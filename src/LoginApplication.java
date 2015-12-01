@@ -42,7 +42,7 @@ public class LoginApplication
     {
         String returnString = String.format( "%s%n%s%n%s%n%n", "*********************", "* Hotel Reservation *", "*********************" );
 
-        returnString += userOrStaff.equals("user") ? "User Login: " : "Staff Login: ";
+        returnString += userOrStaff.equals("user") ? "User Login: " : "Staff Login: "; //...................................................... add more to the return string
 
         return returnString;
     }
