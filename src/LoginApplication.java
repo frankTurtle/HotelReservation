@@ -35,6 +35,9 @@ public class LoginApplication
 
     }
 
+    // Method to generate the header for the login system
+    // takes 1 String argument
+    // determines if it will display Staff or User Login
     private static String generateHeader( String userOrStaff )
     {
         String returnString = String.format( "%s%n%s%n%s%n%n", "*********************", "* Hotel Reservation *", "*********************" );
