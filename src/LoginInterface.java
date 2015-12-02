@@ -1,12 +1,13 @@
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 /**
  * Created by Barret J. Nobel on 12/1/2015.
  */
 
 public class LoginInterface
 {
-    public static String initialMenu() {
+    // Method to create the initial menu
+    // has Login or create a new account options
+    public static String initialMenu()
+    {
         String returnString = generateHeader( "Hotel Reservation" );
         returnString += "Please choose from the following:\n";
         returnString += "1. Login\n";
@@ -15,6 +16,8 @@ public class LoginInterface
         return returnString;
     }
 
+    // Method to display the prompt to login
+    // asks for login and password
     public static String[] loginPrompt( String userOrStaff )
     {
         String[] returnStringArray = { generateHeader( "Login "),
@@ -24,6 +27,8 @@ public class LoginInterface
         return returnStringArray;
     }
 
+    // Method to generate the menu for a new account
+    // asks user if they want a new staff or user account
     public static String newAccountInitialMenu()
     {
         String returnString = generateHeader( "New Account" );
@@ -34,6 +39,7 @@ public class LoginInterface
         return returnString;
     }
 
+    // Method to generate the menu prompts for the new user account
     public static String[] newAccountUserMenu()
     {
         String[] returnStringArray = { generateHeader( "New Account" ),
@@ -51,6 +57,7 @@ public class LoginInterface
         return returnStringArray;
     }
 
+    // Method to generate hte menu prompts for the new staff account
     public static String[] newAccountStaffMenu()
     {
         String[] returnStringArray = { generateHeader( "New Account" ),
@@ -62,6 +69,7 @@ public class LoginInterface
         return returnStringArray;
     }
 
+    // Method to generate a header with test passed in
     private static String generateHeader( String titleIn )
     {
         String stars = "*********************";
@@ -69,50 +77,9 @@ public class LoginInterface
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 
-    public static void main(String[] args)
-    {
-
-        for( String loginItem : newAccountStaffMenu() )
-            System.out.println( loginItem );
-//        System.out.println( passwordPrompt());
-//        System.out.print( newAccountInitialMenu());
-//        String username; //............................. variables
-//        String password;
-//        boolean loginSuccess = false;
-//        Scanner console = new Scanner( System.in );
-//
-//        do
-//        {
-//            try
-//            {
-//                System.out.print( generateHeader("staff") ); //............................... print header
-//                username = console.next(); //................................................. capture username
-//                System.out.print( "Password: " ); //.......................................... prompt for the password
-//                password = console.next();
-//            }
-//            catch (Exception e)
-//            {
-//                System.out.println( "\nInvalid Username or password, try again\n\n" );
-//                Object temp = console.next(); //.............................................. captures the return character
-//            }
-//
-//            // NEED TO CREATE ACCOUNT OBJECT AND VERIFY CREDENTIALS
-//            // IF ITS VALID SET LOGIN SUCCESS TO TRUE
-//
-//        } while( !loginSuccess );
-
-    }
-
-//    // Method to generate the header for the login system
-//    // takes 1 String argument
-//    // determines if it will display Staff or User Login
-//    private static String generateHeader( String userOrStaff )
+//    public static void main( String[] args )
 //    {
-//        String returnString = String.format( "%s%n%s%n%s%n%n", "*********************", "* Hotel Reservation *", "*********************" );
-//
-//        returnString += userOrStaff.equals("user") ? "User Login: " : "Staff Login: "; //...................................................... add more to the return string
-//
-//        return returnString;
+//        System.out.println( initialMenu() );
 //    }
 
 }
