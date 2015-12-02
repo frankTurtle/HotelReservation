@@ -42,7 +42,7 @@ public class LoginInterface
     {
         String stars = "*********************";
         String title = String.format( "*%-19s*", titleIn );
-        return String.format("%s%n%s%n%s%n%n", stars, title, stars);
+        return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 
     public static void main(String[] args)
