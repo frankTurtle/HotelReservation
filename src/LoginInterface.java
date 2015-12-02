@@ -29,8 +29,7 @@ public class LoginInterface
     // asks user if they want a new staff or user account
     public static String newAccountInitialMenu()
     {
-        String returnString = generateHeader( "New Account" );
-        returnString += "Choose from the menu:\n";
+        String returnString = "Choose from the menu:\n";
         returnString += "1.Staff Account\n";
         returnString += "2.User Account\n>:";
 
