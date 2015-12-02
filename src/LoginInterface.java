@@ -15,20 +15,16 @@ public class LoginInterface
         return returnString;
     }
 
-    public static String loginPrompt( String userOrStaff )
+    public static String[] loginPrompt( String userOrStaff )
     {
-        String returnString = generateHeader( "Login" );
-        returnString += userOrStaff.equals("user") ? "User Login: " : "Staff Login: ";
+        String[] returnStringArray = { generateHeader( "Login "),
+                                       userOrStaff.equals("user") ? "User Login: " : "Staff Login: ",
+                                       "Password: "};
 
-        return returnString;
+        return returnStringArray;
     }
 
-    public static String passwordPrompt()
-    {
-        return "Password: ";
-    }
-
-    public static String newAccountMenu()
+    public static String newAccountInitialMenu()
     {
         String returnString = generateHeader( "New Account" );
         returnString += "Choose from the menu:\n";
@@ -37,6 +33,11 @@ public class LoginInterface
 
         return returnString;
     }
+
+//    public static String[] newAccountStaffMenu()
+//    {
+//
+//    }
 
     private static String generateHeader( String titleIn )
     {
@@ -48,9 +49,10 @@ public class LoginInterface
     public static void main(String[] args)
     {
 
-        System.out.print(loginPrompt("user") );
-        System.out.println( passwordPrompt());
-        System.out.print( newAccountMenu());
+        for( String loginItem : loginPrompt("staff") )
+            System.out.println( loginItem );
+//        System.out.println( passwordPrompt());
+//        System.out.print( newAccountInitialMenu());
 //        String username; //............................. variables
 //        String password;
 //        boolean loginSuccess = false;
