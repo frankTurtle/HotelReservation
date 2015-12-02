@@ -39,8 +39,7 @@ public class LoginInterface
     // Method to generate the menu prompts for the new user account
     public static String[] newAccountUserMenu()
     {
-        String[] returnStringArray = { generateHeader( "New Account" ),
-                                        "First Name: ",
+        String[] returnStringArray = {  "First Name: ",
                                         "Last Name: ",
                                         "Password: ",
                                         "Confirm Password: ",
@@ -57,8 +56,7 @@ public class LoginInterface
     // Method to generate hte menu prompts for the new staff account
     public static String[] newAccountStaffMenu()
     {
-        String[] returnStringArray = { generateHeader( "New Account" ),
-                                        "First Name: ",
+        String[] returnStringArray = {  "First Name: ",
                                         "Last Name: ",
                                         "Password: ",
                                         "Confirm Password: ",
@@ -70,8 +68,8 @@ public class LoginInterface
     // Method to generate a header with test passed in
     public static String generateHeader( String titleIn )
     {
-        String stars = "*********************";
-        String title = String.format( "*%-19s*", titleIn );
+        String stars = "************************";
+        String title = String.format( "* %-19s *", titleIn );
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 }

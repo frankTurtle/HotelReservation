@@ -19,9 +19,15 @@ public class HotelReservationApplication
 
             // TODO: 12/2/15 NEEDS TO VERIFY CREDENTIALS
         }
-        else //....................................... user chose to create a new account
+        else if( newAccountMenuChoice() == 1 ) //..... user wants to create a new Staff account
         {
+            // TODO: 12/2/15 HAVE USER LOGIN TO ADMIN ACCOUNT
+        }
+        else //....................................... creates a new User account
+        {
+            String [] userAccountAnswers = newUserAccountMenu();
 
+            // TODO: 12/2/15 CREATE USER ACCOUNT WITH ANSWERS IN ARRAY
         }
 
     }
@@ -36,11 +42,11 @@ public class HotelReservationApplication
                                      LoginInterface.initialMenu()
                                     };
 
-        return errorCheck( displayThisText );
+        return errorCheck( displayThisText, 1, 2 );
     }
 
     // Method to display and process the login
-    // returns an array with the credentials entered
+    // returns a String array with the credentials entered
     private static String[] login()
     {
         String[] returnString = new String[ LoginInterface.loginPrompt("").length ];
@@ -50,7 +56,7 @@ public class HotelReservationApplication
                                     "2.Staff login\n>:"
                                     };
 
-        String answer = ( errorCheck(displayThisText) == 1 ) ? "user" : "staff";
+        String answer = ( errorCheck(displayThisText, 1, 2) == 1 ) ? "user" : "staff";
 
         for( int i = 0; i < returnString.length; i++ )
         {
@@ -61,12 +67,23 @@ public class HotelReservationApplication
         return returnString;
     }
 
-//    private static int newAccountMenuChoice()
-//    {
-//        System.out.print( LoginInterface.newAccountInitialMenu() );
-//    }
+    // Method to display and process the new account menu
+    // returns an int
+    // either 1: Staff
+    // or     2: User
+    private static int newAccountMenuChoice()
+    {
+        String[] displayThisText = { LoginInterface.generateHeader("New Account Creation"),
+                                     LoginInterface.newAccountInitialMenu()
+                                    };
 
-    private static int errorCheck( String[] displayText )
+        return errorCheck( displayThisText, 1, 2 );
+
+    }
+
+    // Method to check for input errors
+    // takes the low and high for range of values to test within
+    private static int errorCheck( String[] displayText, int low, int high )
     {
         int choice = 0;
 
@@ -78,7 +95,7 @@ public class HotelReservationApplication
             try
             {
                 choice = console.nextInt();
-                if( choice < 1 || choice > 2) throw new Exception("\nChoice must be between 1 and 2, try again!");
+                if( choice < low || choice > high ) throw new Exception( String.format("%nChoice must be between %d and %d, try again!", low, high) );
             }
             catch ( InputMismatchException e )
             {
@@ -90,8 +107,20 @@ public class HotelReservationApplication
                 System.out.println( e.getMessage() );
 
             }
-        }while ( choice != 1 && choice != 2 );
+        }while ( choice != low && choice != high );
 
         return choice;
+    }
+
+    // Method to display and process the new User Account creation
+    // returns a String array with all the answers
+    private static String[] newUserAccountMenu()
+    {
+        System.out.println( LoginInterface.generateHeader( "New User Account" ) );
+
+        for( String item : LoginInterface.newAccountUserMenu() )
+            System.out.println( item );
+
+        return new String[1]; // TODO: 12/2/15 update return
     }
 }
