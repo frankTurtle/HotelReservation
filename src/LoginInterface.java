@@ -51,6 +51,17 @@ public class LoginInterface
         return returnStringArray;
     }
 
+    public static String[] newAccountStaffMenu()
+    {
+        String[] returnStringArray = { generateHeader( "New Account" ),
+                "First Name: ",
+                "Last Name: ",
+                "Password: ",
+                "Confirm Password: ",
+        };
+        return returnStringArray;
+    }
+
     private static String generateHeader( String titleIn )
     {
         String stars = "*********************";
@@ -61,7 +72,7 @@ public class LoginInterface
     public static void main(String[] args)
     {
 
-        for( String loginItem : newAccountUserMenu() )
+        for( String loginItem : newAccountStaffMenu() )
             System.out.println( loginItem );
 //        System.out.println( passwordPrompt());
 //        System.out.print( newAccountInitialMenu());
