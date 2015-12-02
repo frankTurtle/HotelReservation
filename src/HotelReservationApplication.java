@@ -9,6 +9,11 @@ public class HotelReservationApplication
 {
     public static void main( String[] args )
     {
+        login();
+    }
+
+    public static void login()
+    {
         Scanner console = new Scanner( System.in );
         int choice = 0;
 
@@ -32,6 +37,5 @@ public class HotelReservationApplication
 
             }
         }while ( choice != 1 && choice != 2 );
-
     }
 }
