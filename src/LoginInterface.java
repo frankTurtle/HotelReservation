@@ -19,7 +19,7 @@ public class LoginInterface
     // asks for login and password
     public static String[] loginPrompt( String userOrStaff )
     {
-        String[] returnStringArray = { userOrStaff.equals("user") ? "User Login: " : "Staff Login: ",
+        String[] returnStringArray = { userOrStaff.equals("user") ? "User First Name: " : "Staff First Name: ",
                                        "Password: "};
 
         return returnStringArray;
