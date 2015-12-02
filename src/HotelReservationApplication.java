@@ -39,9 +39,9 @@ public class HotelReservationApplication
     {
         String[] displayThisText = { LoginInterface.generateHeader("Hotel Reservation"),
                                      LoginInterface.initialMenu()
-                                    };
+                                    }; //................................................. strings to pass in in for prompts
 
-        return errorCheck( displayThisText, 1, 2 );
+        return errorCheck( displayThisText, 1, 2 ); //.................................... display prompts / get response / error check
     }
 
     // Method to display and process the login
@@ -53,14 +53,14 @@ public class HotelReservationApplication
                                     "Please Choose from the following: \n",
                                     "1.User login\n",
                                     "2.Staff login\n>:"
-                                    };
+                                    }; //................................................. strings to pass in for prompts
 
-        String answer = ( errorCheck(displayThisText, 1, 2) == 1 ) ? "user" : "staff";
+        String answer = ( errorCheck(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
-        for( int i = 0; i < returnString.length; i++ )
+        for( int i = 0; i < returnString.length; i++ ) //................................. loop through the questions to get answers
         {
-            System.out.print( LoginInterface.loginPrompt(answer)[i] );
-            returnString[ i ] = console.next();
+            System.out.print( LoginInterface.loginPrompt(answer)[i] ); //................. display question
+            returnString[ i ] = console.next(); //........................................ get answer
         }
 
         return returnString;
@@ -74,9 +74,9 @@ public class HotelReservationApplication
     {
         String[] displayThisText = { LoginInterface.generateHeader("New Account Creation"),
                                      LoginInterface.newAccountInitialMenu()
-                                    };
+                                    }; //..................................................... strings for prompts
 
-        return errorCheck( displayThisText, 1, 2 );
+        return errorCheck( displayThisText, 1, 2 ); //........................................ display prompts / get response / error check
 
     }
 
@@ -84,29 +84,29 @@ public class HotelReservationApplication
     // takes the low and high for range of values to test within
     private static int errorCheck( String[] displayText, int low, int high )
     {
-        int choice = 0;
+        int choice = 0; //................................................................................................ variable to return the answer with
 
         do
         {
-            for( String item: displayText )
-                System.out.print( item );
+            for( String item: displayText ) //............................................................................ loop through prompts
+                System.out.print( item ); //.............................................................................. display them
 
             try
             {
-                choice = console.nextInt();
-                if( choice < low || choice > high ) throw new Exception( String.format("%nChoice must be between %d and %d, try again!", low, high) );
+                choice = console.nextInt(); //............................................................................ get input
+                if( choice < low || choice > high )  //................................................................... test bounds
+                    throw new Exception( String.format("%nChoice must be between %d and %d, try again!", low, high) ); //. throw error if not in bounds
             }
-            catch ( InputMismatchException e )
+            catch ( InputMismatchException e ) //......................................................................... it its not an integer
             {
-                System.out.println("\nValue must be an integer, try again!");
-                Object temp = console.next();
+                System.out.println("\nValue must be an integer, try again!"); //.......................................... display message
+                Object temp = console.next(); //.......................................................................... capture lingering input
             }
-            catch ( Exception e )
+            catch ( Exception e ) //...................................................................................... generic exception
             {
-                System.out.println( e.getMessage() );
-
+                System.out.println( e.getMessage() ); //.................................................................. print message
             }
-        }while ( choice != low && choice != high );
+        }while ( choice != low && choice != high ); //.................................................................... loop while choice is outside bounds
 
         return choice;
     }
@@ -115,10 +115,10 @@ public class HotelReservationApplication
     // returns a String array with all the answers
     private static String[] newUserAccountMenu()
     {
-        System.out.println( LoginInterface.generateHeader( "New User Account" ) );
+        System.out.println( LoginInterface.generateHeader( "New User Account" ) ); //. prints header
 
-        for( String item : LoginInterface.newAccountUserMenu() )
-            System.out.println( item );
+        for( String item : LoginInterface.newAccountUserMenu() ) //................... loop through each prompt
+            System.out.println( item ); // TODO: 12/2/15 get responses 
 
         return new String[1]; // TODO: 12/2/15 update return
     }
