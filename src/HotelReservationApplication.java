@@ -26,6 +26,9 @@ public class HotelReservationApplication
         {
             String [] userAccountAnswers = newUserAccountMenu();
 
+            for( String item : userAccountAnswers )
+                System.out.println( item );
+
             // TODO: 12/2/15 CREATE USER ACCOUNT WITH ANSWERS IN ARRAY
         }
 
@@ -41,7 +44,7 @@ public class HotelReservationApplication
                                      LoginInterface.initialMenu()
                                     }; //................................................. strings to pass in in for prompts
 
-        return errorCheck( displayThisText, 1, 2 ); //.................................... display prompts / get response / error check
+        return errorCheckWithinRange( displayThisText, 1, 2 ); //.................................... display prompts / get response / error check
     }
 
     // Method to display and process the login
@@ -55,7 +58,7 @@ public class HotelReservationApplication
                                     "2.Staff login\n>:"
                                     }; //................................................. strings to pass in for prompts
 
-        String answer = ( errorCheck(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
+        String answer = ( errorCheckWithinRange(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
         for( int i = 0; i < returnString.length; i++ ) //................................. loop through the questions to get answers
         {
@@ -76,13 +79,13 @@ public class HotelReservationApplication
                                      LoginInterface.newAccountInitialMenu()
                                     }; //..................................................... strings for prompts
 
-        return errorCheck( displayThisText, 1, 2 ); //........................................ display prompts / get response / error check
+        return errorCheckWithinRange( displayThisText, 1, 2 ); //........................................ display prompts / get response / error check
 
     }
 
     // Method to check for input errors
     // takes the low and high for range of values to test within
-    private static int errorCheck( String[] displayText, int low, int high )
+    private static int errorCheckWithinRange(String[] displayText, int low, int high )
     {
         int choice = 0; //................................................................................................ variable to return the answer with
 
@@ -115,11 +118,31 @@ public class HotelReservationApplication
     // returns a String array with all the answers
     private static String[] newUserAccountMenu()
     {
+        String[] answers = new String[ LoginInterface.newAccountUserMenu().length ];
+
         System.out.println( LoginInterface.generateHeader( "New User Account" ) ); //. prints header
 
-        for( String item : LoginInterface.newAccountUserMenu() ) //................... loop through each prompt
-            System.out.println( item ); // TODO: 12/2/15 get responses 
+        for( int i = 0; i < answers.length; i++ )
+        {
+            try
+            {
+                System.out.print( LoginInterface.newAccountUserMenu()[i] );
+                answers[i] = ( i == 4 || i == 8 || i == 10) ? Integer.toString(console.nextInt()) : console.next();
+            }
+            catch ( InputMismatchException e )
+            {
+                System.out.println("Must enter an integer, try again\n");
+                Object chomp = console.next();
+                i --;
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.toString());
+                Object chomp = console.next();
+                i--;
+            }
+        }
 
-        return new String[1]; // TODO: 12/2/15 update return
+        return answers;
     }
 }

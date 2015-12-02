@@ -43,7 +43,8 @@ public class LoginInterface
                                         "Last Name: ",
                                         "Password: ",
                                         "Confirm Password: ",
-                                        "\nStreet: ",
+                                        "\nHouse: ",
+                                        "Street: ",
                                         "City: ",
                                         "State: ",
                                         "Zip: ",
@@ -69,7 +70,7 @@ public class LoginInterface
     public static String generateHeader( String titleIn )
     {
         String stars = "************************";
-        String title = String.format( "* %-19s *", titleIn );
+        String title = String.format( "* %-20s *", titleIn );
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 }
