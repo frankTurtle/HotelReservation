@@ -2,7 +2,6 @@
  * Created by Barret J. Nobel on 12/1/2015.
  */
 
-import sun.rmi.runtime.Log;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
