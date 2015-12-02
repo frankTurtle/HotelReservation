@@ -4,12 +4,12 @@
 
 import java.util.Scanner;
 
-public class LoginApplication
+public class LoginInterface
 {
     public static void main(String[] args)
     {
-        String username;
-        int password;
+        String username; //............................. variables
+        String password;
         boolean loginSuccess = false;
         Scanner console = new Scanner( System.in );
 
@@ -20,7 +20,7 @@ public class LoginApplication
                 System.out.print( generateHeader("staff") ); //............................... print header
                 username = console.next(); //................................................. capture username
                 System.out.print( "Password: " ); //.......................................... prompt for the password
-                password = console.nextInt();
+                password = console.next();
             }
             catch (Exception e)
             {
