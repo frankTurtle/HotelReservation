@@ -114,7 +114,7 @@ public class DatabaseCreation
 
         String createUserAccountTable = "CREATE TABLE User_Account " + //.................................. creates user_account table
                                         "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
-//                                        " account_type CHAR(2) DEFAULT 'U' NOT NULL, " + //................ sets default account type to U
+                                        " account_type CHAR(2) DEFAULT 'U' NOT NULL, " + //................ sets default account type to U
 //                                        " CHECK(account_type = 'U'), " + //................................ checks that the type is set to U
 //                                        " UNIQUE(account_id, account_type), " + //......................... makes sure the type and id are unique
                                         " UNIQUE(account_id), " + //....................................... makes sure the type and id are unique
@@ -137,7 +137,7 @@ public class DatabaseCreation
 
                 String createStaffAccountTable = "CREATE TABLE Staff_Account " + //................................ creates staff_account table
                                          "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //.............. PK
-//                                         " account_type CHAR(2) DEFAULT 'SA' NOT NULL, " + //.............. sets default to staff account
+                                         " account_type CHAR(2) DEFAULT 'SA' NOT NULL, " + //.............. sets default to staff account
 //                                         " CHECK(account_type IN('A', 'SM')), " + //....................... checks to see if the type is admin or staff member
 //                                         " UNIQUE(account_id, account_type), " + //........................ makes sure the id and type are unique
                                          " UNIQUE(account_id), " + //...................................... makes sure the id and type are unique
@@ -154,7 +154,7 @@ public class DatabaseCreation
 
         String createAdminAccountTable = "CREATE TABLE Admin " + //........................................ creates admin table
                                         "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
-//                                        " account_type CHAR(2) DEFAULT 'A' NOT NULL, " + //................ sets default account type to A
+                                        " account_type CHAR(2) DEFAULT 'A' NOT NULL, " + //................ sets default account type to A
 //                                        " CHECK(account_type = 'A'), " + //................................ checks the type is admin
 //                                        " UNIQUE(account_id, account_type), " + //......................... makes sure the id and type are unique
                                         " UNIQUE(account_id), " + //....................................... makes sure the id and type are unique

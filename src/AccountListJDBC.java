@@ -18,6 +18,8 @@ public class AccountListJDBC
 
     AccountListJDBC()
     {
+        accountArrayList = new ArrayList<>();
+
         try
         {
             Class.forName(JDBC_DRIVER); //.................................... register the JDBC driver
@@ -30,12 +32,38 @@ public class AccountListJDBC
 
             //TODO: get data from DB!
 
-            String sql = "SELECT * FROM staff_member, admin, user_account ";
-            ResultSet rs = statement.executeQuery(sql);
-            while( rs.next() )
+            String[] sqlStrings = {
+                    "SELECT * FROM admin",
+                    "SELECT * FROM staff_account",
+                    "SELECT * FROM user_account;"
+            };
+
+
+//            String sqlAdmin = "SELECT * FROM admin";
+//            String sqlStaff = "SELECT * FROM staff_account";
+//            String sqlUser  = "SELECT * FROM user_account;";
+
+            for( String sqlCommand : sqlStrings )
             {
-                System.out.println( rs.toString() );
+                ResultSet rs = statement.executeQuery( sqlCommand );
+
+                while ( rs.next() )
+                {
+//                    if( sqlCommand.equals("user_account") )
+//                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString()))
+                    accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id")) );
+                }
+
+//                while( rs.next() )
             }
+//            ResultSet rs = statement.executeQuery(sqlAdmin);
+//            while( rs.next() )
+//            {
+//               accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id")) );
+//            }
+
+            for( Account item : accountArrayList )
+                System.out.println(item);
         }
         catch(SQLException se)
         {
@@ -107,9 +135,9 @@ public class AccountListJDBC
 //
 //    }
 
+
     public static void main( String[] args )
     {
         AccountListJDBC list = new AccountListJDBC();
-
     }
 }
