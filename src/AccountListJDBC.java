@@ -22,26 +22,18 @@ public class AccountListJDBC
 
         try
         {
-            Class.forName(JDBC_DRIVER); //.................................... register the JDBC driver
+            Class.forName(JDBC_DRIVER); //.......................................... register the JDBC driver
 
-            System.out.println("Connecting to database...");
+//            System.out.println("Connecting to database...");
             connection = DriverManager.getConnection(DB_URL, USER, PASS); //........ initial connect to the DB
 
-            System.out.println("Creating statement...");
+//            System.out.println("Creating statement...");
             statement = connection.createStatement();
 
-            //TODO: get data from DB!
-
-            String[] sqlStrings = {
-                    "SELECT * FROM admin",
-                    "SELECT * FROM staff_account",
-                    "SELECT * FROM user_account"
-            };
-
-
-//            String sqlAdmin = "SELECT * FROM admin";
-//            String sqlStaff = "SELECT * FROM staff_account";
-//            String sqlUser  = "SELECT * FROM user_account;";
+            String[] sqlStrings = { "SELECT * FROM admin",
+                                    "SELECT * FROM staff_account",
+                                    "SELECT * FROM user_account"
+                                    };
 
             for( String sqlCommand : sqlStrings )
             {
@@ -50,18 +42,11 @@ public class AccountListJDBC
                 while ( rs.next() )
                 {
                     if( sqlCommand.equals("SELECT * FROM user_account") )
-                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id"), rs.getString("street"), rs.getString("city"), rs.getString("state"), rs.getInt("zip"), rs.getString("email"), rs.getInt("phone")) );
+                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id"), rs.getString("street"), rs.getString("city"), rs.getString("state"), rs.getInt("zip"), rs.getString("email"), rs.getInt("phone")) );
                     else
-                        accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id")) );
+                        accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id")) );
                 }
-
-//                while( rs.next() )
             }
-//            ResultSet rs = statement.executeQuery(sqlAdmin);
-//            while( rs.next() )
-//            {
-//               accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id")) );
-//            }
 
             for( Account item : accountArrayList )
                 System.out.println(item);

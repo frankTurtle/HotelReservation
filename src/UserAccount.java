@@ -20,7 +20,7 @@ public class UserAccount extends Account
      */
     UserAccount()
     {
-        this( "", "", "U", "", 0, "", "", "", 0, "", 0 );
+        this( "", "", "U", "", "", 0, "", "", "", 0, "", 0 );
     }
 
     /**
@@ -28,6 +28,7 @@ public class UserAccount extends Account
      * @param firstName User's first name
      * @param lastName User's last name
      * @param accountType User's account type
+     * @param username User's username
      * @param password User's password
      * @param accountId User's account ID
      * @param street User's street
@@ -37,9 +38,9 @@ public class UserAccount extends Account
      * @param emailAddress User's email address
      * @param phoneNumber User's phone number
      */
-    UserAccount( String firstName, String lastName, String accountType, String password, int accountId, String street, String city, String state, int zipCode, String emailAddress, int phoneNumber )
+    UserAccount( String firstName, String lastName, String accountType, String username, String password, int accountId, String street, String city, String state, int zipCode, String emailAddress, int phoneNumber )
     {
-        super( firstName, lastName, accountType, password, accountId );
+        super( firstName, lastName, accountType, username, password, accountId );
         this.setStreet( street );
         this.setCity( city );
         this.setState( state );
@@ -159,7 +160,7 @@ public class UserAccount extends Account
 
     /**
      * Override the toString method
-     * @return String displaying the User first / last name, account type, account ID, address, email, phone number
+     * @return String displaying the User first / last name, account type, username, account ID, address, email, phone number
      */
     @Override
     public String toString()

@@ -13,7 +13,7 @@ public class StaffAccount extends Account
      */
     StaffAccount()
     {
-        this( "", "", "SM", "", 0 );
+        this( "", "", "SM", "", "", 0 );
     }
 
     /**
@@ -24,9 +24,9 @@ public class StaffAccount extends Account
      * @param password the Staff's password
      * @param accountId the Staff's unique ID
      */
-    StaffAccount( String firstName, String lastName, String accountType, String password, int accountId )
+    StaffAccount( String firstName, String lastName, String accountType, String username, String password, int accountId )
     {
-        super( firstName, lastName, accountType, password, accountId );
+        super( firstName, lastName, accountType, username, password, accountId );
     }
 
     /**
