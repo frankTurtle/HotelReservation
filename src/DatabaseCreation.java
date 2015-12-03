@@ -106,7 +106,6 @@ public class DatabaseCreation
                                     " PRIMARY KEY( account_id ), " + //.................................... sets the account_id as the PK
                                     " fname VARCHAR(255), " + //........................................... attribute for first name
                                     " lname VARCHAR(255), " + //........................................... attribute for last name
-                                    " username VARCHAR(255), " + //........................................ attribute for username
                                     " password VARCHAR(255))"; //.......................................... attribute for password
 
         String createUserAccountTable = "CREATE TABLE User_Account " + //.................................. creates user_account table
