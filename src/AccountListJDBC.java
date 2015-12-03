@@ -9,26 +9,22 @@ public class AccountListJDBC
 {
     ArrayList< Account > accountArrayList; // = new ArrayList<>();
 
-    final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //... JDBC driver
-    final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
-    final String USER = "root"; //........................... database login credentials
-    final String PASS = "1234567890";
-    Connection connection;
-    Statement statement;
+    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //... JDBC driver
+    static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
+    static final String USER = "root"; //........................... database login credentials
+    static final String PASS = "1234567890";
+//    Connection connection;
 
+    // Default Constructor
+    // sets up connection
+    // loads accountArrayList with all Accounts from the DB
     AccountListJDBC()
     {
         accountArrayList = new ArrayList<>();
 
         try
         {
-            Class.forName(JDBC_DRIVER); //.......................................... register the JDBC driver
-
-//            System.out.println("Connecting to database...");
-            connection = DriverManager.getConnection(DB_URL, USER, PASS); //........ initial connect to the DB
-
-//            System.out.println("Creating statement...");
-            statement = connection.createStatement();
+            Statement statement = connectToDatabase().createStatement();
 
             String[] sqlStrings = { "SELECT * FROM admin",
                                     "SELECT * FROM staff_account",
@@ -47,9 +43,8 @@ public class AccountListJDBC
                         accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id")) );
                 }
             }
-
-            for( Account item : accountArrayList )
-                System.out.println(item);
+//            for( Account item : accountArrayList )
+//                System.out.println(item);
         }
         catch(SQLException se)
         {
@@ -59,26 +54,27 @@ public class AccountListJDBC
         {
             e.printStackTrace();
         }
-        finally //............................................................ closes resources
+    }
+
+    private static Connection connectToDatabase()
+    {
+        Connection returnConnection = null;
+
+        try
         {
-            try
-            {
-                if(statement!=null)
-                    statement.close();
-            }
-            catch(SQLException se2)
-            {
-            }// nothing we can do
-            try
-            {
-                if(connection!=null)
-                    connection.close();
-            }
-            catch(SQLException se)
-            {
-                se.printStackTrace();
-            }
+            Class.forName(JDBC_DRIVER); //....................................................................... register the JDBC driver
+            returnConnection =  DriverManager.getConnection(DB_URL, USER, PASS); //........ initial connect to the DB
         }
+        catch(SQLException se)
+        {
+            se.printStackTrace();
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+
+        return returnConnection;
     }
 
 //    public static void addStaffAccount( StaffAccount staff )
