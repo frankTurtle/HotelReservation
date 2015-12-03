@@ -9,9 +9,9 @@ public class AccountListJDBC
 {
     ArrayList< Account > accountArrayList; // = new ArrayList<>();
 
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //... JDBC driver
+    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //.................... JDBC driver
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
-    static final String USER = "root"; //........................... database login credentials
+    static final String USER = "root"; //............................................ database login credentials
     static final String PASS = "1234567890";
     static Connection connection = null;
     static Statement statement = null;
@@ -45,8 +45,6 @@ public class AccountListJDBC
                         accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id")) );
                 }
             }
-//            for( Account item : accountArrayList )
-//                System.out.println(item);
         }
         catch(SQLException se)
         {
@@ -142,10 +140,32 @@ public class AccountListJDBC
         }
     }
 
-//    public StaffAccount searchStaffAccount( String staffID )
-//    {
-//
-//    }
+    public StaffAccount searchStaffAccount( String staffID )
+    {
+        String sqlStatement = String.format( "SELECT * FROM staff_account WHERE account_id = %d", Integer.parseInt(staffID) );
+        StaffAccount returnStaffMember = new StaffAccount();
+
+        try
+        {
+            ResultSet rs = statement.executeQuery(sqlStatement);
+            while (rs.next())
+            {
+                returnStaffMember.setAccountType( rs.getString("account_type") );
+                returnStaffMember.setFirstName( rs.getString("fname") );
+                returnStaffMember.setLastName( rs.getString("lname") );
+                returnStaffMember.setUsername( rs.getString("username") );
+                returnStaffMember.setPassword( rs.getString("password") );
+            }
+        }
+        catch( SQLException ex )
+        {
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+
+        return returnStaffMember;
+    }
 
 //    public UserAccount searchUserAccoount( String userID )
 //    {
@@ -170,7 +190,8 @@ public class AccountListJDBC
         list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "SA", "staffUsername", "0234", 0));
         list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "A", "staffUsername", "0000", 0));
         list.addUserAccount( new UserAccount("userFirst", "userLast", "U", "username", "password", 0, "street", "city", "state", 1234, "email", 12345));
-        list.deleteStaffAccount( "1" );
+//        list.deleteStaffAccount( "3" );
         list.deleteUserAccount( "1" );
+        System.out.println( list.searchStaffAccount( "5" ) );
     }
 }
