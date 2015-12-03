@@ -35,7 +35,7 @@ public class AccountListJDBC
             String[] sqlStrings = {
                     "SELECT * FROM admin",
                     "SELECT * FROM staff_account",
-                    "SELECT * FROM user_account;"
+                    "SELECT * FROM user_account"
             };
 
 
@@ -49,9 +49,10 @@ public class AccountListJDBC
 
                 while ( rs.next() )
                 {
-//                    if( sqlCommand.equals("user_account") )
-//                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString()))
-                    accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id")) );
+                    if( sqlCommand.equals("SELECT * FROM user_account") )
+                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id"), rs.getString("street"), rs.getString("city"), rs.getString("state"), rs.getInt("zip"), rs.getString("email"), rs.getInt("phone")) );
+                    else
+                        accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("password"), rs.getInt("account_id")) );
                 }
 
 //                while( rs.next() )

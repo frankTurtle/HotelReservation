@@ -134,9 +134,9 @@ public class Account
     @Override
     public String toString()
     {
-        return String.format( "The Account holders First name is: %s\n" +
+        return String.format( "\nThe Account holders First name is: %s\n" +
                               "The Account holders Last name is: %s\n" +
                               "The Account type is: %s\n" +
-                              "The Account holders ID is: %d\n", this.getFirstName(), this.getLastName(), this.getAccountType(), this.getId() );
+                              "The Account holders ID is: %d", this.getFirstName(), this.getLastName(), this.getAccountType(), this.getId() );
     }
 }
