@@ -13,10 +13,11 @@ public class AccountListJDBC
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
     static final String USER = "root"; //........................... database login credentials
     static final String PASS = "1234567890";
-//    Connection connection;
+    Connection connection = null;
+    Statement statement = null;
 
     // Default Constructor
-    // sets up connection
+    // setup connection
     // loads accountArrayList with all Accounts from the DB
     AccountListJDBC()
     {
@@ -24,7 +25,8 @@ public class AccountListJDBC
 
         try
         {
-            Statement statement = connectToDatabase().createStatement();
+            connection = connectToDatabase();
+            statement = connection.createStatement();
 
             String[] sqlStrings = { "SELECT * FROM admin",
                                     "SELECT * FROM staff_account",
@@ -43,8 +45,8 @@ public class AccountListJDBC
                         accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id")) );
                 }
             }
-//            for( Account item : accountArrayList )
-//                System.out.println(item);
+            for( Account item : accountArrayList )
+                System.out.println(item);
         }
         catch(SQLException se)
         {
