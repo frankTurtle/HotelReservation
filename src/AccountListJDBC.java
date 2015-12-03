@@ -9,10 +9,10 @@ public class AccountListJDBC
 {
     ArrayList< Account > accountArrayList; // = new ArrayList<>();
 
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //... JDBC driver
-    static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
-    static final String USER = "root"; //........................... database login credentials
-    static final String PASS = "1234567890";
+    final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //... JDBC driver
+    final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
+    final String USER = "root"; //........................... database login credentials
+    final String PASS = "1234567890";
     Connection connection;
     Statement statement;
 
