@@ -167,11 +167,39 @@ public class AccountListJDBC
         return returnStaffMember;
     }
 
-//    public UserAccount searchUserAccoount( String userID )
-//    {
-//
-//    }
-//
+    public UserAccount searchUserAccount( String userID )
+    {
+        String sqlStatement = String.format( "SELECT * FROM user_account WHERE account_id = %d", Integer.parseInt(userID) );
+        UserAccount returnUserAccount = new UserAccount();
+
+        try
+        {
+            ResultSet rs = statement.executeQuery(sqlStatement);
+            while( rs.next() )
+            {
+                returnUserAccount.setAccountType( rs.getString("account_type") );
+                returnUserAccount.setStreet( rs.getString("street") );
+                returnUserAccount.setCity( rs.getString("city") );
+                returnUserAccount.setState( rs.getString("state") );
+                returnUserAccount.setZipCode( rs.getInt("zip") );
+                returnUserAccount.setEmailAddress( rs.getString("email") );
+                returnUserAccount.setPhoneNumber( rs.getInt("phone") );
+                returnUserAccount.setFirstName( rs.getString("fname") );
+                returnUserAccount.setLastName( rs.getString("lname") );
+                returnUserAccount.setUsername( rs.getString("username") );
+                returnUserAccount.setPassword( rs.getString("password") );
+            }
+        }
+        catch( SQLException ex )
+        {
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+
+        return returnUserAccount;
+    }
+
 //    public static void updateStaffAccount()
 //    {
 //
@@ -192,6 +220,7 @@ public class AccountListJDBC
         list.addUserAccount( new UserAccount("userFirst", "userLast", "U", "username", "password", 0, "street", "city", "state", 1234, "email", 12345));
 //        list.deleteStaffAccount( "3" );
         list.deleteUserAccount( "1" );
-        System.out.println( list.searchStaffAccount( "5" ) );
+//        System.out.println( list.searchStaffAccount( "5" ) );
+        System.out.println( list.searchUserAccount( "5" ) );
     }
 }
