@@ -98,6 +98,9 @@ public class DatabaseCreation
     // creates staff member account
     private static void createAccountTables( Connection connection )
     {
+
+        //TODO CLEAN UP AND REMOVE COMMENTS
+
 //        String createAccountTable = "CREATE TABLE Account " + //........................................... creates account table
 //                                    "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //........;.......... PK
 //                                    " account_type CHAR(2) NOT NULL, " + //................................ to determine if its a User or Staff account
