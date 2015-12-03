@@ -13,8 +13,8 @@ public class AccountListJDBC
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
     static final String USER = "root"; //........................... database login credentials
     static final String PASS = "1234567890";
-    Connection connection = null;
-    Statement statement = null;
+    static Connection connection = null;
+    static Statement statement = null;
 
     // Default Constructor
     // setup connection
@@ -45,8 +45,8 @@ public class AccountListJDBC
                         accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id")) );
                 }
             }
-            for( Account item : accountArrayList )
-                System.out.println(item);
+//            for( Account item : accountArrayList )
+//                System.out.println(item);
         }
         catch(SQLException se)
         {
@@ -64,7 +64,7 @@ public class AccountListJDBC
 
         try
         {
-            Class.forName(JDBC_DRIVER); //....................................................................... register the JDBC driver
+            Class.forName(JDBC_DRIVER); //................................................. register the JDBC driver
             returnConnection =  DriverManager.getConnection(DB_URL, USER, PASS); //........ initial connect to the DB
         }
         catch(SQLException se)
@@ -79,31 +79,74 @@ public class AccountListJDBC
         return returnConnection;
     }
 
-//    public static void addStaffAccount( StaffAccount staff )
-//    {
-//
-//    }
-//
-//    public static void addUserAccount( UserAccount user )
-//    {
-//
-//    }
-//
-//    public static StaffAccount deleteStaffAccount( String staffID )
-//    {
-//
-//    }
-//
-//    public static UserAccount deleteUserAccount( String userID )
-//    {
-//
-//    }
-//
+    public static void addStaffAccount( Account staff )
+    {
+        String insertInto = ( staff.getAccountType().equals("A") ) ? "admin" : "staff_account";
+        String sqlStatement = String.format( "INSERT INTO %s " +
+                                             "VALUES( %d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\' )", insertInto, 0, staff.getAccountType(), staff.getFirstName(), staff.getLastName(), staff.getUsername(), staff.getPassword() );
+
+        try
+        {
+            statement.executeUpdate( sqlStatement );
+            System.out.print("Success");
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addUserAccount( UserAccount user )
+    {
+        String sqlStatement = String.format( "INSERT INTO user_account " +
+                "VALUES( %d, \'%s\', '%s', '%s', '%s', %d, '%s', %d, \'%s\', \'%s\', \'%s\', \'%s\' )", 0, user.getAccountType(), user.getStreet(), user.getCity(), user.getState(), user.getZipCode(), user.getEmailAddress(), user.getPhoneNumber(), user.getFirstName(), user.getLastName(), user.getUsername(), user.getPassword() );
+
+        try
+        {
+            statement.executeUpdate( sqlStatement );
+            System.out.print("Success");
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteStaffAccount( String staffID )
+    {
+        String sqlStatement = String.format("DELETE FROM staff_account WHERE account_id = %d", Integer.parseInt(staffID) );
+
+        try
+        {
+            statement.executeUpdate( sqlStatement );
+            System.out.print("Successfully deleted staffID: " + staffID);
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteUserAccount( String userID )
+    {
+        String sqlStatement = String.format("DELETE FROM user_account WHERE account_id = %d", Integer.parseInt(userID) );
+
+        try
+        {
+            statement.executeUpdate( sqlStatement );
+            System.out.print("Successfully deleted staffID: " + userID);
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+    }
+
 //    public StaffAccount searchStaffAccount( String staffID )
 //    {
 //
 //    }
-//
+
 //    public UserAccount searchUserAccoount( String userID )
 //    {
 //
@@ -123,5 +166,11 @@ public class AccountListJDBC
     public static void main( String[] args )
     {
         AccountListJDBC list = new AccountListJDBC();
+
+        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "SA", "staffUsername", "0234", 0));
+        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "A", "staffUsername", "0000", 0));
+        list.addUserAccount( new UserAccount("userFirst", "userLast", "U", "username", "password", 0, "street", "city", "state", 1234, "email", 12345));
+        list.deleteStaffAccount( "1" );
+        list.deleteUserAccount( "1" );
     }
 }
