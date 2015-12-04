@@ -170,6 +170,7 @@ public class AccountListJDBC
                 returnStaffMember.setLastName( rs.getString("lname") );
                 returnStaffMember.setUsername( rs.getString("username") );
                 returnStaffMember.setPassword( rs.getString("password") );
+                returnStaffMember.setId( rs.getInt("account_id") );
             }
         }
         catch( SQLException ex )
@@ -203,6 +204,7 @@ public class AccountListJDBC
                 returnUserAccount.setLastName( rs.getString("lname") );
                 returnUserAccount.setUsername( rs.getString("username") );
                 returnUserAccount.setPassword( rs.getString("password") );
+                returnUserAccount.setId( rs.getInt("account_id") );
             }
         }
         catch( SQLException ex )
@@ -257,7 +259,7 @@ public class AccountListJDBC
 //            System.out.print("NO!");
 
 //        AccountListJDBC.addUserAccount( new UserAccount("bigb", "guuy", "U", "turtle", "1234", 80, "street", "city", "state", 1234, "email", 5151) );
-        System.out.print(AccountListJDBC.searchUserAccount( "3" ).getId());
+        System.out.print(AccountListJDBC.searchUserAccount( "4" ).getId());
 
 //        AccountListJDBC list = new AccountListJDBC();
 //

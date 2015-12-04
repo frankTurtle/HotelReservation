@@ -1,3 +1,5 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * Superclass for User and Staff account Objects
  *
@@ -12,13 +14,14 @@ public class Account
     private String username;
     private String password;
     private int accountId;
+    static AtomicInteger nextId = new AtomicInteger();
 
     /**
      * Default constructor
      */
     public Account()
     {
-        this( "", "", "", "", "", 0 );
+        this( "", "", "", "", "", nextId.incrementAndGet() );
     }
 
     /**
@@ -31,12 +34,13 @@ public class Account
      */
     public Account( String firstName, String lastName, String accountType, String username, String password, int accountId )
     {
+        System.out.print("\n" + accountId);
         this.setFirstName( firstName );
         this.setLastName( lastName );
         this.setAccountType( accountType );
         this.setUsername( username );
         this.setPassword( password );
-        this.setId( accountId );
+        this.setId( nextId.incrementAndGet() );
     }
 
     /**
@@ -85,7 +89,7 @@ public class Account
      * Setter medthod for the accountID
      * @param accountId AccountID to set
      */
-    private void setId( int accountId )
+    protected void setId( int accountId )
     {
         this.accountId = accountId;
     }
