@@ -11,7 +11,7 @@ public class HotelReservationApplication
 
     public static void main( String[] args )
     {
-        Account account;
+        Account account = null;
 
         switch( initialMenuChoice() )
         {
@@ -19,14 +19,14 @@ public class HotelReservationApplication
                 while(true)
                 {
                     account = login();
+
                     if (account != null)
                     {
-                        //todo welcome interface
-                        System.out.print(account);
+                        System.out.printf( "Welcome %s %s%n%n", account.getFirstName(), account.getLastName() );
                         break;
                     }
-                    else
-                        System.out.print("\nInvalid username or password, try again\n");
+
+                    System.out.print("\nInvalid username or password, try again\n");
                 }
                 break;
 
@@ -37,6 +37,11 @@ public class HotelReservationApplication
             case 3:
                 System.out.println("\nGoodbye!\n");
                 System.exit(0);
+        }
+
+        switch ( afterLoginMenuChoice( account ) )
+        {
+
         }
 
 
@@ -68,13 +73,21 @@ public class HotelReservationApplication
 //        }
     }
 
+    private static int afterLoginMenuChoice( Account person )
+    {
+        String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
+                                     AfterLoginInterface.initialMenu( person.getAccountType() )};
+
+        return errorCheckWithinRange( displayThisText, 1, 3 );
+    }
+
     // Method to display and process the initial menu
     // returns an int
     // either 1: Login
     // or     2: create a new account
     private static int initialMenuChoice()
     {
-        String[] displayThisText = { LoginInterface.generateHeader("Hotel Reservation"),
+        String[] displayThisText = { generateHeader("Hotel Reservation"),
                                      LoginInterface.initialMenu()
                                     }; //................................................. strings to pass in in for prompts
 
@@ -111,7 +124,6 @@ public class HotelReservationApplication
         if( answer.equals("user") )
         {
             return AccountListJDBC.userLogin(credentials[USERNAME], credentials[PASSWORD]);
-
         }
         else
             return AccountListJDBC.staffLogin( credentials[USERNAME], credentials[PASSWORD] );
@@ -123,7 +135,7 @@ public class HotelReservationApplication
     // or     2: User
     private static int newAccountMenuChoice()
     {
-        String[] displayThisText = { LoginInterface.generateHeader("New Account Creation"),
+        String[] displayThisText = { generateHeader("New Account Creation"),
                                      LoginInterface.newAccountInitialMenu()
                                     }; //..................................................... strings for prompts
 
@@ -196,7 +208,7 @@ public class HotelReservationApplication
     {
         String[] answers = new String[ LoginInterface.newAccountUserMenu().length ];
 
-        System.out.println( LoginInterface.generateHeader( "New User Account" ) ); //. prints header
+        System.out.println( generateHeader( "New User Account" ) ); //. prints header
 
         for( int i = 0; i < answers.length; i++ )
         {
@@ -221,5 +233,13 @@ public class HotelReservationApplication
 
 
         return answers;
+    }
+
+    // Method to generate a header with test passed in
+    public static String generateHeader( String titleIn )
+    {
+        String stars = "************************";
+        String title = String.format( "* %-20s *", titleIn );
+        return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 }

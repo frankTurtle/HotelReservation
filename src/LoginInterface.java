@@ -66,6 +66,14 @@ public class LoginInterface
         return returnStringArray;
     }
 
+    // Method to generate a header with test passed in
+    public static String generateHeader( String titleIn )
+    {
+        String stars = "************************";
+        String title = String.format( "* %-20s *", titleIn );
+        return String.format("%n%s%n%s%n%s%n", stars, title, stars);
+    }
+
     // Method to generate hte menu prompts for the new staff account
     public static String[] newAccountStaffMenu()
     {
@@ -76,13 +84,5 @@ public class LoginInterface
                                         };
 
         return returnStringArray;
-    }
-
-    // Method to generate a header with test passed in
-    public static String generateHeader( String titleIn )
-    {
-        String stars = "************************";
-        String title = String.format( "* %-20s *", titleIn );
-        return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 }
