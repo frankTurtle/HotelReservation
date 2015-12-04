@@ -34,7 +34,6 @@ public class Account
      */
     public Account( String firstName, String lastName, String accountType, String username, String password, int accountId )
     {
-        System.out.print("\n" + accountId);
         this.setFirstName( firstName );
         this.setLastName( lastName );
         this.setAccountType( accountType );

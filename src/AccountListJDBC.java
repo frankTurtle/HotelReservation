@@ -101,9 +101,8 @@ public class AccountListJDBC
     // Method to add a staff member to the DB
     public static void addStaffAccount( Account staff )
     {
-        String insertInto = ( staff.getAccountType().equals("A") ) ? "admin" : "staff_account"; //........ creates a string for the SQL to determine which table it will add the StaffMember to
         String sqlStatement = String.format( "INSERT INTO %s " +
-                                             "VALUES( %d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\' )", insertInto, 0, staff.getAccountType(), staff.getFirstName(), staff.getLastName(), staff.getUsername(), staff.getPassword() );
+                                             "VALUES( %d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\' )", "staff_account", 0, staff.getAccountType(), staff.getFirstName(), staff.getLastName(), staff.getUsername(), staff.getPassword() );
 
         try
         {
@@ -166,7 +165,7 @@ public class AccountListJDBC
 
     public static StaffAccount searchStaffAccount( String staffID )
     {
-        String sqlStatement = String.format( "SELECT * FROM staff_account WHERE account_id = %d", Integer.parseInt(staffID) );
+        String sqlStatement = String.format( "SELECT * FROM staff_account WHERE staff_account_id = %d", Integer.parseInt(staffID) );
         StaffAccount returnStaffMember = new StaffAccount();
 
         try
@@ -179,7 +178,7 @@ public class AccountListJDBC
                 returnStaffMember.setLastName( rs.getString("lname") );
                 returnStaffMember.setUsername( rs.getString("username") );
                 returnStaffMember.setPassword( rs.getString("password") );
-                returnStaffMember.setId( rs.getInt("account_id") );
+                returnStaffMember.setId( rs.getInt("staff_account_id") );
             }
         }
         catch( SQLException ex )
@@ -194,7 +193,7 @@ public class AccountListJDBC
 
     public static UserAccount searchUserAccount( String userID )
     {
-        String sqlStatement = String.format( "SELECT * FROM user_account WHERE account_id = %d", Integer.parseInt(userID) );
+        String sqlStatement = String.format( "SELECT * FROM user_account WHERE user_account_id = %d", Integer.parseInt(userID) );
         UserAccount returnUserAccount = new UserAccount();
 
         try
@@ -213,7 +212,7 @@ public class AccountListJDBC
                 returnUserAccount.setLastName( rs.getString("lname") );
                 returnUserAccount.setUsername( rs.getString("username") );
                 returnUserAccount.setPassword( rs.getString("password") );
-                returnUserAccount.setId( rs.getInt("account_id") );
+                returnUserAccount.setId( rs.getInt("user_account_id") );
             }
         }
         catch( SQLException ex )
@@ -253,17 +252,17 @@ public class AccountListJDBC
 
     public static void main( String[] args )
     {
-//        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel3", "A", "frank", "0234", 0) );
-//        System.out.print(AccountListJDBC.searchStaffAccount( "2" ).getId());
-        AccountListJDBC.deleteStaffAccount("4");
+//        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel3", "SA", "frank", "0234", 0) );
+//        System.out.print(AccountListJDBC.searchStaffAccount( "5" ).getId());
+//        AccountListJDBC.deleteStaffAccount("4");
 //        AccountListJDBC.deleteUserAccount("10");
 
-//        if( staffLogin("7", "0234") != null )
-//            System.out.print( staffLogin("3", "0234") );
-//        else
-//            System.out.print("NO!");
+        if( staffLogin("4", "0234") != null )
+            System.out.print( staffLogin("3", "0234") );
+        else
+            System.out.print("NO!");
 
 //        AccountListJDBC.addUserAccount( new UserAccount("bigb", "guuy", "U", "turtle", "1234", 80, "street", "city", "state", 1234, "email", 5151) );
-//        System.out.print(AccountListJDBC.searchUserAccount( "4" ).getId());
+//        System.out.print(AccountListJDBC.searchUserAccount( "2" ).getId());
     }
 }
