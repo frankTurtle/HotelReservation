@@ -102,64 +102,63 @@ public class DatabaseCreation
 
         //TODO CLEAN UP AND REMOVE COMMENTS
 
-        String createAccountTable = "CREATE TABLE Account " + //........................................... creates account table
-                                    "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //........;.......... PK
-                                    " UNIQUE( account_id ), " + //............................. makes sure the id and account type are unique
-                                    " PRIMARY KEY( account_id ), " + //.................................... sets the account_id as the PK
-                                    " fname VARCHAR(255), " + //........................................... attribute for first name
-                                    " lname VARCHAR(255), " + //........................................... attribute for last name
-                                    " username VARCHAR(255), " + //........................................ attribute for username
-                                    " password VARCHAR(255))"; //.......................................... attribute for password
+//        String createAccountTable = "CREATE TABLE Account " + //........................................... creates account table
+//                                    "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //........;.......... PK
+//                                    " UNIQUE( account_id ), " + //............................. makes sure the id and account type are unique
+//                                    " PRIMARY KEY( account_id ), " + //.................................... sets the account_id as the PK
+//                                    " fname VARCHAR(255), " + //........................................... attribute for first name
+//                                    " lname VARCHAR(255), " + //........................................... attribute for last name
+//                                    " username VARCHAR(255), " + //........................................ attribute for username
+//                                    " password VARCHAR(255))"; //.......................................... attribute for password
 
         String createUserAccountTable = "CREATE TABLE User_Account " + //.................................. creates user_account table
                                         "(user_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
-                                        " account_type CHAR(2) DEFAULT 'U' NOT NULL, " + //................ sets default account type to U
-                                        " account_id INTEGER NOT NULL, " +
+                                        " account_type CHAR(2) NOT NULL, " + //................ sets default account type to U
                                         " UNIQUE( user_account_id ), " + //....................................... makes sure the type and id are unique
-                                        " PRIMARY KEY( account_id ), " + //................................ sets the PK
-                                        " FOREIGN KEY( account_id ) REFERENCES Account( account_id )" + //...................... set the FKs
-                                        " ON UPDATE CASCADE ON DELETE CASCADE, " +
+                                        " PRIMARY KEY( user_account_id ), " + //................................ sets the PK
                                         " street VARCHAR(255), " + //...................................... attribute for street
                                         " city VARCHAR(255), " + //........................................ attribute for city
                                         " state VARCHAR(255), " + //....................................... attribute for state
                                         " zip INTEGER, " + //.............................................. attribute for zip
                                         " email VARCHAR(255), " + //....................................... attribute for email
-                                        " phone INTEGER )"; // + //.............................................. attribute for phone number
+                                        " phone INTEGER," + //.............................................. attribute for phone number
+                                        " fname VARCHAR(255), " + //........................................... attribute for first name
+                                        " lname VARCHAR(255), " + //........................................... attribute for last name
+                                        " username VARCHAR(255), " + //........................................ attribute for username
+                                        " password VARCHAR(255))";
 
 
         String createStaffAccountTable = "CREATE TABLE Staff_Account " + //................................ creates staff_account table
                                          "(staff_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //.............. PK
-                                         " account_type CHAR(2) DEFAULT 'SA' NOT NULL, " + //.............. sets default to staff account
-                                         " account_id INTEGER NOT NULL, " +
-                                         " UNIQUE(account_id), " + //...................................... makes sure the id and type are unique
+                                         " account_type CHAR(2) NOT NULL, " + //.............. sets default to staff account
+                                         " UNIQUE( staff_account_id ), " + //...................................... makes sure the id and type are unique
                                          " PRIMARY KEY( staff_account_id ), " + // +;//............................... sets PK
-                                         " FOREIGN KEY( account_id ) REFERENCES Account( account_id )" + //...................... set the FKs
-                                         " ON UPDATE CASCADE ON DELETE CASCADE )";
+                                         " fname VARCHAR(255), " + //........................................... attribute for first name
+                                         " lname VARCHAR(255), " + //........................................... attribute for last name
+                                         " username VARCHAR(255), " + //........................................ attribute for username
+                                         " password VARCHAR(255))";
 
-        String createAdminAccountTable = "CREATE TABLE Admin " + //........................................ creates admin table
-                                        "(admin_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
-                                        " account_type CHAR(2) DEFAULT 'A' NOT NULL, " + //................ sets default account type to A
-                                        " account_id INTEGER NOT NULL, " +
-                                        " UNIQUE(account_id), " + //....................................... makes sure the id and type are unique
-                                        " PRIMARY KEY( admin_account_id ), " + // + //................................ sets PK
-                                        " FOREIGN KEY( account_id ) REFERENCES Account( account_id )" + //...................... set the FKs
-                                        " ON UPDATE CASCADE ON DELETE CASCADE )";
+//        String createAdminAccountTable = "CREATE TABLE Admin " + //........................................ creates admin table
+//                                        "(admin_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
+//                                        " account_type CHAR(2) DEFAULT 'A' NOT NULL, " + //................ sets default account type to A
+//                                        " account_id INTEGER NOT NULL, " +
+//                                        " UNIQUE(account_id), " + //....................................... makes sure the id and type are unique
+//                                        " PRIMARY KEY( admin_account_id ), " + // + //................................ sets PK
+//                                        " FOREIGN KEY( account_id ) REFERENCES Account( account_id )" + //...................... set the FKs
+//                                        " ON UPDATE CASCADE ON DELETE CASCADE )";
 
         try
         {
             Statement statement = connection.createStatement(); //.......................................... create a new statement
 
-            statement.executeUpdate( createAccountTable ); //............................................... execute the statement to create the account table
-            System.out.println( "Account table created successfully!");
+//            statement.executeUpdate( createAccountTable ); //............................................... execute the statement to create the account table
+//            System.out.println( "Account table created successfully!");
 
             statement.executeUpdate( createUserAccountTable ); //........................................... execute the statement to create the user account table
             System.out.println( "User account table created successfully!");
 
             statement.executeUpdate( createStaffAccountTable ); //.......................................... execute the statement to create the staff account table
             System.out.println( "Staff account table created successfully!");
-
-            statement.executeUpdate( createAdminAccountTable ); //.......................................... execute the statement to create the admin account table
-            System.out.println( "Admin account table created successfully!");
         }
         catch ( SQLException se )
         {
@@ -174,11 +173,13 @@ public class DatabaseCreation
                                         "checkInTime CHAR(20), " + //check in time represented as a string
                                         "checkOutTime CHAR(20), " + //check out time represented as a string
                                         "paymentMethod CHAR(6), " + //"cash" or "credit"
-                                        "account_id INTEGER NOT NULL, " + //Foreign key 1
+                                        "user_account_id INTEGER NOT NULL, " + //Foreign key 1
+                                        "staff_account_id INTEGER NOT NULL, "+ //Foreign key 2
                                         "roomAmount INTEGER, " + //number of rooms reserved
                                         "roomNumber INTEGER, " + //the physical room number
                                         "PRIMARY KEY (reservationID), " +
-                                        "FOREIGN KEY (account_id) REFERENCES account(account_id) " +
+                                        "FOREIGN KEY ( user_account_id ) REFERENCES user_account( user_account_id ), " +
+                                        "FOREIGN KEY ( staff_account_id ) REFERENCES staff_account( staff_account_id ) "+
                                         "ON UPDATE CASCADE ON DELETE CASCADE)";
 
         try
