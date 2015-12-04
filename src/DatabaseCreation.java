@@ -88,7 +88,9 @@ public class DatabaseCreation
     private static void createTables( Connection connection )
     {
         createAccountTables( connection ); //................... create the account table
-        createReservationTables( connection );
+        createReservationTable( connection );
+        createAmenityTable( connection );
+        createRoomTable( connection );
     }
 
     // Method to create the account tables
@@ -166,7 +168,7 @@ public class DatabaseCreation
         }
     }
 
-    private static void createReservationTables( Connection connection )
+    private static void createReservationTable( Connection connection )
     {
         String createReservationTable = "CREATE TABLE Reservation" + //
                                         "(reservationID INTEGER NOT NULL, " + //Primary key
@@ -188,6 +190,52 @@ public class DatabaseCreation
 
             statement.executeUpdate( createReservationTable );
             System.out.println( "Reservation table created successfully!");
+        }
+        catch ( SQLException se )
+        {
+            se.printStackTrace();
+        }
+    }
+
+    private static void createAmenityTable( Connection connection )
+    {
+        String createamenityTable = "CREATE TABLE Amenity_Table" +
+                                    "(amenityid INTEGER NOT NULL," +
+                                    "PRIMARY KEY (amenityid)," +
+                                    "amenityname VARCHAR(50), " +
+                                    "status VARCHAR(50))";
+
+        try
+        {
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate( createamenityTable );
+            System.out.println( "Amenity table created successfully!");
+        }
+        catch ( SQLException se )
+        {
+            se.printStackTrace();
+        }
+    }
+
+    private static void createRoomTable( Connection connection )
+    {
+        String createRoomTable = "CREATE TABLE Room " + //...................... creates RoomList table
+                                 "(room_id INTEGER NOT NULL, " + //,,,,,,,,,,,,,,,,,,,,,,,,,............ PK
+                                 " room_type VARCHAR(255) NOT NULL, " + //.............................. attribute for room type
+                                 " Status char(2), " + //............................................... attrubute for status
+                                 " UNIQUE(room_id), " + //............................. makes sure the id and account type are unique
+                                 " PRIMARY KEY( room_id ), " + //....................................... sets the account_id as the PK
+                                 " roomPrice float8, " + //............................................. attribute for roomprice
+                                 " description VARCHAR(255), " + //..................................... attribute for description
+                                 " capacity Integer)"; //........................................ attribute for capacity
+
+        try
+        {
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate( createRoomTable );
+            System.out.println( "RoomList table created successfully!");
         }
         catch ( SQLException se )
         {
