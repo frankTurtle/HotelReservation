@@ -218,7 +218,7 @@ public class AccountListJDBC
     }
 
 //    public static void updateUserAccountByStaff()
-    //    {
+//    {
 //
 //    }
 //
@@ -237,15 +237,9 @@ public class AccountListJDBC
         return ( searchUserAccount(userID).getPassword().equals(password) ) ? searchUserAccount( userID ) : null;
     }
 
-//    public static boolean staffLogout()
-//    {
-//
-//    }
-//
-//    public static  boolean userLogout()
-//    {
-//
-//    }
+    public static boolean staffLogout() { return true; }
+
+    public static  boolean userLogout() { return true;}
 
 
     public static void main( String[] args )
@@ -259,7 +253,7 @@ public class AccountListJDBC
 //            System.out.print("NO!");
 
 //        AccountListJDBC.addUserAccount( new UserAccount("bigb", "guuy", "U", "turtle", "1234", 80, "street", "city", "state", 1234, "email", 5151) );
-        System.out.print(AccountListJDBC.searchUserAccount( "4" ).getId());
+//        System.out.print(AccountListJDBC.searchUserAccount( "4" ).getId());
 
 //        AccountListJDBC list = new AccountListJDBC();
 //
