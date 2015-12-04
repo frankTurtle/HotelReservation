@@ -20,6 +20,8 @@ public class HotelReservationApplication
                 {
                     if (login() != null)
                     {
+                        //todo welcome interface
+                        //todo create account
                         System.out.print("Display welcome interface");
                         break;
                     }
