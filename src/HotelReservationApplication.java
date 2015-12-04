@@ -4,6 +4,7 @@
 
 
 import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class HotelReservationApplication
@@ -12,26 +13,57 @@ public class HotelReservationApplication
 
     public static void main( String[] args )
     {
-        if( initialMenuChoice() == 1 ) //............. if the user wants to login
+        switch( initialMenuChoice() )
         {
-            String[] accountCredentials = login();
+            case 1:
+                while(true)
+                {
+                    if (login() != null)
+                    {
+                        System.out.print("Display welcome interface");
+                        break;
+                    }
+                    else
+                        System.out.print("\nInvalid username or password, try again\n");
+                }
+                break;
 
-            // TODO: 12/2/15 NEEDS TO VERIFY CREDENTIALS
+            case 2:
+                newAccountMenu();
+                break;
+
+            case 3:
+                System.out.println("\nGoodbye!\n");
+                System.exit(0);
         }
-        else if( newAccountMenuChoice() == 1 ) //..... user wants to create a new Staff account
-        {
-            // TODO: 12/2/15 HAVE USER LOGIN TO ADMIN ACCOUNT
-        }
-        else //....................................... creates a new User account
-        {
-            String [] userAccountAnswers = newUserAccountMenu();
 
-            for( String item : userAccountAnswers )
-                System.out.println( item );
 
-            // TODO: 12/2/15 CREATE USER ACCOUNT WITH ANSWERS IN ARRAY
-        }
-
+//        if( initialMenuChoice() == 1 ) //............. if the user wants to login
+//        {
+//            while(true)
+//            {
+//                if (login() != null)
+//                {
+//                    System.out.print("Display welcome interface");
+//                    break;
+//                }
+//                else
+//                    System.out.print("\nInvalid username or password, try again\n");
+//            }
+//        }
+//        else if( newAccountMenuChoice() == 1 ) //..... user wants to create a new Staff account
+//        {
+//            // TODO: 12/2/15 HAVE USER LOGIN TO ADMIN ACCOUNT
+//        }
+//        else //....................................... creates a new User account
+//        {
+//            String [] userAccountAnswers = newUserAccountMenu();
+//
+//            for( String item : userAccountAnswers )
+//                System.out.println( item );
+//
+//            // TODO: 12/2/15 CREATE USER ACCOUNT WITH ANSWERS IN ARRAY
+//        }
     }
 
     // Method to display and process the initial menu
@@ -44,29 +76,43 @@ public class HotelReservationApplication
                                      LoginInterface.initialMenu()
                                     }; //................................................. strings to pass in in for prompts
 
-        return errorCheckWithinRange( displayThisText, 1, 2 ); //.................................... display prompts / get response / error check
+        return errorCheckWithinRange( displayThisText, 1, 3 ); //.................................... display prompts / get response / error check
     }
 
     // Method to display and process the login
-    // returns a String array with the credentials entered
-    private static String[] login()
+    // returns boolean if it logged in or not
+    private static Account login()
     {
-        String[] returnString = new String[ LoginInterface.loginPrompt("").length ];
-        String[] displayThisText = { LoginInterface.generateHeader("Login"),
-                                    "Please Choose from the following: \n",
-                                    "1.User login\n",
-                                    "2.Staff login\n>:"
-                                    }; //................................................. strings to pass in for prompts
+        final int USERNAME = 0;
+        final int PASSWORD = 1;
+
+        String[] credentials = new String[ LoginInterface.loginPrompt("").length ];
+        String[] displayThisText = LoginInterface.userOrStaffMenu(); //................................................. strings to pass in for prompts
 
         String answer = ( errorCheckWithinRange(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
-        for( int i = 0; i < returnString.length; i++ ) //................................. loop through the questions to get answers
+        for( int i = 0; i < credentials.length; i++ ) //................................. loop through the questions to get answers
         {
-            System.out.print( LoginInterface.loginPrompt(answer)[i] ); //................. display question
-            returnString[ i ] = console.next(); //........................................ get answer
+            System.out.print(LoginInterface.loginPrompt(answer)[i]); //................. display question
+            try
+            {
+                credentials[i] = console.next(); //......................................... get answer
+                int testForInt = Integer.parseInt(credentials[0] );
+            }
+            catch ( NumberFormatException e )
+            {
+                System.out.println( "\nUserID must be an integer, try again!\n" );
+                i--;
+            }
         }
 
-        return returnString;
+        if( answer.equals("user") )
+        {
+            return AccountListJDBC.userLogin(credentials[USERNAME], credentials[PASSWORD]);
+
+        }
+        else
+            return AccountListJDBC.staffLogin( credentials[USERNAME], credentials[PASSWORD] );
     }
 
     // Method to display and process the new account menu
@@ -80,8 +126,35 @@ public class HotelReservationApplication
                                     }; //..................................................... strings for prompts
 
         return errorCheckWithinRange( displayThisText, 1, 2 ); //........................................ display prompts / get response / error check
-
     }
+
+    private static void newAccountMenu()
+    {
+        switch( newAccountMenuChoice() )
+        {
+            case 1:
+                System.out.print("Choice 1");
+                //todo make user login with ADMIN account
+                break;
+
+            case 2:
+                String [] answers = newUserAccountMenu();
+                String username = String.format( "%s%s", answers[0].substring(0,1), answers[1]  );
+                String street = answers[4] + " " + answers[5];
+                int zip = Integer.parseInt( answers[8] );
+                int phone = Integer.parseInt( answers[10] );
+
+
+                UserAccount addNewUser = new UserAccount( answers[0], answers[1], "U",  username,
+                                                          answers[2], 0, street,  answers[6],
+                                                          answers[7], zip, answers[9], phone
+                                                        );
+
+                AccountListJDBC.addUserAccount( addNewUser );
+                break;
+        }
+    }
+
 
     // Method to check for input errors
     // takes the low and high for range of values to test within
@@ -109,7 +182,7 @@ public class HotelReservationApplication
             {
                 System.out.println( e.getMessage() ); //.................................................................. print message
             }
-        }while ( choice != low && choice != high ); //.................................................................... loop while choice is outside bounds
+        }while ( choice <= low && choice >= high ); //.................................................................... loop while choice is outside bounds
 
         return choice;
     }
@@ -142,6 +215,7 @@ public class HotelReservationApplication
                 i--;
             }
         }
+
 
         return answers;
     }

@@ -10,16 +10,28 @@ public class LoginInterface
     {
         String returnString = "Please choose from the following:\n";
         returnString += "1. Login\n";
-        returnString += "2. Create a new Account\n>:";
+        returnString += "2. Create a new Account\n";
+        returnString += "3. Exit\n>:";
 
         return returnString;
+    }
+
+    public static String[] userOrStaffMenu()
+    {
+        String[] returnStringArray = { LoginInterface.generateHeader("Login"),
+                                    "Please Choose from the following: \n",
+                                    "1.User login\n",
+                                    "2.Staff login\n>:"
+                                     };
+
+        return returnStringArray;
     }
 
     // Method to display the prompt to login
     // asks for login and password
     public static String[] loginPrompt( String userOrStaff )
     {
-        String[] returnStringArray = { userOrStaff.equals("user") ? "User First Name: " : "Staff First Name: ",
+        String[] returnStringArray = { userOrStaff.equals("user") ? "UserID: " : "StaffID: ",
                                        "Password: "};
 
         return returnStringArray;
