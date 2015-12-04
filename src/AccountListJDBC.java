@@ -13,8 +13,8 @@ public class AccountListJDBC
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
     static final String USER = "root"; //............................................ database login credentials
     static final String PASS = "1234567890";
-    static Connection connection = connectToDatabase();
-    static Statement statement = connectStatement();
+    protected static Connection connection = connectToDatabase();
+    protected static Statement statement = connectStatement();
 
     // Default Constructor
     // setup connection
@@ -248,7 +248,9 @@ public class AccountListJDBC
 
     public static void main( String[] args )
     {
-        System.out.print(AccountListJDBC.searchStaffAccount( "0" ));
+        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel", "SA", "frank", "0234", 0) );
+        System.out.print(AccountListJDBC.searchStaffAccount( "3" ).getId());
+
 //        AccountListJDBC list = new AccountListJDBC();
 //
 //        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "SA", "staffUsername", "0234", 0));
