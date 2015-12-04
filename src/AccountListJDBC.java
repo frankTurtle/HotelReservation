@@ -112,7 +112,7 @@ public class AccountListJDBC
     public static void addUserAccount( UserAccount user )
     {
         String sqlStatement = String.format( "INSERT INTO user_account " +
-                "VALUES( %d, \'%s\', '%s', '%s', '%s', %d, '%s', %d, \'%s\', \'%s\', \'%s\', \'%s\' )", 0, user.getAccountType(), user.getStreet(), user.getCity(), user.getState(), user.getZipCode(), user.getEmailAddress(), user.getPhoneNumber(), user.getFirstName(), user.getLastName(), user.getUsername(), user.getPassword() );
+                                             "VALUES( %d, \'%s\', '%s', '%s', '%s', %d, '%s', %d, \'%s\', \'%s\', \'%s\', \'%s\' )", 0, user.getAccountType(), user.getStreet(), user.getCity(), user.getState(), user.getZipCode(), user.getEmailAddress(), user.getPhoneNumber(), user.getFirstName(), user.getLastName(), user.getUsername(), user.getPassword() );
 
         try
         {
@@ -227,13 +227,13 @@ public class AccountListJDBC
 //
     public static StaffAccount staffLogin( String staffID , String password )
     {
-        return ( searchStaffAccount(staffID).getPassword().equals(password) ) ? searchStaffAccount(staffID) : null;
+        return ( searchStaffAccount(staffID).getPassword().equals(password) ) ? searchStaffAccount( staffID ) : null;
     }
-//
-//    public static  UserAccount userLogin(String userId , String passwd)
-//    {
-//
-//    }
+
+    public static  UserAccount userLogin( String userID , String password )
+    {
+        return ( searchUserAccount(userID).getPassword().equals(password) ) ? searchUserAccount( userID ) : null;
+    }
 
 //    public static boolean staffLogout()
 //    {
@@ -250,11 +250,14 @@ public class AccountListJDBC
     {
 //        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel", "SA", "frank", "0234", 0) );
 //        System.out.print(AccountListJDBC.searchStaffAccount( "3" ).getId());
+//
+//        if( staffLogin("7", "0234") != null )
+//            System.out.print( staffLogin("3", "0234") );
+//        else
+//            System.out.print("NO!");
 
-        if( staffLogin("7", "0234") != null )
-            System.out.print( staffLogin("3", "0234") );
-        else
-            System.out.print("NO!");
+//        AccountListJDBC.addUserAccount( new UserAccount("bigb", "guuy", "U", "turtle", "1234", 80, "street", "city", "state", 1234, "email", 5151) );
+        System.out.print(AccountListJDBC.searchUserAccount( "3" ).getId());
 
 //        AccountListJDBC list = new AccountListJDBC();
 //
