@@ -225,10 +225,10 @@ public class AccountListJDBC
 //
 //    }
 //
-//    public static StaffAccount staffLogin( String staffID , String password )
-//    {
-//        return ( searchStaffAccount(staffID).getPassword().equals(password) ) ? searchStaffAccount(staffID) : new StaffAccount();
-//    }
+    public static StaffAccount staffLogin( String staffID , String password )
+    {
+        return ( searchStaffAccount(staffID).getPassword().equals(password) ) ? searchStaffAccount(staffID) : null;
+    }
 //
 //    public static  UserAccount userLogin(String userId , String passwd)
 //    {
@@ -248,8 +248,13 @@ public class AccountListJDBC
 
     public static void main( String[] args )
     {
-        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel", "SA", "frank", "0234", 0) );
-        System.out.print(AccountListJDBC.searchStaffAccount( "3" ).getId());
+//        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel", "SA", "frank", "0234", 0) );
+//        System.out.print(AccountListJDBC.searchStaffAccount( "3" ).getId());
+
+        if( staffLogin("7", "0234") != null )
+            System.out.print( staffLogin("3", "0234") );
+        else
+            System.out.print("NO!");
 
 //        AccountListJDBC list = new AccountListJDBC();
 //
