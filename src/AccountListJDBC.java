@@ -13,8 +13,9 @@ public class AccountListJDBC
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
     static final String USER = "root"; //............................................ database login credentials
     static final String PASS = "1234567890";
-    protected static Connection connection = connectToDatabase();
-    protected static Statement statement = connectStatement();
+
+    protected static Connection connection = connectToDatabase(); //................. connection to DB
+    protected static Statement statement = connectStatement(); //.................... way to execute SQL
 
     // Default Constructor
     // setup connection
@@ -56,9 +57,11 @@ public class AccountListJDBC
         }
     }
 
+    // Helper Method to setup the connection to the DB
+    // returns Connection object
     protected static Connection connectToDatabase()
     {
-        Connection returnConnection = null;
+        Connection returnConnection = null; //............................................ connection object to return
 
         try
         {
@@ -77,9 +80,12 @@ public class AccountListJDBC
         return returnConnection;
     }
 
+    // Helper Method to hookup the statement object to the connection to the DB
+    // returns Statement object
     protected static Statement connectStatement()
     {
-        Statement returnStatement = null;
+        Statement returnStatement = null; //..................... statement object
+
         try
         {
             returnStatement = connection.createStatement();
@@ -92,16 +98,17 @@ public class AccountListJDBC
         return returnStatement;
     }
 
+    // Method to add a staff member to the DB
     public static void addStaffAccount( Account staff )
     {
-        String insertInto = ( staff.getAccountType().equals("A") ) ? "admin" : "staff_account";
+        String insertInto = ( staff.getAccountType().equals("A") ) ? "admin" : "staff_account"; //........ creates a string for the SQL to determine which table it will add the StaffMember to
         String sqlStatement = String.format( "INSERT INTO %s " +
                                              "VALUES( %d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\' )", insertInto, 0, staff.getAccountType(), staff.getFirstName(), staff.getLastName(), staff.getUsername(), staff.getPassword() );
 
         try
         {
-            statement.executeUpdate( sqlStatement );
-            System.out.print("Success");
+            statement.executeUpdate( sqlStatement ); //................................................... RUN SQL CODE!
+            System.out.printf( "Successfully added %s", staff.getUsername() );
         }
         catch( Exception e )
         {
@@ -109,6 +116,7 @@ public class AccountListJDBC
         }
     }
 
+    // Method to add a user to the DB
     public static void addUserAccount( UserAccount user )
     {
         String sqlStatement = String.format( "INSERT INTO user_account " +
@@ -117,7 +125,7 @@ public class AccountListJDBC
         try
         {
             statement.executeUpdate( sqlStatement );
-            System.out.print("Success");
+            System.out.printf( "Successfully added %s", user.getUsername() );
         }
         catch( Exception e )
         {
@@ -127,12 +135,13 @@ public class AccountListJDBC
 
     public static void deleteStaffAccount( String staffID )
     {
-        String sqlStatement = String.format("DELETE FROM staff_account WHERE account_id = %d", Integer.parseInt(staffID) );
+//        String insertInto = ( searchStaffAccount(staffID).getAccountType().equals("A") ) ? "admin" : "staff_account" ;
+        int id = Integer.parseInt( staffID );
+        String sqlStatement = String.format("DELETE FROM staff_account WHERE account_id = %d", id );
 
         try
         {
-            statement.executeUpdate( sqlStatement );
-            System.out.print("Successfully deleted staffID: " + staffID);
+            System.out.println( ( statement.executeUpdate( sqlStatement ) == 1 ) ? String.format("Successfully deleted StaffID: %d", id ) : String.format("Sorry, StaffID: %d is not found", id) );
         }
         catch( Exception e )
         {
@@ -142,12 +151,12 @@ public class AccountListJDBC
 
     public static void deleteUserAccount( String userID )
     {
-        String sqlStatement = String.format("DELETE FROM user_account WHERE account_id = %d", Integer.parseInt(userID) );
+        int id = Integer.parseInt( userID );
+        String sqlStatement = String.format("DELETE FROM user_account WHERE account_id = %d", id );
 
         try
         {
-            statement.executeUpdate( sqlStatement );
-            System.out.print("Successfully deleted staffID: " + userID);
+            System.out.println( ( statement.executeUpdate( sqlStatement ) == 1 ) ? String.format("Successfully deleted UserID: %d", id ) : String.format("Sorry, UserID: %d is not found", id) );
         }
         catch( Exception e )
         {
@@ -244,9 +253,11 @@ public class AccountListJDBC
 
     public static void main( String[] args )
     {
-//        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel", "SA", "frank", "0234", 0) );
-//        System.out.print(AccountListJDBC.searchStaffAccount( "3" ).getId());
-//
+//        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel3", "A", "frank", "0234", 0) );
+//        System.out.print(AccountListJDBC.searchStaffAccount( "2" ).getId());
+        AccountListJDBC.deleteStaffAccount("4");
+//        AccountListJDBC.deleteUserAccount("10");
+
 //        if( staffLogin("7", "0234") != null )
 //            System.out.print( staffLogin("3", "0234") );
 //        else
@@ -254,15 +265,5 @@ public class AccountListJDBC
 
 //        AccountListJDBC.addUserAccount( new UserAccount("bigb", "guuy", "U", "turtle", "1234", 80, "street", "city", "state", 1234, "email", 5151) );
 //        System.out.print(AccountListJDBC.searchUserAccount( "4" ).getId());
-
-//        AccountListJDBC list = new AccountListJDBC();
-//
-//        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "SA", "staffUsername", "0234", 0));
-//        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "A", "staffUsername", "0000", 0));
-//        list.addUserAccount( new UserAccount("userFirst", "userLast", "U", "username", "password", 0, "street", "city", "state", 1234, "email", 12345));
-////        list.deleteStaffAccount( "3" );
-//        list.deleteUserAccount( "1" );
-////        System.out.println( list.searchStaffAccount( "5" ) );
-//        System.out.println( list.searchUserAccount( "5" ) );
     }
 }
