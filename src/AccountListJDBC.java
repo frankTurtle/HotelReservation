@@ -13,8 +13,8 @@ public class AccountListJDBC
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
     static final String USER = "root"; //............................................ database login credentials
     static final String PASS = "1234567890";
-    static Connection connection = null;
-    static Statement statement = null;
+    static Connection connection = connectToDatabase();
+    static Statement statement = connectStatement();
 
     // Default Constructor
     // setup connection
@@ -56,7 +56,7 @@ public class AccountListJDBC
         }
     }
 
-    private static Connection connectToDatabase()
+    protected static Connection connectToDatabase()
     {
         Connection returnConnection = null;
 
@@ -75,6 +75,21 @@ public class AccountListJDBC
         }
 
         return returnConnection;
+    }
+
+    protected static Statement connectStatement()
+    {
+        Statement returnStatement = null;
+        try
+        {
+            returnStatement = connection.createStatement();
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+
+        return returnStatement;
     }
 
     public static void addStaffAccount( Account staff )
@@ -140,7 +155,7 @@ public class AccountListJDBC
         }
     }
 
-    public StaffAccount searchStaffAccount( String staffID )
+    public static StaffAccount searchStaffAccount( String staffID )
     {
         String sqlStatement = String.format( "SELECT * FROM staff_account WHERE account_id = %d", Integer.parseInt(staffID) );
         StaffAccount returnStaffMember = new StaffAccount();
@@ -167,7 +182,7 @@ public class AccountListJDBC
         return returnStaffMember;
     }
 
-    public UserAccount searchUserAccount( String userID )
+    public static UserAccount searchUserAccount( String userID )
     {
         String sqlStatement = String.format( "SELECT * FROM user_account WHERE account_id = %d", Integer.parseInt(userID) );
         UserAccount returnUserAccount = new UserAccount();
@@ -200,12 +215,32 @@ public class AccountListJDBC
         return returnUserAccount;
     }
 
+//    public static void updateUserAccountByStaff()
+    //    {
+//
+//    }
+//
 //    public static void updateStaffAccount()
 //    {
 //
 //    }
 //
-//    public static void updateUserAccount()
+//    public static StaffAccount staffLogin( String staffID , String password )
+//    {
+//        return ( searchStaffAccount(staffID).getPassword().equals(password) ) ? searchStaffAccount(staffID) : new StaffAccount();
+//    }
+//
+//    public static  UserAccount userLogin(String userId , String passwd)
+//    {
+//
+//    }
+
+//    public static boolean staffLogout()
+//    {
+//
+//    }
+//
+//    public static  boolean userLogout()
 //    {
 //
 //    }
@@ -213,14 +248,15 @@ public class AccountListJDBC
 
     public static void main( String[] args )
     {
-        AccountListJDBC list = new AccountListJDBC();
-
-        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "SA", "staffUsername", "0234", 0));
-        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "A", "staffUsername", "0000", 0));
-        list.addUserAccount( new UserAccount("userFirst", "userLast", "U", "username", "password", 0, "street", "city", "state", 1234, "email", 12345));
-//        list.deleteStaffAccount( "3" );
-        list.deleteUserAccount( "1" );
-//        System.out.println( list.searchStaffAccount( "5" ) );
-        System.out.println( list.searchUserAccount( "5" ) );
+        System.out.print(AccountListJDBC.searchStaffAccount( "0" ));
+//        AccountListJDBC list = new AccountListJDBC();
+//
+//        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "SA", "staffUsername", "0234", 0));
+//        list.addStaffAccount( new StaffAccount("staffFirst", "staffLast", "A", "staffUsername", "0000", 0));
+//        list.addUserAccount( new UserAccount("userFirst", "userLast", "U", "username", "password", 0, "street", "city", "state", 1234, "email", 12345));
+////        list.deleteStaffAccount( "3" );
+//        list.deleteUserAccount( "1" );
+////        System.out.println( list.searchStaffAccount( "5" ) );
+//        System.out.println( list.searchUserAccount( "5" ) );
     }
 }
