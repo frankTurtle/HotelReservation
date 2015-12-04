@@ -11,16 +11,18 @@ public class HotelReservationApplication
 
     public static void main( String[] args )
     {
+        Account account;
+
         switch( initialMenuChoice() )
         {
             case 1:
                 while(true)
                 {
-                    if (login() != null)
+                    account = login();
+                    if (account != null)
                     {
                         //todo welcome interface
-                        //todo create account
-                        System.out.print("Display welcome interface");
+                        System.out.print(account);
                         break;
                     }
                     else
