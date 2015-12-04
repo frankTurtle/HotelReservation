@@ -2,9 +2,7 @@
  * Created by Barret J. Nobel on 12/1/2015.
  */
 
-
 import java.util.InputMismatchException;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class HotelReservationApplication
@@ -179,12 +177,13 @@ public class HotelReservationApplication
             {
                 System.out.println("\nValue must be an integer, try again!"); //.......................................... display message
                 Object temp = console.next(); //.......................................................................... capture lingering input
+                choice = 0;
             }
             catch ( Exception e ) //...................................................................................... generic exception
             {
                 System.out.println( e.getMessage() ); //.................................................................. print message
             }
-        }while ( choice <= low && choice >= high ); //.................................................................... loop while choice is outside bounds
+        }while ( choice < low || choice > high ); //.................................................................... loop while choice is outside bounds
 
         return choice;
     }
