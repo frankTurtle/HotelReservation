@@ -22,7 +22,7 @@ public class AccountListJDBC
     // loads accountArrayList with all Accounts from the DB
     AccountListJDBC()
     {
-        accountArrayList = new ArrayList<>();
+        accountArrayList = new ArrayList();
 
         try
         {
