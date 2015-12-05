@@ -197,8 +197,6 @@ public class HotelReservationApplication
                     String username = String.format( "%s%s", answers[0].substring(0,1), answers[1]  );
                     String adminOrNot =  answers[4].toLowerCase().equals("y") ? "A" : "SA";
 
-                    System.out.print(adminOrNot);
-
                     StaffAccount addNewStaff = new StaffAccount( answers[0], answers[1], adminOrNot, username, answers[2], 0);
 
                     AccountListJDBC.addStaffAccount( addNewStaff );
