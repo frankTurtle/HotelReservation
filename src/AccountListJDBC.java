@@ -246,10 +246,7 @@ public class AccountListJDBC
         return ( searchUserAccount(userID).getPassword().equals(password) ) ? searchUserAccount( userID ) : null;
     }
 
-    public static boolean staffLogout() { return true; }
-
-    public static  boolean userLogout() { return true;}
-
+    public static Object logout() { return null; }
 
     public static void main( String[] args )
     {

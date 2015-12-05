@@ -58,7 +58,7 @@ public class HotelReservationApplication
 
                     case 3: //........................................................................................... exit program
                         System.out.println("\nGoodBye!\n");
-                        System.exit(0);
+                        account = (Account)AccountListJDBC.logout(); //.................................................. sets account to null upon logout
                         break;
                 }
             }
