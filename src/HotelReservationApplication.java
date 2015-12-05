@@ -99,7 +99,7 @@ public class HotelReservationApplication
                     break;
 
 
-                case 1: //............. admin
+                case 1: //............................................................ admin
                     switch( afterLoginAccountManagementChoice(person) )
                     {
                         //todo FINISH ALL CASES
