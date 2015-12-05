@@ -20,18 +20,7 @@ public class HotelReservationApplication
                 switch (initialMenuChoice()) //.......................................................................... present the login interface
                 {
                     case 1: //........................................................................................... logging in
-                        while (true)
-                        {
-                            account = login(); //........................................................................ gets account object to login to
-
-                            if (account != null) //...................................................................... if the account is valid
-                            {
-                                System.out.printf("Welcome %s %s%n%n", account.getFirstName(), account.getLastName()); //. welcome them
-                                break;
-                            }
-
-                            System.out.print("\nInvalid username or password, try again\n"); //.......................... the account is not valid
-                        }
+                        loginPicked();
                         break;
 
                     case 2: //........................................................................................... create a new account
@@ -212,6 +201,22 @@ public class HotelReservationApplication
         }
         else
             return AccountListJDBC.staffLogin( credentials[USERNAME], credentials[PASSWORD] );
+    }
+
+    private static void loginPicked()
+    {
+        while (true)
+        {
+            account = login(); //........................................................................ gets account object to login to
+
+            if (account != null) //...................................................................... if the account is valid
+            {
+                System.out.printf("Welcome %s %s%n%n", account.getFirstName(), account.getLastName()); //. welcome them
+                break;
+            }
+
+            System.out.print("\nInvalid username or password, try again\n"); //.......................... the account is not valid
+        }
     }
 
     // Method to display and process the new account menu
