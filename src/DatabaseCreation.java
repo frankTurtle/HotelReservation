@@ -15,6 +15,8 @@ public class DatabaseCreation
 
     public static void main(String[] args)
     {
+        //TODO: ask user for DB login credentials
+
         Connection conn = null; //............................................ connection to the DB
         Statement stmt = null; //............................................. statement to execute
 
