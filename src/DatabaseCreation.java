@@ -101,18 +101,6 @@ public class DatabaseCreation
     // creates staff member account
     private static void createAccountTables( Connection connection )
     {
-
-        //TODO CLEAN UP AND REMOVE COMMENTS
-
-//        String createAccountTable = "CREATE TABLE Account " + //........................................... creates account table
-//                                    "(account_id INTEGER NOT NULL AUTO_INCREMENT, " + //........;.......... PK
-//                                    " UNIQUE( account_id ), " + //............................. makes sure the id and account type are unique
-//                                    " PRIMARY KEY( account_id ), " + //.................................... sets the account_id as the PK
-//                                    " fname VARCHAR(255), " + //........................................... attribute for first name
-//                                    " lname VARCHAR(255), " + //........................................... attribute for last name
-//                                    " username VARCHAR(255), " + //........................................ attribute for username
-//                                    " password VARCHAR(255))"; //.......................................... attribute for password
-
         String createUserAccountTable = "CREATE TABLE User_Account " + //.................................. creates user_account table
                                         "(user_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
                                         " account_type CHAR(2) NOT NULL, " + //................ sets default account type to U
@@ -140,21 +128,9 @@ public class DatabaseCreation
                                          " username VARCHAR(255), " + //........................................ attribute for username
                                          " password VARCHAR(255))";
 
-//        String createAdminAccountTable = "CREATE TABLE Admin " + //........................................ creates admin table
-//                                        "(admin_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
-//                                        " account_type CHAR(2) DEFAULT 'A' NOT NULL, " + //................ sets default account type to A
-//                                        " account_id INTEGER NOT NULL, " +
-//                                        " UNIQUE(account_id), " + //....................................... makes sure the id and type are unique
-//                                        " PRIMARY KEY( admin_account_id ), " + // + //................................ sets PK
-//                                        " FOREIGN KEY( account_id ) REFERENCES Account( account_id )" + //...................... set the FKs
-//                                        " ON UPDATE CASCADE ON DELETE CASCADE )";
-
         try
         {
             Statement statement = connection.createStatement(); //.......................................... create a new statement
-
-//            statement.executeUpdate( createAccountTable ); //............................................... execute the statement to create the account table
-//            System.out.println( "Account table created successfully!");
 
             statement.executeUpdate( createUserAccountTable ); //........................................... execute the statement to create the user account table
             System.out.println( "User account table created successfully!");
