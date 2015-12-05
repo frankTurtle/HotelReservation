@@ -26,7 +26,7 @@ public class AccountManagementInterface
                 returnString += "1. View my account\n";
                 returnString += "2. View all accounts\n";
                 returnString += "3. Create a new account\n";
-                returnString += "4. Previous menu\n";
+                returnString += "4. Previous menu\n>:";
                 break;
 
             case 2: //.......................................................................... USER
@@ -34,7 +34,7 @@ public class AccountManagementInterface
                 returnString += "1. View my account\n";
                 returnString += "2. Update my account\n";
                 returnString += "3. Delete my account\n";
-                returnString += "4. Previous menu\n";
+                returnString += "4. Previous menu\n>:";
                 break;
         }
 

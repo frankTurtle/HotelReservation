@@ -56,13 +56,13 @@ public class HotelReservationApplication
 
     // Method to determine which choice from the menu
     // after you login and choose account management
-    private static int afterLoginAccountManagementChoice( Account person)
+    private static int afterLoginAccountManagementChoice( Account person )
     {
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
                                      AccountManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
         //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
-        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 3 : 3; //.... sets the max for response based on account questions
+        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 3; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
     }
@@ -77,10 +77,9 @@ public class HotelReservationApplication
         {
             switch( type )
             {
-                case 0: //............. user
+                case 0: //............................................................. user
                     switch( afterLoginAccountManagementChoice(person) )
                     {
-                        //todo FINISH ALL CASES
                         case 1: //..................................................... view my account
                             System.out.println( person );
                             break;
@@ -94,6 +93,7 @@ public class HotelReservationApplication
                             break;
 
                         case 4: //..................................................... go to previous menu
+                            stopLoop = true;
                             break;
                     }
                     break;
@@ -104,6 +104,7 @@ public class HotelReservationApplication
                     {
                         //todo FINISH ALL CASES
                         case 1: //..................................................... view my account
+                            System.out.println( person );
                             break;
 
                         case 2: //.................................................... view all accounts
