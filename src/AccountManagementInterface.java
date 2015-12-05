@@ -3,14 +3,16 @@
  */
 public class AccountManagementInterface
 {
+    // Method to display the initial menu
+    // has three different paths depending on who's logged in
     public static String initialMenu( String accountType )
     {
         String returnString = "Please choose from the following:\n";
-        int type = ( accountType.equals("U") ) ? 2 : ( accountType.equals("A") ) ? 3 : 0;
+        int type = ( accountType.equals("U") ) ? 2 : ( accountType.equals("A") ) ? 3 : 0; //... determines if its a user / staff / admin
 
         switch( type ) //todo update all the questions for each type of account
         {
-            case 3: //....... ADMIN
+            case 3: //......................................................................... ADMIN
                 returnString += "1. View my account\n";
                 returnString += "2. View all accounts\n";
                 returnString += "3. Create a new account\n";
@@ -18,21 +20,20 @@ public class AccountManagementInterface
                 returnString += "5. Previous menu\n>:";
                 break;
 
-            case 0: //........STAFF
+            case 0: //......................................................................... STAFF
                 returnString += "STAFF MENU\n";
                 returnString += "1. Account Management\n";
                 returnString += "2. Reservation Management\n";
                 returnString += "3. Exit\n>:";
                 break;
 
-            case 2: //........ USER
+            case 2: //.......................................................................... USER
                 returnString += "USER MENU\n";
                 returnString += "1. Account Management\n";
                 returnString += "2. Reservation Management\n";
                 returnString += "3. Exit\n>:";
                 break;
         }
-
 
         return returnString;
     }
@@ -77,6 +78,5 @@ public class AccountManagementInterface
 
         return returnStringArray;
     }
-
 
 }
