@@ -7,8 +7,6 @@ import java.sql.*;
 
 public class AccountListJDBC
 {
-    ArrayList< Account > accountArrayList; // = new ArrayList<>();
-
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; //.................... JDBC driver
     static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation"; //. URL to locate the DB
     static final String USER = "root"; //............................................ database login credentials
@@ -17,20 +15,17 @@ public class AccountListJDBC
     protected static Connection connection = connectToDatabase(); //................. connection to DB
     protected static Statement statement = connectStatement(); //.................... way to execute SQL
 
-    // Default Constructor
-    // setup connection
-    // loads accountArrayList with all Accounts from the DB
-    AccountListJDBC()
+    // Method to return all Accounts in DB
+    public static ArrayList<Account> getAllAccounts()
     {
-        accountArrayList = new ArrayList();
+        ArrayList<Account> accountArrayList = new ArrayList<Account>();
 
         try
         {
             connection = connectToDatabase();
             statement = connection.createStatement();
 
-            String[] sqlStrings = { "SELECT * FROM admin",
-                                    "SELECT * FROM staff_account",
+            String[] sqlStrings = { "SELECT * FROM staff_account",
                                     "SELECT * FROM user_account"
                                     };
 
@@ -41,9 +36,9 @@ public class AccountListJDBC
                 while ( rs.next() )
                 {
                     if( sqlCommand.equals("SELECT * FROM user_account") )
-                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id"), rs.getString("street"), rs.getString("city"), rs.getString("state"), rs.getInt("zip"), rs.getString("email"), rs.getInt("phone")) );
+                        accountArrayList.add( new UserAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("user_account_id"), rs.getString("street"), rs.getString("city"), rs.getString("state"), rs.getInt("zip"), rs.getString("email"), rs.getInt("phone")) );
                     else
-                        accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("account_id")) );
+                        accountArrayList.add( new StaffAccount(rs.getString("fname"), rs.getString("lname"), rs.getString("account_type"), rs.getString("username"), rs.getString("password"), rs.getInt("staff_account_id")) );
                 }
             }
         }
@@ -55,6 +50,8 @@ public class AccountListJDBC
         {
             e.printStackTrace();
         }
+
+        return accountArrayList;
     }
 
     // Helper Method to setup the connection to the DB

@@ -87,4 +87,20 @@ public class AccountManagementInterface
         return String.format( "Are you sure you want to delete your account ( Y or N )?%n>:");
     }
 
+    public static String[][] adminDeleteAccountMenu()
+    {
+        String[] initialMenu = { newAccountInitialMenu() };
+        String[] userID = { "Enter UserID: " };
+        String[] staffID = { "Enter StaffID: " };
+        String[] delete = { deleteAccountConfirmation() };
+
+        String[][] returnString = {initialMenu,
+                                    userID,
+                                    staffID,
+                                    delete
+                                    };
+
+        return returnString;
+    }
+
 }

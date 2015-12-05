@@ -85,10 +85,11 @@ public class HotelReservationApplication
                             break;
 
                         case 2: //..................................................... update my account
+                            //TODO: Implement
                             break;
 
                         case 3: //..................................................... delete my account
-                            deleteAccount();
+                            deleteAccount( account );
                             stopLoop = true;
                             break;
 
@@ -102,12 +103,12 @@ public class HotelReservationApplication
                 case 1: //............................................................ admin
                     switch( afterLoginAccountManagementChoice(person) )
                     {
-                        //todo FINISH ALL CASES
                         case 1: //..................................................... view my account
                             System.out.println( person );
                             break;
 
-                        case 2: //.................................................... view all accounts
+                        case 2: //..................................................... view all accounts
+                            viewAllAccounts();
                             break;
 
                         case 3: //..................................................... create new account
@@ -115,6 +116,7 @@ public class HotelReservationApplication
                             break;
 
                         case 4: //..................................................... delete an account
+                            deleteAccountAdmin();
                             break;
 
                         case 5: //..................................................... go to previous menu
@@ -141,6 +143,11 @@ public class HotelReservationApplication
                     break;
             }
         }
+    }
+
+    private static void viewAllAccounts()
+    {
+        for( Account account : AccountListJDBC.getAllAccounts() ) System.out.println( account );
     }
 
     // Method to display a menu to display the menu after you've successfully logged in
@@ -387,7 +394,7 @@ public class HotelReservationApplication
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 
-    public static Account deleteAccount( )
+    public static Account deleteAccount( Account account )
     {
         Account deleteThisAccount = account;
 
@@ -419,6 +426,68 @@ public class HotelReservationApplication
             catch (Exception e)
             {
                 System.out.print( e.getMessage() );
+            }
+        }
+
+        return deleteThisAccount;
+    }
+
+    public static Account deleteAccountAdmin( )
+    {
+        String[][] questions = AccountManagementInterface.adminDeleteAccountMenu();
+        int userOrStaff = 0;
+        int accountID = 0;
+        int password = 0;
+
+        Account deleteThisAccount = null;
+
+        for( int i = 0; i < questions.length; i++ )
+        {
+            switch( i )
+            {
+                case 0: //........................................................ first menu
+                    userOrStaff = errorCheckWithinRange( questions[i], 1, 2 );
+                    if( userOrStaff == 1 ) //..................................... pick to delete a staff account
+                        i++;
+                    break;
+
+                case 1: //........................................................ delete user account
+                    while( true )
+                    {
+                        try
+                        {
+                            System.out.print( questions[i][0] );
+                            accountID = console.nextInt();
+                            break;
+                        }
+                        catch( Exception e )
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                    i++;
+                    break;
+
+                case 2: //........................................................ delete staff account
+                    while( true )
+                    {
+                        try
+                        {
+                            System.out.print( questions[i][0] );
+                            accountID = console.nextInt();
+                            break;
+                        }
+                        catch( Exception e )
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                    break;
+
+                case 3: //......................................................... password
+                    deleteThisAccount = ( userOrStaff == 1 ) ? AccountListJDBC.searchStaffAccount( "" + accountID ) : AccountListJDBC.searchUserAccount( "" + accountID );
+                    deleteAccount( deleteThisAccount );
+                    break;
             }
         }
 

@@ -136,10 +136,12 @@ public class Account
     @Override
     public String toString()
     {
+        String accountType = this.getAccountType().toLowerCase().equals("u") ? "User" : this.getAccountType().toLowerCase().equals("a") ? "Admin" : "Staff";
+
         return String.format( "\nThe Account holders First name is: %s\n" +
                               "The Account holders Last name is: %s\n" +
                               "The Account holders Username is: %s\n" +
                               "The Account type is: %s\n" +
-                              "The Account holders ID is: %d", this.getFirstName(), this.getLastName(), this.getUsername(), this.getAccountType(), this.getId() );
+                              "The Account holders ID is: %d", this.getFirstName(), this.getLastName(), this.getUsername(), accountType, this.getId() );
     }
 }
