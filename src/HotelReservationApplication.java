@@ -220,12 +220,24 @@ public class HotelReservationApplication
             {
                 System.out.print( AccountManagementInterface.newAccountStaffMenu()[i] ); //.......... ask question
                 answers[i] = console.next(); //...................................................... get answer
+
+                if( i == 3 )
+                {
+                    if( !answers[2].equals(answers[3]) )
+                        throw new Exception( "Passwords do not match, try again\n" );
+                }
             }
             catch (Exception e)
             {
-                System.out.println(e.toString());
-                Object chomp = console.next(); //.................................................... captures new line
-                i--; //.............................................................................. decrement i so not to lose spot in index due to error
+                System.out.println(e.getMessage());
+
+                if( i == 3 )
+                    i -= 2; //.......................................................................... decrement by 2 to go back to ask about password
+                else
+                {
+                    Object chomp = console.next(); //.................................................... captures new line
+                    i --;
+                }
             }
         }
 
