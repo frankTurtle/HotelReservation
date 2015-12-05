@@ -278,6 +278,12 @@ public class HotelReservationApplication
             {
                 System.out.print( AccountManagementInterface.newAccountUserMenu()[i] );
                 answers[i] = ( i == 4 || i == 8 || i == 10) ? Integer.toString(console.nextInt()) : console.next();
+
+                if( i == 3 )
+                {
+                    if( !answers[2].equals(answers[3]) )
+                        throw new Exception( "Passwords do not match, try again\n" );
+                }
             }
             catch ( InputMismatchException e )
             {
@@ -287,9 +293,9 @@ public class HotelReservationApplication
             }
             catch (Exception e)
             {
-                System.out.println(e.toString());
-                Object chomp = console.next();
-                i--;
+                System.out.println( e.getMessage() );
+//                Object chomp = console.next();
+                i -= 2;
             }
         }
 

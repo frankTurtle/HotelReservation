@@ -124,7 +124,8 @@ public class AccountListJDBC
         try
         {
             statement.executeUpdate( sqlStatement );
-            System.out.printf( "Successfully added %s", user.getUsername() );
+            System.out.printf( "%nSuccessfully added %s%n", user.getUsername() );
+            System.out.printf( "UserID: %d%nPassword: %d%n", user.getId(), user.getPassword() );
         }
         catch( Exception e )
         {
