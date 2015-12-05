@@ -13,6 +13,7 @@ public class AccountManagementInterface
         switch( type ) //todo update all the questions for each type of account
         {
             case 3: //......................................................................... ADMIN
+                returnString += "ADMIN MENU\n";
                 returnString += "1. View my account\n";
                 returnString += "2. View all accounts\n";
                 returnString += "3. Create a new account\n";
@@ -22,16 +23,18 @@ public class AccountManagementInterface
 
             case 0: //......................................................................... STAFF
                 returnString += "STAFF MENU\n";
-                returnString += "1. Account Management\n";
-                returnString += "2. Reservation Management\n";
-                returnString += "3. Exit\n>:";
+                returnString += "1. View my account\n";
+                returnString += "2. View all accounts\n";
+                returnString += "3. Create a new account\n";
+                returnString += "4. Previous menu\n";
                 break;
 
             case 2: //.......................................................................... USER
                 returnString += "USER MENU\n";
-                returnString += "1. Account Management\n";
-                returnString += "2. Reservation Management\n";
-                returnString += "3. Exit\n>:";
+                returnString += "1. View my account\n";
+                returnString += "2. Update my account\n";
+                returnString += "3. Delete my account\n";
+                returnString += "4. Previous menu\n";
                 break;
         }
 
@@ -77,6 +80,11 @@ public class AccountManagementInterface
                                     };
 
         return returnStringArray;
+    }
+
+    public static String deleteAccountConfirmation()
+    {
+        return String.format( "Are you sure you want to delete your account ( Y or N )?%n>:");
     }
 
 }
