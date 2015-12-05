@@ -98,6 +98,24 @@ public class AccountListJDBC
         return returnStatement;
     }
 
+    protected static int getUserID( String accountType )
+    {
+        String sqlGetMaxID = String.format( " SELECT MAX(%s_account_id) FROM %s_account ", accountType, accountType);
+        int returnID = 0;
+
+        try
+        {
+            ResultSet rs = statement.executeQuery( sqlGetMaxID );
+            while( rs.next() ) { returnID = rs.getInt(1) + 1; }
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+        }
+
+        return returnID;
+    }
+
     // Method to add a staff member to the DB
     public static void addStaffAccount( Account staff )
     {
@@ -106,8 +124,11 @@ public class AccountListJDBC
 
         try
         {
+            int userID = getUserID( "staff" );
+
             statement.executeUpdate( sqlStatement ); //................................................... RUN SQL CODE!
-            System.out.printf( "Successfully added %s", staff.getUsername() );
+            System.out.printf( "%nSuccessfully added %s", staff.getUsername() );
+            System.out.printf( "StaffID: %d%nPassword: %s%n", userID, staff.getPassword() );
         }
         catch( Exception e )
         {
@@ -123,9 +144,11 @@ public class AccountListJDBC
 
         try
         {
+            int userID = getUserID( "user" );
+
             statement.executeUpdate( sqlStatement );
             System.out.printf( "%nSuccessfully added %s%n", user.getUsername() );
-            System.out.printf( "UserID: %d%nPassword: %d%n", user.getId(), user.getPassword() );
+            System.out.printf( "UserID: %d%nPassword: %s%n", userID, user.getPassword() );
         }
         catch( Exception e )
         {
@@ -133,15 +156,15 @@ public class AccountListJDBC
         }
     }
 
-    public static void deleteStaffAccount( String staffID )
+    public static void deleteStaffAccount( int staffID )
     {
 //        String insertInto = ( searchStaffAccount(staffID).getAccountType().equals("A") ) ? "admin" : "staff_account" ;
-        int id = Integer.parseInt( staffID );
-        String sqlStatement = String.format("DELETE FROM staff_account WHERE account_id = %d", id );
+//        int id = Integer.parseInt( staffID );
+        String sqlStatement = String.format("DELETE FROM staff_account WHERE staff_account_id = %d", staffID );
 
         try
         {
-            System.out.println( ( statement.executeUpdate( sqlStatement ) == 1 ) ? String.format("Successfully deleted StaffID: %d", id ) : String.format("Sorry, StaffID: %d is not found", id) );
+            System.out.println( ( statement.executeUpdate( sqlStatement ) == 1 ) ? String.format("Successfully deleted StaffID: %d", staffID ) : String.format("Sorry, StaffID: %d is not found", staffID) );
         }
         catch( Exception e )
         {
@@ -149,14 +172,14 @@ public class AccountListJDBC
         }
     }
 
-    public static void deleteUserAccount( String userID )
+    public static void deleteUserAccount( int userID )
     {
-        int id = Integer.parseInt( userID );
-        String sqlStatement = String.format("DELETE FROM user_account WHERE account_id = %d", id );
+//        int id = Integer.parseInt( userID );
+        String sqlStatement = String.format("DELETE FROM user_account WHERE user_account_id = %d", userID );
 
         try
         {
-            System.out.println( ( statement.executeUpdate( sqlStatement ) == 1 ) ? String.format("Successfully deleted UserID: %d", id ) : String.format("Sorry, UserID: %d is not found", id) );
+            System.out.println( ( statement.executeUpdate( sqlStatement ) == 1 ) ? String.format("Successfully deleted UserID: %d", userID ) : String.format("Sorry, UserID: %d is not found", userID) );
         }
         catch( Exception e )
         {

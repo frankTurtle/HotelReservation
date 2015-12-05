@@ -81,16 +81,75 @@ public class HotelReservationApplication
     // Method to display and choose from the account management interface
     private static void afterLoginAccountManagement( Account person )
     {
-        switch( afterLoginAccountManagementChoice(person) )
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+        boolean stopLoop = false;
+
+        while( !stopLoop )
         {
-            //todo FINISH ALL CASES
+            switch( type )
+            {
+                case 0: //............. user
+                    switch( afterLoginAccountManagementChoice(person) )
+                    {
+                        //todo FINISH ALL CASES
+                        case 1: //..................................................... view my account
+                            System.out.println( person );
+                            break;
 
-            case 3: //..................................................... create new account
-                newAccountMenu();
-                break;
+                        case 2: //..................................................... update my account
+                            break;
 
-            case 5: //..................................................... go to previous menu
-                break;
+                        case 3: //..................................................... delete my account
+                            deleteAccount();
+                            stopLoop = true;
+                            break;
+
+                        case 4: //..................................................... go to previous menu
+                            break;
+                    }
+                    break;
+
+
+                case 1: //............. admin
+                    switch( afterLoginAccountManagementChoice(person) )
+                    {
+                        //todo FINISH ALL CASES
+                        case 1: //..................................................... view my account
+                            break;
+
+                        case 2: //.................................................... view all accounts
+                            break;
+
+                        case 3: //..................................................... create new account
+                            newAccountMenu();
+                            break;
+
+                        case 4: //..................................................... delete an account
+                            break;
+
+                        case 5: //..................................................... go to previous menu
+                            break;
+                    }
+                    break;
+
+                case 2: //............. staff
+                    switch( afterLoginAccountManagementChoice(person) )
+                    {
+                        //todo FINISH ALL CASES
+                        case 1: //..................................................... view my account
+                            break;
+
+                        case 2: //..................................................... view all accounts
+                            break;
+
+                        case 3: //..................................................... create new account
+                            break;
+
+                        case 4: //..................................................... go to previous menu
+                            break;
+                    }
+                    break;
+            }
         }
     }
 
@@ -320,5 +379,43 @@ public class HotelReservationApplication
         String stars = "************************";
         String title = String.format( "* %-20s *", titleIn );
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
+    }
+
+    public static Account deleteAccount( )
+    {
+        Account deleteThisAccount = account;
+
+        while( true )
+        {
+            try
+            {
+                System.out.print(AccountManagementInterface.deleteAccountConfirmation());
+                String answer = console.next().toLowerCase();
+                String type = deleteThisAccount.getAccountType();
+
+                if (answer.equals("y") && type.equals("U"))
+                {
+                    AccountListJDBC.deleteUserAccount( deleteThisAccount.getId() );
+                    account = null;
+                    break;
+                }
+                else if (answer.equals("y") && (type.equals("SA") || type.equals("A")))
+                {
+                    AccountListJDBC.deleteStaffAccount( deleteThisAccount.getId() );
+                    account = null;
+                    break;
+                }
+                else if( answer.equals("n"))
+                    break;
+                else
+                    throw new Exception("\nInvalid entry, try again\n\n");
+            }
+            catch (Exception e)
+            {
+                System.out.print( e.getMessage() );
+            }
+        }
+
+        return deleteThisAccount;
     }
 }
