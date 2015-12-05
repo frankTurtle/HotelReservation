@@ -180,9 +180,9 @@ public class HotelReservationApplication
 
         String answer = ( errorCheckWithinRange(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
-        for( int i = 0; i < credentials.length; i++ ) //................................. loop through the questions to get answers
+        for( int i = 0; i < credentials.length; i++ ) //.................................... loop through the questions to get answers
         {
-            System.out.print(LoginInterface.loginPrompt(answer)[i]); //................. display question
+            System.out.print(LoginInterface.loginPrompt(answer)[i]); //..................... display question
             try
             {
                 credentials[i] = console.next(); //......................................... get answer
