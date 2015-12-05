@@ -8,40 +8,59 @@ import java.util.Scanner;
 public class HotelReservationApplication
 {
     static Scanner console = new Scanner( System.in );
+    static Account account = null;
 
     public static void main( String[] args )
     {
-        Account account = null;
-
-        switch( initialMenuChoice() )
+        while( true )
         {
-            case 1:
-                while(true)
+            //*********************** PRE LOGIN *******************
+            if( account == null)
+            {
+                switch (initialMenuChoice())
                 {
-                    account = login();
+                    case 1:
+                        while (true)
+                        {
+                            account = login();
 
-                    if (account != null)
-                    {
-                        System.out.printf( "Welcome %s %s%n%n", account.getFirstName(), account.getLastName() );
+                            if (account != null)
+                            {
+                                System.out.printf("Welcome %s %s%n%n", account.getFirstName(), account.getLastName());
+                                break;
+                            }
+
+                            System.out.print("\nInvalid username or password, try again\n");
+                        }
                         break;
-                    }
 
-                    System.out.print("\nInvalid username or password, try again\n");
+                    case 2:
+                        newAccountMenu();
+                        break;
+
+                    case 3:
+                        System.out.println("\nGoodbye!\n");
+                        System.exit(0);
                 }
-                break;
+            }
 
-            case 2:
-                newAccountMenu();
-                break;
+            //************************* POST LOGIN *********************
+            if( account != null )
+            {
+                switch (afterLoginMenuChoice(account)) {
+                    case 1:
+                        afterLoginAccountManagement( account );
+                        continue;
 
-            case 3:
-                System.out.println("\nGoodbye!\n");
-                System.exit(0);
-        }
+                    case 2:
+                        break;
 
-        switch ( afterLoginMenuChoice( account ) )
-        {
-
+                    case 3:
+                        System.out.println("\nGoodBye!\n");
+                        System.exit(0);
+                        break;
+                }
+            }
         }
 
 
@@ -64,7 +83,7 @@ public class HotelReservationApplication
 //        }
 //        else //....................................... creates a new User account
 //        {
-//            String [] userAccountAnswers = newUserAccountMenu();
+//            String [] userAccountAnswers = newUserAccountMenuAnswers();
 //
 //            for( String item : userAccountAnswers )
 //                System.out.println( item );
@@ -73,12 +92,37 @@ public class HotelReservationApplication
 //        }
     }
 
+    private static int afterLoginAccountManagementChoice( Account person)
+    {
+        String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
+                                     AccountManagementInterface.initialMenu( person.getAccountType() )};
+
+        //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
+        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 3 : 3; //.... sets the max for response based on account questions
+
+        return errorCheckWithinRange( displayThisText, 1, max );
+    }
+
+    private static void afterLoginAccountManagement( Account person )
+    {
+        switch( afterLoginAccountManagementChoice(person) )
+        {
+            case 3: //..................................... create new account
+                newAccountMenu();
+                break;
+
+        }
+    }
+
     private static int afterLoginMenuChoice( Account person )
     {
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
                                      AfterLoginInterface.initialMenu( person.getAccountType() )};
 
-        return errorCheckWithinRange( displayThisText, 1, 3 );
+        //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
+        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 3 : 3; //.... sets the max for response based on account questions
+
+        return errorCheckWithinRange( displayThisText, 1, max );
     }
 
     // Method to display and process the initial menu
@@ -136,7 +180,7 @@ public class HotelReservationApplication
     private static int newAccountMenuChoice()
     {
         String[] displayThisText = { generateHeader("New Account Creation"),
-                                     LoginInterface.newAccountInitialMenu()
+                                     AccountManagementInterface.newAccountInitialMenu()
                                     }; //..................................................... strings for prompts
 
         return errorCheckWithinRange( displayThisText, 1, 2 ); //........................................ display prompts / get response / error check
@@ -147,17 +191,29 @@ public class HotelReservationApplication
         switch( newAccountMenuChoice() )
         {
             case 1:
-                System.out.print("Choice 1");
-                //todo make user login with ADMIN account
+                if( account != null && account.getAccountType().equals("A") )
+                {
+                    String [] answers = newStaffAccountMenuAnswers();
+                    String username = String.format( "%s%s", answers[0].substring(0,1), answers[1]  );
+                    String adminOrNot =  answers[4].toLowerCase().equals("y") ? "A" : "SA";
+
+                    System.out.print(adminOrNot);
+
+                    StaffAccount addNewStaff = new StaffAccount( answers[0], answers[1], adminOrNot, username, answers[2], 0);
+
+                    AccountListJDBC.addStaffAccount( addNewStaff );
+                    break;
+                }
+                else
+                    System.out.println( "\nSorry, you must be logged in as an administrator to do this.\n" );
                 break;
 
             case 2:
-                String [] answers = newUserAccountMenu();
+                String [] answers = newUserAccountMenuAnswers();
                 String username = String.format( "%s%s", answers[0].substring(0,1), answers[1]  );
                 String street = answers[4] + " " + answers[5];
                 int zip = Integer.parseInt( answers[8] );
                 int phone = Integer.parseInt( answers[10] );
-
 
                 UserAccount addNewUser = new UserAccount( answers[0], answers[1], "U",  username,
                                                           answers[2], 0, street,  answers[6],
@@ -169,6 +225,32 @@ public class HotelReservationApplication
         }
     }
 
+    public static String[] newStaffAccountMenuAnswers()
+    {
+        String[] answers = new String[ AccountManagementInterface.newAccountStaffMenu().length ];
+
+        System.out.println( generateHeader( "New Staff Account" ) ); //. prints header
+
+        for( int i = 0; i < answers.length; i++ )
+        {
+            try
+            {
+                System.out.print( AccountManagementInterface.newAccountStaffMenu()[i] );
+                answers[i] = console.next();
+
+                if( i == answers.length )
+                    System.out.print("here");
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.toString());
+                Object chomp = console.next();
+                i--;
+            }
+        }
+
+        return answers;
+    }
 
     // Method to check for input errors
     // takes the low and high for range of values to test within
@@ -204,9 +286,9 @@ public class HotelReservationApplication
 
     // Method to display and process the new User Account creation
     // returns a String array with all the answers
-    private static String[] newUserAccountMenu()
+    private static String[] newUserAccountMenuAnswers()
     {
-        String[] answers = new String[ LoginInterface.newAccountUserMenu().length ];
+        String[] answers = new String[ AccountManagementInterface.newAccountUserMenu().length ];
 
         System.out.println( generateHeader( "New User Account" ) ); //. prints header
 
@@ -214,7 +296,7 @@ public class HotelReservationApplication
         {
             try
             {
-                System.out.print( LoginInterface.newAccountUserMenu()[i] );
+                System.out.print( AccountManagementInterface.newAccountUserMenu()[i] );
                 answers[i] = ( i == 4 || i == 8 || i == 10) ? Integer.toString(console.nextInt()) : console.next();
             }
             catch ( InputMismatchException e )
@@ -230,7 +312,6 @@ public class HotelReservationApplication
                 i--;
             }
         }
-
 
         return answers;
     }

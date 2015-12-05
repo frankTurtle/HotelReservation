@@ -39,32 +39,32 @@ public class LoginInterface
 
     // Method to generate the menu for a new account
     // asks user if they want a new staff or user account
-    public static String newAccountInitialMenu()
-    {
-        String returnString = "Choose from the menu:\n";
-        returnString += "1.Staff Account\n";
-        returnString += "2.User Account\n>:";
+//    public static String newAccountInitialMenu()
+//    {
+//        String returnString = "Choose from the menu:\n";
+//        returnString += "1.Staff Account\n";
+//        returnString += "2.User Account\n>:";
+//
+//        return returnString;
+//    }
 
-        return returnString;
-    }
-
-    // Method to generate the menu prompts for the new user account
-    public static String[] newAccountUserMenu()
-    {
-        String[] returnStringArray = {  "First Name: ",
-                                        "Last Name: ",
-                                        "Password: ",
-                                        "Confirm Password: ",
-                                        "\nHouse: ",
-                                        "Street: ",
-                                        "City: ",
-                                        "State: ",
-                                        "Zip: ",
-                                        "Email: ",
-                                        "Phone Number: "
-                                        };
-        return returnStringArray;
-    }
+//    // Method to generate the menu prompts for the new user account
+//    public static String[] newAccountUserMenu()
+//    {
+//        String[] returnStringArray = {  "First Name: ",
+//                                        "Last Name: ",
+//                                        "Password: ",
+//                                        "Confirm Password: ",
+//                                        "\nHouse: ",
+//                                        "Street: ",
+//                                        "City: ",
+//                                        "State: ",
+//                                        "Zip: ",
+//                                        "Email: ",
+//                                        "Phone Number: "
+//                                        };
+//        return returnStringArray;
+//    }
 
     // Method to generate a header with test passed in
     public static String generateHeader( String titleIn )
@@ -74,15 +74,16 @@ public class LoginInterface
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 
-    // Method to generate hte menu prompts for the new staff account
-    public static String[] newAccountStaffMenu()
-    {
-        String[] returnStringArray = {  "First Name: ",
-                                        "Last Name: ",
-                                        "Password: ",
-                                        "Confirm Password: ",
-                                        };
+//    // Method to generate hte menu prompts for the new staff account
+//    public static String[] newAccountStaffMenu()
+//    {
+//        String[] returnStringArray = {  "First Name: ",
+//                                        "Last Name: ",
+//                                        "Password: ",
+//                                        "Confirm Password: ",
+//                                        };
+//
+//        return returnStringArray;
+//    }
 
-        return returnStringArray;
-    }
 }

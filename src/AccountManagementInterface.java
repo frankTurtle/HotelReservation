@@ -1,0 +1,82 @@
+/**
+ * Created by Barret J. Nobel on 12/4/2015.
+ */
+public class AccountManagementInterface
+{
+    public static String initialMenu( String accountType )
+    {
+        String returnString = "Please choose from the following:\n";
+        int type = ( accountType.equals("U") ) ? 2 : ( accountType.equals("A") ) ? 3 : 0;
+
+        switch( type ) //todo update all the questions for each type of account
+        {
+            case 3: //....... ADMIN
+                returnString += "1. View my account\n";
+                returnString += "2. View all accounts\n";
+                returnString += "3. Create a new account\n";
+                returnString += "4. Delete an account\n";
+                returnString += "5. Previous menu\n>:";
+                break;
+
+            case 0: //........STAFF
+                returnString += "STAFF MENU\n";
+                returnString += "1. Account Management\n";
+                returnString += "2. Reservation Management\n";
+                returnString += "3. Exit\n>:";
+                break;
+
+            case 2: //........ USER
+                returnString += "USER MENU\n";
+                returnString += "1. Account Management\n";
+                returnString += "2. Reservation Management\n";
+                returnString += "3. Exit\n>:";
+                break;
+        }
+
+
+        return returnString;
+    }
+    // Method to generate the menu for a new account
+    // asks user if they want a new staff or user account
+    public static String newAccountInitialMenu()
+    {
+        String returnString = "Choose from the menu:\n";
+        returnString += "1.Staff Account\n";
+        returnString += "2.User Account\n>:";
+
+        return returnString;
+    }
+
+    // Method to generate the menu prompts for the new user account
+    public static String[] newAccountUserMenu()
+    {
+        String[] returnStringArray = {  "First Name: ",
+                                        "Last Name: ",
+                                        "Password: ",
+                                        "Confirm Password: ",
+                                        "\nHouse: ",
+                                        "Street: ",
+                                        "City: ",
+                                        "State: ",
+                                        "Zip: ",
+                                        "Email: ",
+                                        "Phone Number: "
+                                        };
+        return returnStringArray;
+    }
+
+    // Method to generate hte menu prompts for the new staff account
+    public static String[] newAccountStaffMenu()
+    {
+        String[] returnStringArray = {  "First Name: ",
+                                        "Last Name: ",
+                                        "Password: ",
+                                        "Confirm Password: ",
+                                        "Administrator ( Y or N ):"
+                                    };
+
+        return returnStringArray;
+    }
+
+
+}
