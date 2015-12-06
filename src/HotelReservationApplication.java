@@ -42,7 +42,7 @@ public class HotelReservationApplication
                 {
                     case 1: //........................................................................................... account management
                         afterLoginAccountManagement( account ); //....................................................... present account management interface
-                        continue;
+                        break;
 
                     case 2: //........................................................................................... reservation management
                         break;
@@ -63,7 +63,6 @@ public class HotelReservationApplication
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
                                      AccountManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
-        //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
         int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 3; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
@@ -74,8 +73,6 @@ public class HotelReservationApplication
     {
         int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
         boolean stopLoop = false;
-
-        System.out.print( type );
 
         while( !stopLoop )
         {
@@ -120,7 +117,7 @@ public class HotelReservationApplication
                             break;
 
                         case 4: //..................................................... delete an account
-                            deleteAccountAdmin();
+                            Account deleted = deleteAccountAdmin();
                             break;
 
                         case 5: //..................................................... go to previous menu
@@ -443,7 +440,7 @@ public class HotelReservationApplication
             }
         }
 
-        account = null;
+//        account = null;
 
         return deleteThisAccount;
     }
@@ -453,7 +450,6 @@ public class HotelReservationApplication
         String[][] questions = AccountManagementInterface.adminDeleteAccountMenu();
         int userOrStaff = 0;
         int accountID = 0;
-        int password = 0;
 
         Account deleteThisAccount = null;
 

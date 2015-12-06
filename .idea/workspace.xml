@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountListJDBC.java" afterPath="$PROJECT_DIR$/src/AccountListJDBC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountManagementInterface.java" afterPath="$PROJECT_DIR$/src/AccountManagementInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationApplication.java" />
     </list>
     <ignored path="HotelReservation.iws" />
@@ -30,9 +28,10 @@
       <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9453376">
-              <caret line="504" column="25" selection-start-line="504" selection-start-column="25" selection-end-line="504" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.83762056">
+              <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
               <folding>
+                <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -43,7 +42,7 @@
                 <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-                <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
+                <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,7 +54,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="91" column="102" selection-start-line="91" selection-start-column="102" selection-end-line="91" selection-end-column="102" />
               <folding>
-                <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
                 <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
                 <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
               </folding>
@@ -484,12 +482,18 @@
       <option name="project" value="LOCAL" />
       <updated>1449430500631</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added some error checking on menu deletion&#10;removed old comments">
+      <created>1449433675734</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1449433675734</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -498,7 +502,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28884026" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28884026" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14592275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -531,11 +535,12 @@
     <MESSAGE value="merged with latest master branch" />
     <MESSAGE value="admin can now delete accounts" />
     <MESSAGE value="udpated implementation of deleting the account for the user" />
-    <option name="LAST_COMMIT_MESSAGE" value="udpated implementation of deleting the account for the user" />
+    <MESSAGE value="added some error checking on menu deletion&#10;removed old comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some error checking on menu deletion&#10;removed old comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -549,6 +554,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -559,7 +565,7 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,7 +575,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
           <folding>
-            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
             <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
             <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
           </folding>
@@ -625,6 +630,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -635,7 +641,7 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -718,7 +724,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="102" selection-start-line="91" selection-start-column="102" selection-end-line="91" selection-end-column="102" />
           <folding>
-            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
             <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
             <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
           </folding>
@@ -727,9 +732,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9453376">
-          <caret line="504" column="25" selection-start-line="504" selection-start-column="25" selection-end-line="504" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.83762056">
+          <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
           <folding>
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -740,7 +746,7 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
       </provider>
