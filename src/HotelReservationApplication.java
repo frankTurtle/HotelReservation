@@ -73,6 +73,8 @@ public class HotelReservationApplication
         int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
         boolean stopLoop = false;
 
+        System.out.print( type );
+
         while( !stopLoop )
         {
             switch( type )
@@ -120,6 +122,7 @@ public class HotelReservationApplication
                             break;
 
                         case 5: //..................................................... go to previous menu
+                            stopLoop = true;
                             break;
                     }
                     break;
@@ -394,9 +397,9 @@ public class HotelReservationApplication
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 
-    public static Account deleteAccount( Account account )
+    public static Account deleteAccount( Account accountIn )
     {
-        Account deleteThisAccount = account;
+        Account deleteThisAccount = accountIn;
 
         while( true )
         {
@@ -409,13 +412,11 @@ public class HotelReservationApplication
                 if (answer.equals("y") && type.equals("U"))
                 {
                     AccountListJDBC.deleteUserAccount( deleteThisAccount.getId() );
-                    account = null;
                     break;
                 }
                 else if (answer.equals("y") && (type.equals("SA") || type.equals("A")))
                 {
                     AccountListJDBC.deleteStaffAccount( deleteThisAccount.getId() );
-                    account = null;
                     break;
                 }
                 else if( answer.equals("n"))
@@ -428,6 +429,8 @@ public class HotelReservationApplication
                 System.out.print( e.getMessage() );
             }
         }
+
+        account = null;
 
         return deleteThisAccount;
     }
