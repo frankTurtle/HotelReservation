@@ -63,7 +63,7 @@ public class HotelReservationApplication
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
                                      AccountManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
-        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 3; //.... sets the max for response based on account questions
+        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 4; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
     }
@@ -129,17 +129,20 @@ public class HotelReservationApplication
                 case 2: //............. staff
                     switch( afterLoginAccountManagementChoice(person) )
                     {
-                        //todo FINISH ALL CASES
                         case 1: //..................................................... view my account
+                            System.out.println( person );
                             break;
 
                         case 2: //..................................................... view all accounts
+                            viewAllAccounts();
                             break;
 
                         case 3: //..................................................... create new account
+                            newAccountMenu();
                             break;
 
                         case 4: //..................................................... go to previous menu
+                            stopLoop = true;
                             break;
                     }
                     break;
@@ -439,8 +442,6 @@ public class HotelReservationApplication
                 System.out.print( e.getMessage() );
             }
         }
-
-//        account = null;
 
         return deleteThisAccount;
     }
