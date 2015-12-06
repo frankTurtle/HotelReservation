@@ -87,6 +87,11 @@ public class AccountManagementInterface
         return String.format( "Are you sure you want to delete your account ( Y or N )?%n>:");
     }
 
+    public static String deleteAccountConfirmation( String idNumber )
+    {
+        return String.format( "Are you sure you want to delete account %s ( Y or N )?%n>:", idNumber );
+    }
+
     public static String[][] adminDeleteAccountMenu()
     {
         String[] initialMenu = { newAccountInitialMenu() };

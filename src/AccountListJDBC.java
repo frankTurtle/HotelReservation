@@ -155,8 +155,6 @@ public class AccountListJDBC
 
     public static void deleteStaffAccount( int staffID )
     {
-//        String insertInto = ( searchStaffAccount(staffID).getAccountType().equals("A") ) ? "admin" : "staff_account" ;
-//        int id = Integer.parseInt( staffID );
         String sqlStatement = String.format("DELETE FROM staff_account WHERE staff_account_id = %d", staffID );
 
         try
@@ -171,7 +169,6 @@ public class AccountListJDBC
 
     public static void deleteUserAccount( int userID )
     {
-//        int id = Integer.parseInt( userID );
         String sqlStatement = String.format("DELETE FROM user_account WHERE user_account_id = %d", userID );
 
         try
@@ -272,13 +269,13 @@ public class AccountListJDBC
     {
 //        AccountListJDBC.addStaffAccount(new StaffAccount("barret", "nobel3", "SA", "frank", "0234", 0) );
 //        System.out.print(AccountListJDBC.searchStaffAccount( "5" ).getId());
-//        AccountListJDBC.deleteStaffAccount("4");
+        AccountListJDBC.deleteStaffAccount(5);
 //        AccountListJDBC.deleteUserAccount("10");
 
-        if( staffLogin("4", "0234") != null )
-            System.out.print( staffLogin("3", "0234") );
-        else
-            System.out.print("NO!");
+//        if( staffLogin("4", "0234") != null )
+//            System.out.print( staffLogin("3", "0234") );
+//        else
+//            System.out.print("NO!");
 
 //        AccountListJDBC.addUserAccount( new UserAccount("bigb", "guuy", "U", "turtle", "1234", 80, "street", "city", "state", 1234, "email", 5151) );
 //        System.out.print(AccountListJDBC.searchUserAccount( "2" ).getId());

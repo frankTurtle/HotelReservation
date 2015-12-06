@@ -2,6 +2,8 @@
  * Created by Barret J. Nobel on 12/1/2015.
  */
 
+import jdk.internal.util.xml.impl.Input;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -403,6 +405,12 @@ public class HotelReservationApplication
 
         while( true )
         {
+            if( deleteThisAccount.getFirstName().equals("") )
+            {
+                System.out.print( "\nInvalid ID\n" );
+                break;
+            }
+
             try
             {
                 System.out.print(AccountManagementInterface.deleteAccountConfirmation());
@@ -419,8 +427,13 @@ public class HotelReservationApplication
                     AccountListJDBC.deleteStaffAccount( deleteThisAccount.getId() );
                     break;
                 }
-                else if( answer.equals("n"))
+                else if( answer.equals("n") )
                     break;
+                else if( type.equals("SM") )
+                {
+                    System.out.println("\nInvalid ID\n");
+                    break;
+                }
                 else
                     throw new Exception("\nInvalid entry, try again\n\n");
             }
@@ -463,6 +476,11 @@ public class HotelReservationApplication
                             accountID = console.nextInt();
                             break;
                         }
+                        catch( InputMismatchException e )
+                        {
+                            System.out.println( "Integer only, please try again\n");
+                            Object chomp = console.next();
+                        }
                         catch( Exception e )
                         {
                             e.printStackTrace();
@@ -479,6 +497,11 @@ public class HotelReservationApplication
                             System.out.print( questions[i][0] );
                             accountID = console.nextInt();
                             break;
+                        }
+                        catch( InputMismatchException e )
+                        {
+                            System.out.println( "Integer only, please try again\n");
+                            Object chomp = console.next();
                         }
                         catch( Exception e )
                         {
