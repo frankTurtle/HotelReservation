@@ -2,8 +2,6 @@
  * Created by Barret J. Nobel on 12/1/2015.
  */
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -150,6 +148,7 @@ public class HotelReservationApplication
         }
     }
 
+    // Method to print out all accounts in DB
     private static void viewAllAccounts()
     {
         for( Account account : AccountListJDBC.getAllAccounts() ) System.out.println( account );
@@ -186,19 +185,19 @@ public class HotelReservationApplication
     private static Account login()
     {
         final int USERNAME = 0;
-        final int PASSWORD = 1;
+        final int PASSWORD = 1; //.................................................................. just to be sure I access the array elements correctly in return statement
 
         String[] credentials = new String[ LoginInterface.loginPrompt("").length ];
-        String[] displayThisText = LoginInterface.userOrStaffMenu(); //................................................. strings to pass in for prompts
+        String[] displayThisText = LoginInterface.userOrStaffMenu(); //.............................. strings to pass in for prompts
 
         String answer = ( errorCheckWithinRange(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
-        for( int i = 0; i < credentials.length; i++ ) //.................................... loop through the questions to get answers
+        for( int i = 0; i < credentials.length; i++ ) //............................................. loop through the questions to get answers
         {
-            System.out.print(LoginInterface.loginPrompt(answer)[i]); //..................... display question
+            System.out.print(LoginInterface.loginPrompt(answer)[i]); //.............................. display question
             try
             {
-                credentials[i] = console.next(); //......................................... get answer
+                credentials[i] = console.next(); //.................................................. get answer
                 int testForInt = Integer.parseInt(credentials[0] );
             }
             catch ( NumberFormatException e )
@@ -208,14 +207,16 @@ public class HotelReservationApplication
             }
         }
 
-        if( answer.equals("user") )
+        if( answer.equals("user") ) //.............................................................. if its a user
         {
-            return AccountListJDBC.userLogin(credentials[USERNAME], credentials[PASSWORD]);
+            return AccountListJDBC.userLogin(credentials[USERNAME], credentials[PASSWORD]); //...... call userLogin method
         }
         else
-            return AccountListJDBC.staffLogin( credentials[USERNAME], credentials[PASSWORD] );
+            return AccountListJDBC.staffLogin( credentials[USERNAME], credentials[PASSWORD] ); //... or call the staffLogin method
     }
 
+    // Method to display welcome or error after user has typed in their credentials
+    // calls login() method again if invalid
     private static void loginPicked()
     {
         while (true)
@@ -246,7 +247,7 @@ public class HotelReservationApplication
     }
 
     // Method to display a menu of choices when creating a new account
-    // creats the account in the DB once determined
+    // creates the account in the DB once determined
     private static void newAccountMenu()
     {
         switch( newAccountMenuChoice() )
@@ -357,20 +358,20 @@ public class HotelReservationApplication
     // returns a String array with all the answers
     private static String[] newUserAccountMenuAnswers()
     {
-        String[] answers = new String[ AccountManagementInterface.newAccountUserMenu().length ];
+        String[] answers = new String[ AccountManagementInterface.newAccountUserMenu().length ]; //................... creates answers array the same size as the questions to match size
 
-        System.out.println( generateHeader( "New User Account" ) ); //. prints header
+        System.out.println( generateHeader( "New User Account" ) ); //................................................. prints header
 
-        for( int i = 0; i < answers.length; i++ )
+        for( int i = 0; i < answers.length; i++ ) //................................................................... loop through each question
         {
             try
             {
-                System.out.print( AccountManagementInterface.newAccountUserMenu()[i] );
-                answers[i] = ( i == 4 || i == 8 || i == 10) ? Integer.toString(console.nextInt()) : console.next();
+                System.out.print( AccountManagementInterface.newAccountUserMenu()[i] ); //............................. print question
+                answers[i] = ( i == 4 || i == 8 || i == 10) ? Integer.toString(console.nextInt()) : console.next(); //. some of the questions accept int's as the only response
 
-                if( i == 3 )
+                if( i == 3 ) //........................................................................................ third element is the second time asking for a password
                 {
-                    if( !answers[2].equals(answers[3]) )
+                    if( !answers[2].equals(answers[3]) ) //............................................................ if the passwords don't match
                         throw new Exception( "Passwords do not match, try again\n" );
                 }
             }
@@ -383,7 +384,6 @@ public class HotelReservationApplication
             catch (Exception e)
             {
                 System.out.println( e.getMessage() );
-//                Object chomp = console.next();
                 i -= 2;
             }
         }
@@ -399,13 +399,15 @@ public class HotelReservationApplication
         return String.format("%n%s%n%s%n%s%n", stars, title, stars);
     }
 
+    // Method to delete an account from the DB
+    // returns the account object it deletes
     public static Account deleteAccount( Account accountIn )
     {
         Account deleteThisAccount = accountIn;
 
-        while( true )
+        while( true ) //....................................................................... loop for error catching
         {
-            if( deleteThisAccount.getFirstName().equals("") )
+            if( deleteThisAccount.getFirstName().equals("") ) //............................... if its an account that doesnt exist
             {
                 System.out.print( "\nInvalid ID\n" );
                 break;
@@ -413,23 +415,23 @@ public class HotelReservationApplication
 
             try
             {
-                System.out.print(AccountManagementInterface.deleteAccountConfirmation());
-                String answer = console.next().toLowerCase();
-                String type = deleteThisAccount.getAccountType();
+                System.out.print(AccountManagementInterface.deleteAccountConfirmation()); //... confirm they want to delete the account
+                String answer = console.next().toLowerCase(); //............................... get answer
+                String type = deleteThisAccount.getAccountType(); //........................... get the account type to call appropriate delete method
 
-                if (answer.equals("y") && type.equals("U"))
+                if (answer.equals("y") && type.equals("U")) //................................. if its a user
                 {
                     AccountListJDBC.deleteUserAccount( deleteThisAccount.getId() );
                     break;
                 }
-                else if (answer.equals("y") && (type.equals("SA") || type.equals("A")))
+                else if (answer.equals("y") && (type.equals("SA") || type.equals("A"))) //.... if its a staff member or admin
                 {
                     AccountListJDBC.deleteStaffAccount( deleteThisAccount.getId() );
                     break;
                 }
-                else if( answer.equals("n") )
+                else if( answer.equals("n") ) //.............................................. if they dont want to delete the account
                     break;
-                else if( type.equals("SM") )
+                else if( type.equals("SM") ) //............................................... a weird entry in the DB when it was an invalid ID
                 {
                     System.out.println("\nInvalid ID\n");
                     break;
@@ -446,6 +448,8 @@ public class HotelReservationApplication
         return deleteThisAccount;
     }
 
+    // Method to delete an account from an admin account
+    // other options
     public static Account deleteAccountAdmin( )
     {
         String[][] questions = AccountManagementInterface.adminDeleteAccountMenu();
