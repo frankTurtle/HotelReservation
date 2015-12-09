@@ -105,7 +105,7 @@ public class DatabaseCreation
     {
         String createUserAccountTable = "CREATE TABLE User_Account " + //.................................. creates user_account table
                                         "(user_account_id INTEGER NOT NULL AUTO_INCREMENT, " + //............... PK
-                                        " account_type CHAR(2) NOT NULL, " + //................ sets default account type to U
+                                        " account_type CHAR(2) NOT NULL, " + //..............        .. sets default account type to U
                                         " UNIQUE( user_account_id ), " + //....................................... makes sure the type and id are unique
                                         " PRIMARY KEY( user_account_id ), " + //................................ sets the PK
                                         " street VARCHAR(255), " + //...................................... attribute for street
