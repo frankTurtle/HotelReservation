@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AccountList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DatabaseCreation.java" afterPath="$PROJECT_DIR$/src/DatabaseCreation.java" />
     </list>
     <ignored path="HotelReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseCreation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseCreation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DatabaseCreation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4174107">
+            <state vertical-scroll-proportion="0.0">
               <caret line="107" column="101" selection-start-line="107" selection-start-column="101" selection-end-line="107" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AccountList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47486034">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -148,6 +158,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -156,6 +173,11 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -170,6 +192,7 @@
         <option value="$PROJECT_DIR$/src/AccountListJDBC.java" />
         <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
         <option value="$PROJECT_DIR$/src/DatabaseCreation.java" />
+        <option value="$PROJECT_DIR$/src/AccountList.java" />
       </list>
     </option>
   </component>
@@ -204,6 +227,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,9 +264,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -590,6 +613,109 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseCreation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AfterLoginInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StaffAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
+          <folding>
+            <element signature="method#toString#0;class#Account#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccountListJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+          <folding>
+            <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1080,8 +1206,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DatabaseCreation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4174107">
+        <state vertical-scroll-proportion="0.0">
           <caret line="107" column="101" selection-start-line="107" selection-start-column="101" selection-end-line="107" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccountList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47486034">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
           <folding />
         </state>
       </provider>
