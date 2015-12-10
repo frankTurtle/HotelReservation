@@ -25,7 +25,7 @@ public class ReportJDBC
     /**
      *
      */
-    static final String DB_URL = "jdbc:mysql://localhost:3306/reservation";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation";
 
     //  Database credentials
     /**
@@ -118,8 +118,8 @@ public class ReportJDBC
     public static String generateYearly (int year)
     {
 
-        String sqlGetYear = String.format("SELECT.Cost,Date FROM reservation.new_table;");
-
+//        String sqlGetYear = String.format("SELECT Cost,Date FROM reservation.new_table;");
+        String sqlGetYear = String.format( "SELECT roomAmount from reservation;" );
         double returnTC = 0;
 
 
