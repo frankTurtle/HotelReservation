@@ -47,7 +47,7 @@ public class HotelReservationApplication
 
                     case 3: //........................................................................................... exit program
                         System.out.println("\nGoodBye!\n");
-                        account = (Account)AccountListJDBC.logout(); //.................................................. sets account to null upon logout
+                        if( AccountList.logout() ) account = null; //.................................................... sets account to null upon logout
                         break;
                 }
             }
@@ -151,7 +151,7 @@ public class HotelReservationApplication
     // Method to print out all accounts in DB
     private static void viewAllAccounts()
     {
-        for( Account account : AccountListJDBC.getAllAccounts() ) System.out.println( account );
+        for( Account account : AccountList.getAllAccounts() ) System.out.println( account );
     }
 
     // Method to display a menu to display the menu after you've successfully logged in
@@ -209,10 +209,10 @@ public class HotelReservationApplication
 
         if( answer.equals("user") ) //.............................................................. if its a user
         {
-            return AccountListJDBC.userLogin(credentials[USERNAME], credentials[PASSWORD]); //...... call userLogin method
+            return AccountList.userLogin(credentials[USERNAME], credentials[PASSWORD]); //...... call userLogin method
         }
         else
-            return AccountListJDBC.staffLogin( credentials[USERNAME], credentials[PASSWORD] ); //... or call the staffLogin method
+            return AccountList.staffLogin( credentials[USERNAME], credentials[PASSWORD] ); //... or call the staffLogin method
     }
 
     // Method to display welcome or error after user has typed in their credentials
@@ -261,7 +261,7 @@ public class HotelReservationApplication
 
                     StaffAccount addNewStaff = new StaffAccount( answers[0], answers[1], adminOrNot, username, answers[2], 0); //.. create the new staff object
 
-                    AccountListJDBC.addStaffAccount( addNewStaff ); //............................................................. add staff object to DB
+                    AccountList.addStaffAccount( addNewStaff ); //............................................................. add staff object to DB
                     break;
                 }
                 else //............................................................................................................ not admin logged in
@@ -280,7 +280,7 @@ public class HotelReservationApplication
                                                           answers[7], zip, answers[9], phone
                                                         ); //...................................................................... create a new user account
 
-                AccountListJDBC.addUserAccount( addNewUser ); //................................................................... add the user to the DB
+                AccountList.addUserAccount( addNewUser ); //................................................................... add the user to the DB
                 break;
         }
     }
@@ -421,12 +421,12 @@ public class HotelReservationApplication
 
                 if (answer.equals("y") && type.equals("U")) //................................. if its a user
                 {
-                    AccountListJDBC.deleteUserAccount( deleteThisAccount.getId() );
+                    AccountList.deleteUserAccount( deleteThisAccount.getId() );
                     break;
                 }
                 else if (answer.equals("y") && (type.equals("SA") || type.equals("A"))) //.... if its a staff member or admin
                 {
-                    AccountListJDBC.deleteStaffAccount( deleteThisAccount.getId() );
+                    AccountList.deleteStaffAccount( deleteThisAccount.getId() );
                     break;
                 }
                 else if( answer.equals("n") ) //.............................................. if they dont want to delete the account
@@ -512,7 +512,7 @@ public class HotelReservationApplication
                     break;
 
                 case 3: //......................................................... password
-                    deleteThisAccount = ( userOrStaff == 1 ) ? AccountListJDBC.searchStaffAccount( "" + accountID ) : AccountListJDBC.searchUserAccount( "" + accountID );
+                    deleteThisAccount = ( userOrStaff == 1 ) ? AccountList.searchStaffAccount( "" + accountID ) : AccountList.searchUserAccount( "" + accountID );
                     deleteAccount( deleteThisAccount );
                     break;
             }

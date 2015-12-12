@@ -4,6 +4,8 @@
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountList.java" afterPath="$PROJECT_DIR$/src/AccountList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountListJDBC.java" afterPath="$PROJECT_DIR$/src/AccountListJDBC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationApplication.java" />
     </list>
     <ignored path="HotelReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,17 +27,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.40614334">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-                <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -63,13 +63,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AccountList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4254835">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="57" selection-end-column="132" />
               <folding>
-                <marker date="1449947876134" expanded="false" signature="2:23" placeholder="..." />
+                <element signature="method#addUserAccount#0;class#AccountList#0" expanded="false" />
+                <element signature="method#addStaffAccount#0;class#AccountList#0" expanded="false" />
+                <element signature="method#searchUserAccount#0;class#AccountList#0" expanded="false" />
+                <element signature="method#searchStaffAccount#0;class#AccountList#0" expanded="false" />
+                <element signature="docComment;method#deleteUserAccount#0;class#AccountList#0" expanded="false" />
+                <element signature="e#5068#5069#0" expanded="true" />
+                <element signature="e#5140#5141#0" expanded="true" />
+                <element signature="e#5304#5305#0" expanded="true" />
+                <element signature="e#5359#5360#0" expanded="true" />
+                <marker date="1449949529114" expanded="false" signature="2:23" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -148,16 +157,20 @@
         <entry file="file://$PROJECT_DIR$/src/AccountListJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+              <caret line="247" column="126" selection-start-line="247" selection-start-column="126" selection-end-line="247" selection-end-column="126" />
               <folding>
+                <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+                <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+                <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+                <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
               </folding>
@@ -235,10 +248,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Account.java" />
         <option value="$PROJECT_DIR$/src/AccountManagementInterface.java" />
-        <option value="$PROJECT_DIR$/src/AccountListJDBC.java" />
-        <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
         <option value="$PROJECT_DIR$/src/DatabaseCreation.java" />
+        <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
         <option value="$PROJECT_DIR$/src/AccountList.java" />
+        <option value="$PROJECT_DIR$/src/AccountListJDBC.java" />
       </list>
     </option>
   </component>
@@ -600,7 +613,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449717179690</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Uploaded newest updates to AccountList class by Amarjit&#10;">
+      <created>1449947898553</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1449947898553</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -609,11 +628,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28445426" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14623655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -621,14 +641,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28494042" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -651,7 +670,8 @@
     <MESSAGE value="fixed bug that when logged in as an Admin, your account would become null when you tried to delete a non-existing account" />
     <MESSAGE value="cleaned up the code" />
     <MESSAGE value="created AccountList branch&#10;added Amarjit's class&#10;removed package" />
-    <option name="LAST_COMMIT_MESSAGE" value="created AccountList branch&#10;added Amarjit's class&#10;removed package" />
+    <MESSAGE value="Uploaded newest updates to AccountList class by Amarjit&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uploaded newest updates to AccountList class by Amarjit&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,10 +690,8 @@
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -762,14 +780,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -817,10 +839,8 @@
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -909,14 +929,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -964,10 +988,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1048,14 +1070,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -1103,10 +1129,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1171,14 +1195,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -1226,10 +1254,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1294,14 +1320,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -1314,10 +1344,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1339,14 +1367,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -1423,26 +1455,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AfterLoginInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1455,19 +1471,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccountList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="57" selection-end-column="132" />
+          <folding>
+            <element signature="method#addUserAccount#0;class#AccountList#0" expanded="false" />
+            <element signature="method#addStaffAccount#0;class#AccountList#0" expanded="false" />
+            <element signature="method#searchUserAccount#0;class#AccountList#0" expanded="false" />
+            <element signature="method#searchStaffAccount#0;class#AccountList#0" expanded="false" />
+            <element signature="docComment;method#deleteUserAccount#0;class#AccountList#0" expanded="false" />
+            <element signature="e#5068#5069#0" expanded="true" />
+            <element signature="e#5140#5141#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5359#5360#0" expanded="true" />
+            <marker date="1449949529114" expanded="false" signature="2:23" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AccountListJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+          <caret line="247" column="126" selection-start-line="247" selection-start-column="126" selection-end-line="247" selection-end-column="126" />
           <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
@@ -1476,14 +1531,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.40614334">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1496,16 +1549,6 @@
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AccountList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4254835">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <marker date="1449947876134" expanded="false" signature="2:23" placeholder="..." />
           </folding>
         </state>
       </provider>

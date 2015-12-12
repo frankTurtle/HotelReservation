@@ -1,6 +1,8 @@
 //package Team1 Group1;
 
 
+import java.util.ArrayList;
+
 /**
 
 
@@ -27,11 +29,11 @@ public class AccountList {
      * @param staff instance of the StaffAccount class
      */
 
-    public static void AddStaffAccount(StaffAccount staff)
+    public static void addStaffAccount(StaffAccount staff)
     {
 
 
-        AccountListJDBC.AddStaffAccount(staff);
+        AccountListJDBC.addStaffAccount(staff);
 
     }//end AddStaffAccount
 
@@ -57,8 +59,8 @@ public class AccountList {
     {
 
 
-        AccountListJDBC.updateUserAccountByStaff( userId, passwd , FName , LName ,
-                passwd , Address , State , ZipCode , PhoneNo, email);
+        AccountListJDBC.updateAccountByStaff( userId, passwd , FName , LName ,
+                passwd , Address , State , ZipCode , PhoneNo, email, Accounttype );
 
 
     }//end updateAccountByUser
@@ -70,7 +72,7 @@ public class AccountList {
      * @param FName    String type
      * @param LName    String type
      */
-    public static void updateStaffAccountMethod (String staffId ,String passwd, String FName , String LName , String Accounttype
+    public static void updateStaffAccountMethod (String staffId ,String passwd, String FName , String LName , String Accounttype,
                                                  String Username)
 
     {
@@ -90,7 +92,7 @@ public class AccountList {
      * @param userID String
      * @return instance of UserAccountMethod Class
      */
-    public static UserAccount searchUserAccountMethod ( String userID)
+    public static UserAccount searchUserAccount ( String userID)
     {
 
 
@@ -104,7 +106,7 @@ public class AccountList {
      * @param staffID String
      * @return instance of StaffAccountMethod class
      */
-    public static StaffAccount searchStaffAccountMethod ( String staffID)
+    public static StaffAccount searchStaffAccount ( String staffID)
     {
 
 
@@ -118,7 +120,7 @@ public class AccountList {
      *
      * @param userID
      */
-    public static void deleteUserAccountMethod(String userID)
+    public static void deleteUserAccount(int userID)
     {
 
         AccountListJDBC.deleteUserAccount(userID);
@@ -130,7 +132,7 @@ public class AccountList {
      * it connects to DB via the AccountsManagementJDBC methods.
      * @param staffID
      */
-    public static void deleteStaffAccount(String staffID)
+    public static void deleteStaffAccount(int staffID)
     {
 
         AccountListJDBC.deleteStaffAccount(staffID);
@@ -171,27 +173,20 @@ public class AccountList {
 
 
     /***************************************************************************
-     * staffLogout functions allows the staff to logout of LMS
      *
      * @return True when successfully logged out
      */
-    public static boolean staffLogout()
+    public static boolean logout()
     {
-        boolean result = AccountListJDBC.staffLogoutMethod();
-        return result ;
-    }//end staffLogout
+        return (AccountListJDBC.logout() == null) ? true : false;
+    }//end logout
 
+//.......................................................................................
 
-    /***************************************************************************
-     * userLogout function allows user to logout of the LMS
-     * @return True when successfully logged out
-     */
-    public static  boolean userLogout()
+    public static ArrayList<Account> getAllAccounts()
     {
-        boolean result = AccountListJDBC.userLogout();
-
-        return result;
-    }// end userLogout
+        return AccountListJDBC.getAllAccounts();
+    }
 
 
 }//end AccountList.java

@@ -243,16 +243,19 @@ public class AccountListJDBC
         return returnUserAccount;
     }
 
-//    public static void updateUserAccountByStaff()
-//    {
-//
-//    }
-//
-//    public static void updateStaffAccount()
-//    {
-//
-//    }
-//
+    public static void updateAccountByStaff(String userId , String passwd,
+                                            String FName , String LName , String Address ,String City ,
+                                            String State , String ZipCode ,String PhoneNo , String email , String Accounttype)
+    {
+        //TODO: Amarjit's implementation
+    }
+
+    public static  void updateStaffAccount(String staffId ,String passwd, String FName , String LName , String Accounttype,
+                                           String Username)
+    {
+        //TODO: Amarjit's implementation
+    }
+
     public static StaffAccount staffLogin( String staffID , String password )
     {
         return ( searchStaffAccount(staffID).getPassword().equals(password) ) ? searchStaffAccount( staffID ) : null;
