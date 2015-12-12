@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Amenity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AmenityList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AmenityListJDBC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AmenityMangementInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Room.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomListJDBC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomManagementInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountList.java" afterPath="$PROJECT_DIR$/src/AccountList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountListJDBC.java" afterPath="$PROJECT_DIR$/src/AccountListJDBC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationApplication.java" />
     </list>
     <ignored path="HotelReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40614334">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,101 +58,127 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseCreation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DatabaseCreation.java">
+      <file leaf-file-name="Amenity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Amenity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="101" selection-start-line="107" selection-start-column="101" selection-end-line="107" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AccountList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="57" selection-end-column="132" />
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
               <folding>
-                <element signature="method#addUserAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="method#addStaffAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="method#searchUserAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="method#searchStaffAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="docComment;method#deleteUserAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="e#5068#5069#0" expanded="true" />
-                <element signature="e#5140#5141#0" expanded="true" />
-                <element signature="e#5304#5305#0" expanded="true" />
-                <element signature="e#5359#5360#0" expanded="true" />
-                <marker date="1449949529114" expanded="false" signature="2:23" placeholder="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
+      <file leaf-file-name="AmenityListJDBC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AmenityListJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AfterLoginInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AfterLoginInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountManagementInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaffAccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StaffAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding>
-                <element signature="e#285#286#0" expanded="false" />
-                <element signature="e#332#333#0" expanded="false" />
-                <element signature="e#1050#1051#0" expanded="false" />
-                <element signature="e#1089#1090#0" expanded="false" />
+                <element signature="method#updateamenity_JDBC#0;class#amenityList_JDBC#0" expanded="false" />
+                <element signature="method#viewamenity_JDBC#0;class#amenityList_JDBC#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Account.java">
+      <file leaf-file-name="AmenityList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AmenityList.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AmenityMangementInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AmenityMangementInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding>
-                <element signature="e#477#478#0" expanded="false" />
-                <element signature="e#545#546#0" expanded="false" />
-                <element signature="e#1419#1420#0" expanded="false" />
-                <element signature="e#1456#1457#0" expanded="false" />
-                <element signature="e#1612#1613#0" expanded="false" />
-                <element signature="e#1648#1649#0" expanded="false" />
-                <element signature="e#2906#2907#0" expanded="false" />
-                <element signature="e#2945#2946#0" expanded="false" />
-                <element signature="e#3058#3059#0" expanded="false" />
-                <element signature="e#3095#3096#0" expanded="false" />
-                <element signature="e#3228#3229#0" expanded="false" />
-                <element signature="e#3264#3265#0" expanded="false" />
-                <element signature="method#toString#0;class#Account#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2198#2199#0" expanded="true" />
+                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="e#2289#2290#0" expanded="true" />
+                <element signature="e#2336#2337#0" expanded="true" />
+                <element signature="e#2367#2368#0" expanded="true" />
+                <element signature="e#2409#2410#0" expanded="true" />
+                <element signature="e#2437#2438#0" expanded="true" />
+                <element signature="e#2482#2483#0" expanded="true" />
+                <element signature="e#2510#2511#0" expanded="true" />
+                <element signature="e#2549#2550#0" expanded="true" />
+                <element signature="e#2580#2581#0" expanded="true" />
+                <element signature="e#2621#2622#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
+                <element signature="e#2680#2681#0" expanded="true" />
+                <element signature="e#2709#2710#0" expanded="true" />
+                <element signature="e#2743#2744#0" expanded="true" />
+                <element signature="e#2772#2773#0" expanded="true" />
+                <element signature="e#2812#2813#0" expanded="true" />
+                <element signature="e#2840#2841#0" expanded="true" />
+                <element signature="e#2882#2883#0" expanded="true" />
+                <element signature="e#2916#2917#0" expanded="true" />
+                <element signature="e#2956#2957#0" expanded="true" />
+                <element signature="e#2987#2988#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomListJDBC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RoomListJDBC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="219" column="1" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#updateRoom_JDBC#0;class#roomList_JDBC#0" expanded="false" />
+                <element signature="method#viewRoom_JDBC#0;class#roomList_JDBC#0" expanded="false" />
+                <element signature="method#addRoom#0;class#roomList_JDBC#0" expanded="false" />
+                <element signature="method#deleteRoom#0;class#roomList_JDBC#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RoomList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="16" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="16" />
+              <folding>
+                <element signature="method#deleteRoom#0;class#roomList#0" expanded="false" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomManagementInterface.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RoomManagementInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.89192265">
+              <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+              <folding>
+                <element signature="e#1426#1427#0" expanded="true" />
+                <element signature="e#1461#1462#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,7 +188,7 @@
         <entry file="file://$PROJECT_DIR$/src/AccountListJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="247" column="126" selection-start-line="247" selection-start-column="126" selection-end-line="247" selection-end-column="126" />
+              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding>
                 <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
@@ -173,43 +204,6 @@
                 <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding>
-                <element signature="e#429#430#0" expanded="false" />
-                <element signature="e#497#498#0" expanded="false" />
-                <element signature="e#1731#1732#0" expanded="false" />
-                <element signature="e#1767#1768#0" expanded="false" />
-                <element signature="e#1929#1930#0" expanded="false" />
-                <element signature="e#1961#1962#0" expanded="false" />
-                <element signature="e#2201#2202#0" expanded="false" />
-                <element signature="e#2235#2236#0" expanded="false" />
-                <element signature="e#2387#2388#0" expanded="false" />
-                <element signature="e#2425#2426#0" expanded="false" />
-                <element signature="e#2603#2604#0" expanded="false" />
-                <element signature="e#2651#2652#0" expanded="false" />
-                <element signature="e#2816#2817#0" expanded="false" />
-                <element signature="e#2862#2863#0" expanded="false" />
-                <element signature="e#2989#2990#0" expanded="false" />
-                <element signature="e#3018#3019#0" expanded="false" />
-                <element signature="e#3139#3140#0" expanded="false" />
-                <element signature="e#3166#3167#0" expanded="false" />
-                <element signature="e#3290#3291#0" expanded="false" />
-                <element signature="e#3318#3319#0" expanded="false" />
-                <element signature="e#3447#3448#0" expanded="false" />
-                <element signature="e#3477#3478#0" expanded="false" />
-                <element signature="e#3624#3625#0" expanded="false" />
-                <element signature="e#3659#3660#0" expanded="false" />
-                <element signature="e#3800#3801#0" expanded="false" />
-                <element signature="e#3834#3835#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -252,6 +246,15 @@
         <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
         <option value="$PROJECT_DIR$/src/AccountList.java" />
         <option value="$PROJECT_DIR$/src/AccountListJDBC.java" />
+        <option value="$PROJECT_DIR$/src/Amenity.java" />
+        <option value="$PROJECT_DIR$/src/AmenityList_JDBC.java" />
+        <option value="$PROJECT_DIR$/src/AmenityList.java" />
+        <option value="$PROJECT_DIR$/src/AmenityMangementInterface.java" />
+        <option value="$PROJECT_DIR$/src/Room.java" />
+        <option value="$PROJECT_DIR$/src/RoomListJDBC.java" />
+        <option value="$PROJECT_DIR$/src/RoomList.java" />
+        <option value="$PROJECT_DIR$/src/RoomManagementInterface.java" />
+        <option value="$PROJECT_DIR$/src/AmenityListJDBC.java" />
       </list>
     </option>
   </component>
@@ -266,7 +269,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -284,9 +287,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,6 +320,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hotel Reservation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotelReservation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RoomManagementInterface.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -628,7 +649,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -643,6 +663,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -684,92 +705,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#loginPicked#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newAccountMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newAccountMenu#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseCreation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AfterLoginInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StaffAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -802,34 +742,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,12 +806,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,18 +815,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -951,34 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,12 +903,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,18 +912,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1092,34 +944,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,12 +984,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,18 +993,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1217,34 +1025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,12 +1065,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,18 +1074,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1389,12 +1153,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1402,34 +1161,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,18 +1170,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1501,7 +1221,40 @@
             <element signature="e#5140#5141#0" expanded="true" />
             <element signature="e#5304#5305#0" expanded="true" />
             <element signature="e#5359#5360#0" expanded="true" />
-            <marker date="1449949529114" expanded="false" signature="2:23" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Amenity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1509,7 +1262,7 @@
     <entry file="file://$PROJECT_DIR$/src/AccountListJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="247" column="126" selection-start-line="247" selection-start-column="126" selection-end-line="247" selection-end-column="126" />
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding>
             <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
@@ -1529,26 +1282,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/AmenityListJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40614334">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding>
+            <element signature="method#updateamenity_JDBC#0;class#amenityList_JDBC#0" expanded="false" />
+            <element signature="method#viewamenity_JDBC#0;class#amenityList_JDBC#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AmenityList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AmenityMangementInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#loginPicked#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newAccountMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newAccountMenu#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2198#2199#0" expanded="true" />
+            <element signature="e#2223#2224#0" expanded="true" />
+            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2289#2290#0" expanded="true" />
+            <element signature="e#2336#2337#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2409#2410#0" expanded="true" />
+            <element signature="e#2437#2438#0" expanded="true" />
+            <element signature="e#2482#2483#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+            <element signature="e#2549#2550#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2621#2622#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2680#2681#0" expanded="true" />
+            <element signature="e#2709#2710#0" expanded="true" />
+            <element signature="e#2743#2744#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2840#2841#0" expanded="true" />
+            <element signature="e#2882#2883#0" expanded="true" />
+            <element signature="e#2916#2917#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+            <element signature="e#2987#2988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RoomListJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="219" column="1" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updateRoom_JDBC#0;class#roomList_JDBC#0" expanded="false" />
+            <element signature="method#viewRoom_JDBC#0;class#roomList_JDBC#0" expanded="false" />
+            <element signature="method#addRoom#0;class#roomList_JDBC#0" expanded="false" />
+            <element signature="method#deleteRoom#0;class#roomList_JDBC#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RoomList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <element signature="method#deleteRoom#0;class#roomList#0" expanded="false" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RoomManagementInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89192265">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding>
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
           </folding>
         </state>
       </provider>
