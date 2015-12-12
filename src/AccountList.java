@@ -1,18 +1,24 @@
 //package Team1 Group1;
 
+
 /**
- * The AccountsListAccount.java \
+
+
+ * The AccountListAccount.java \
  * @author Amarjit Singh, Barret Nobel , Jay Kumar
  */
+
 public class AccountList {
 
     /**
      *
      * @param user
      */
-    public static void addUserAccountMethod(UserAccount user )
+
+    public static void addUserAccount(UserAccount user )
     {
-        AccountsListJDBC.addUserAccountMethod(user);
+
+        AccountListJDBC.addUserAccount(user);
 
     }// end addUserAccount
 
@@ -20,11 +26,14 @@ public class AccountList {
      * this method adds the Staff Account to the DB
      * @param staff instance of the StaffAccount class
      */
-    public static void AddStaffAccountMethod (StaffAccount staff)
+
+    public static void AddStaffAccount(StaffAccount staff)
     {
 
-        AccountsListJDBC.AddStaffAccount(staff);
-    }//end AddStaffAccountMethod
+
+        AccountListJDBC.AddStaffAccount(staff);
+
+    }//end AddStaffAccount
 
 
 
@@ -48,10 +57,11 @@ public class AccountList {
     {
 
 
-        AccountsListJDBC.updateUserAccountByStaffMethod( userId, passwd , FName , LName ,
+        AccountListJDBC.updateUserAccountByStaff( userId, passwd , FName , LName ,
                 passwd , Address , State , ZipCode , PhoneNo, email);
 
-    }//end updateAccountByUserMethod
+
+    }//end updateAccountByUser
 
     /***************************************************************************
      * updateStaffAccount allows the staff to update the staff information
@@ -65,9 +75,13 @@ public class AccountList {
 
     {
 
-        AccountsListJDBC.updateStaffAccountMethod(staffId , passwd ,  FName, LName , Accounttype , Username);
 
-    }// end updateStaffAccountMethod
+
+        AccountListJDBC.updateStaffAccount(staffId , passwd ,  FName, LName , Accounttype , Username);
+
+
+
+    }// end updateStaffAccount
 
 
     /**
@@ -79,7 +93,9 @@ public class AccountList {
     public static UserAccount searchUserAccountMethod ( String userID)
     {
 
-        UserAccount user = AccountsListJDBC.searchUserAccountMethod(userID);
+
+
+        UserAccount user = AccountListJDBC.searchUserAccount(userID);
         return user;
     }
     /*******************************************************************************
@@ -91,10 +107,11 @@ public class AccountList {
     public static StaffAccount searchStaffAccountMethod ( String staffID)
     {
 
-        StaffAccountMethod staff = AccountsListJDBC.searchStaffAccountMethod(staffID);
+
+        StaffAccount staff = AccountListJDBC.searchStaffAccount(staffID);
 
         return staff;
-    }// end searchStaffAccountMethod
+    }// end searchStaffAccount
 
     /***************************************************************************
      * deleteUserAccount takes the desired userID and deletes it from the database
@@ -104,8 +121,8 @@ public class AccountList {
     public static void deleteUserAccountMethod(String userID)
     {
 
-        AccountsListJDBC.deleteUserAccountMethod(userID);
-    }//end deleteUserAccountMethod
+        AccountListJDBC.deleteUserAccount(userID);
+    }//end deleteUserAccoun
 
 
     /***************************************************************************
@@ -113,11 +130,11 @@ public class AccountList {
      * it connects to DB via the AccountsManagementJDBC methods.
      * @param staffID
      */
-    public static void deleteStaffAccountMethod(String staffID)
+    public static void deleteStaffAccount(String staffID)
     {
 
-        AccountsListJDBC.deleteStaffAccountMethod(staffID);
-    }//end deleteStaffAccountMethod
+        AccountListJDBC.deleteStaffAccount(staffID);
+    }//end deleteStaffAccount
 
 
     /***************************************************************************
@@ -125,15 +142,15 @@ public class AccountList {
      * different tasks
      * @param staffId String
      * @param passwd  String
-     * @return Object of the Staff Account Method
+     * @return Object of the Staff Account
      */
-    public static StaffAccountMethod staffLogin(String staffId , String passwd)
+    public static StaffAccount staffLogin(String staffId , String passwd)
     {
 
-        StaffAccount staff = AccountsListJDBC.staffLoginMethod(staffId, passwd);
+        StaffAccount staff = AccountListJDBC.staffLogin(staffId, passwd);
 
         return staff;
-    }// end staffLoginMethod
+    }// end staffLogin
 
 
     /***************************************************************************
@@ -141,16 +158,16 @@ public class AccountList {
      * different tasks
      * @param userId  String
      * @param passwd  String
-     * @return instance of the UserAccount Class Method
+     * @return instance of the UserAccount Class
      */
     public static  UserAccount userLogin(String userId , String passwd)
     {
         //connects to DB with staff credentials , returns true if credentials are
         //accurate and false if not accurate
-        UserAccount user = AccountsListJDBC.userLoginMethod(userId, passwd);
+        UserAccount user = AccountListJDBC.userLogin(userId, passwd);
 
         return user;
-    }//end userLoginMethod
+    }//end userLogin
 
 
     /***************************************************************************
@@ -158,23 +175,23 @@ public class AccountList {
      *
      * @return True when successfully logged out
      */
-    public static boolean staffLogoutMethod()
+    public static boolean staffLogout()
     {
-        boolean result = AccountsListJDBC.staffLogoutMethod();
+        boolean result = AccountListJDBC.staffLogoutMethod();
         return result ;
-    }//end staffLogoutMethod
+    }//end staffLogout
 
 
     /***************************************************************************
      * userLogout function allows user to logout of the LMS
      * @return True when successfully logged out
      */
-    public static  boolean userLogoutMethod()
+    public static  boolean userLogout()
     {
-        boolean result = AccountsListJDBC.userLogoutMethod();
+        boolean result = AccountListJDBC.userLogout();
 
         return result;
-    }// end userLogoutMethod
+    }// end userLogout
 
 
-}//end AccountsManagement.java
+}//end AccountList.java
