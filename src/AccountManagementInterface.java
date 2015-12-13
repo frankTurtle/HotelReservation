@@ -59,7 +59,7 @@ public class AccountManagementInterface
                                         "Last Name: ",
                                         "Password: ",
                                         "Confirm Password: ",
-                                        "\nHouse: ",
+                                        "\nHouse Number: ",
                                         "Street: ",
                                         "City: ",
                                         "State: ",
