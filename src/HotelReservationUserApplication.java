@@ -47,7 +47,7 @@ public class HotelReservationUserApplication
 
                     case 3: //........................................................................................... exit program
                         System.out.println("\nGoodBye!\n");
-                        if( AccountList.logout() ) account = null; //.................................................... sets account to null upon logout
+                        System.exit(0);
                         break;
                 }
             }
@@ -220,7 +220,7 @@ public class HotelReservationUserApplication
     {
         String[] displayThisText = { generateHeader("Hotel Reservation"),
                                     LoginInterface.initialMenu()
-                                    }; //............................................................ strings to pass in in for prompts
+                                    }; //................................................. strings to pass in in for prompts
 
         return errorCheckWithinRange( displayThisText, 1, 3 ); //.................................... display prompts / get response / error check
     }
@@ -233,9 +233,9 @@ public class HotelReservationUserApplication
         final int PASSWORD = 1; //.................................................................. just to be sure I access the array elements correctly in return statement
 
         String[] credentials = new String[ LoginInterface.loginPrompt("").length ];
-        String[] displayThisText = LoginInterface.userOrStaffMenu(); //.............................. strings to pass in for prompts
+//        String[] displayThisText = "user"; //.............................. strings to pass in for prompts
 
-        String answer = ( errorCheckWithinRange(displayThisText, 1, 3) == 1 ) ? "user" : "staff"; //. label for the login prompt
+        String answer = "user"; //( errorCheckWithinRange(displayThisText, 1, 3) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
         for( int i = 0; i < credentials.length; i++ ) //............................................. loop through the questions to get answers
         {
@@ -252,12 +252,7 @@ public class HotelReservationUserApplication
             }
         }
 
-        if( answer.equals("user") ) //.............................................................. if its a user
-        {
-            return AccountList.userLogin(credentials[USERNAME], credentials[PASSWORD]); //...... call userLogin method
-        }
-        else
-            return AccountList.staffLogin( credentials[USERNAME], credentials[PASSWORD] ); //... or call the staffLogin method
+        return AccountList.userLogin( credentials[USERNAME], credentials[PASSWORD] ); //... or call the staffLogin method
     }
 
     // Method to display welcome or error after user has typed in their credentials

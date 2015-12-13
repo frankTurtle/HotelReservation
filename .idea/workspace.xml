@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
+    <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="split the classes then got the HotelReservationStaffApplication working">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AfterLoginInterface.java" afterPath="$PROJECT_DIR$/src/AfterLoginInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/HotelReservationApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationStaffApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationUserApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
     </list>
     <ignored path="HotelReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotelReservationStaffApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HotelReservationStaffApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3349131">
-              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="195" column="45" selection-start-line="195" selection-start-column="45" selection-end-line="195" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
@@ -53,17 +51,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelReservationUserApplication.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HotelReservationUserApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="234" column="69" selection-start-line="234" selection-start-column="58" selection-end-line="234" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.628752">
+              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#afterLoginAccountManagement#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#viewSingleAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#viewAllAccounts#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#afterLoginMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
-                <element signature="method#initialMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#newAccountMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#newAccountMenu#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
@@ -110,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -256,9 +254,9 @@
         <option value="$PROJECT_DIR$/src/AccountManagementInterface.java" />
         <option value="$PROJECT_DIR$/src/LoginInterface.java" />
         <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
-        <option value="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
         <option value="$PROJECT_DIR$/src/HotelReservationStaffApplication.java" />
         <option value="$PROJECT_DIR$/src/AfterLoginInterface.java" />
+        <option value="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
       </list>
     </option>
   </component>
@@ -336,7 +334,7 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.HotelReservationStaffApplication">
+  <component name="RunManager" selected="Application.HotelReservationUserApplication">
     <configuration default="false" name="HotelReservationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="HotelReservationApplication" />
@@ -370,6 +368,21 @@
     <configuration default="false" name="HotelReservationStaffApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="HotelReservationStaffApplication" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Hotel Reservation" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="HotelReservationUserApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="HotelReservationUserApplication" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -567,16 +580,18 @@
       <listeners />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.HotelReservationApplication" />
       <item index="1" class="java.lang.String" itemvalue="Application.AccountListJDBC" />
       <item index="2" class="java.lang.String" itemvalue="Application.HotelReservationStaffApplication" />
+      <item index="3" class="java.lang.String" itemvalue="Application.HotelReservationUserApplication" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.HotelReservationStaffApplication" />
-        <item index="1" class="java.lang.String" itemvalue="Application.HotelReservationApplication" />
-        <item index="2" class="java.lang.String" itemvalue="Application.AccountListJDBC" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.HotelReservationUserApplication" />
+        <item index="1" class="java.lang.String" itemvalue="Application.HotelReservationStaffApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Application.HotelReservationApplication" />
+        <item index="3" class="java.lang.String" itemvalue="Application.AccountListJDBC" />
       </list>
     </recent_temporary>
   </component>
@@ -675,12 +690,18 @@
       <option name="project" value="LOCAL" />
       <updated>1450025808421</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="split the classes then got the HotelReservationStaffApplication working">
+      <created>1450026894544</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1450026894544</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -688,8 +709,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.283857" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.283857" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -732,7 +753,8 @@
     <MESSAGE value="implemented method to search for a specific user for the admin account" />
     <MESSAGE value="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option" />
     <MESSAGE value="Created new branch to split the user and staff login into two different classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new branch to split the user and staff login into two different classes" />
+    <MESSAGE value="split the classes then got the HotelReservationStaffApplication working" />
+    <option name="LAST_COMMIT_MESSAGE" value="split the classes then got the HotelReservationStaffApplication working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1589,35 +1611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="234" column="69" selection-start-line="234" selection-start-column="58" selection-end-line="234" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#viewSingleAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#viewAllAccounts#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#initialMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#newAccountMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#newAccountMenu#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#errorCheckWithinRange#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#generateHeader#0;class#HotelReservationUserApplication#0" expanded="false" />
-            <element signature="method#deleteAccountAdmin#0;class#HotelReservationUserApplication#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AfterLoginInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1628,8 +1621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3349131">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="45" selection-start-line="195" selection-start-column="45" selection-end-line="195" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
@@ -1646,6 +1639,35 @@
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.628752">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationUserApplication#0" expanded="false" />
           </folding>
         </state>
       </provider>
