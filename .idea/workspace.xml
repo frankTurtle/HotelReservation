@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountManagementInterface.java" afterPath="$PROJECT_DIR$/src/AccountManagementInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginInterface.java" afterPath="$PROJECT_DIR$/src/LoginInterface.java" />
     </list>
     <ignored path="HotelReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -634,7 +631,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450024889040</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option">
+      <created>1450025503815</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1450025503815</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -689,7 +692,8 @@
     <MESSAGE value="updated creating a new account menu to allow you to go back to previous menu" />
     <MESSAGE value="added the string Number when prompting user for their house" />
     <MESSAGE value="implemented method to search for a specific user for the admin account" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented method to search for a specific user for the admin account" />
+    <MESSAGE value="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
