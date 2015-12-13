@@ -22,7 +22,8 @@ public class LoginInterface
         String[] returnStringArray = { LoginInterface.generateHeader("Login"),
                                     "Please Choose from the following: \n",
                                     "1.User login\n",
-                                    "2.Staff login\n>:"
+                                    "2.Staff login\n",
+                                    "3.Previous menu\n>:"
                                      };
 
         return returnStringArray;

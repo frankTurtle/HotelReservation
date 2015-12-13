@@ -61,7 +61,7 @@ public class HotelReservationApplication
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
                                      AccountManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
-        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 4; //.... sets the max for response based on account questions
+        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 6 : 5; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
     }
@@ -139,11 +139,15 @@ public class HotelReservationApplication
                             viewAllAccounts();
                             break;
 
-                        case 3: //..................................................... create new account
+                        case 3: //..................................................... view a single account
+                            viewSingleAccount();
+                            break;
+
+                        case 4: //..................................................... create new account
                             newAccountMenu();
                             break;
 
-                        case 4: //..................................................... go to previous menu
+                        case 5: //..................................................... go to previous menu
                             stopLoop = true;
                             break;
                     }
@@ -231,7 +235,7 @@ public class HotelReservationApplication
         String[] credentials = new String[ LoginInterface.loginPrompt("").length ];
         String[] displayThisText = LoginInterface.userOrStaffMenu(); //.............................. strings to pass in for prompts
 
-        String answer = ( errorCheckWithinRange(displayThisText, 1, 2) == 1 ) ? "user" : "staff"; //. label for the login prompt
+        String answer = ( errorCheckWithinRange(displayThisText, 1, 3) == 1 ) ? "user" : "staff"; //. label for the login prompt
 
         for( int i = 0; i < credentials.length; i++ ) //............................................. loop through the questions to get answers
         {
