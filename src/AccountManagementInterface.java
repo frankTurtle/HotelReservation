@@ -46,7 +46,8 @@ public class AccountManagementInterface
     {
         String returnString = "Choose from the menu:\n";
         returnString += "1.Staff Account\n";
-        returnString += "2.User Account\n>:";
+        returnString += "2.User Account\n";
+        returnString += "3.Previous menu\n>:";
 
         return returnString;
     }

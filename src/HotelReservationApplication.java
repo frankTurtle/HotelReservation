@@ -243,7 +243,7 @@ public class HotelReservationApplication
                                      AccountManagementInterface.newAccountInitialMenu()
                                     }; //..................................................... strings for prompts
 
-        return errorCheckWithinRange( displayThisText, 1, 2 ); //........................................ display prompts / get response / error check
+        return errorCheckWithinRange( displayThisText, 1, 3 ); //........................................ display prompts / get response / error check
     }
 
     // Method to display a menu of choices when creating a new account
@@ -281,6 +281,9 @@ public class HotelReservationApplication
                                                         ); //...................................................................... create a new user account
 
                 AccountList.addUserAccount( addNewUser ); //................................................................... add the user to the DB
+                break;
+
+            case 3:
                 break;
         }
     }
