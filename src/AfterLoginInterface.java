@@ -8,7 +8,7 @@ public class AfterLoginInterface
     public static String initialMenu( String accountType )
     {
         String returnString = "Please choose from the following:\n";
-        int type = ( accountType.equals("U") ) ? 2 : ( accountType.equals("A") ) ? 3 : 0; //... determins if its admin / user / staff
+        int type = ( accountType.equals("U") ) ? 2 : ( accountType.equals("A") ) ? 3 : 0; //... determines if its admin / user / staff
 
         switch( type ) //todo update all the questions for each type of account
         {

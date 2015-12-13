@@ -5,7 +5,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class HotelReservationApplication
+public class HotelReservationUserApplication
 {
     static Scanner console = new Scanner( System.in ); //.. gets input from keyboard
     static Account account = null; //...................... the account we will be using during all interactions
@@ -59,7 +59,7 @@ public class HotelReservationApplication
     private static int afterLoginAccountManagementChoice( Account person )
     {
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
-                                     AccountManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
+                AccountManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
         int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 6 : 5; //.... sets the max for response based on account questions
 
@@ -204,7 +204,7 @@ public class HotelReservationApplication
     private static int afterLoginMenuChoice( Account person )
     {
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
-                                     AfterLoginInterface.initialMenu( person.getAccountType() )}; //.................. array full of title and questions
+                AfterLoginInterface.initialMenu( person.getAccountType() )}; //.................. array full of title and questions
 
         //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
         int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 3 : 3; //.... sets the max for response based on account questions
@@ -219,8 +219,8 @@ public class HotelReservationApplication
     private static int initialMenuChoice()
     {
         String[] displayThisText = { generateHeader("Hotel Reservation"),
-                                     LoginInterface.initialMenu()
-                                    }; //................................................. strings to pass in in for prompts
+                                    LoginInterface.initialMenu()
+                                    }; //............................................................ strings to pass in in for prompts
 
         return errorCheckWithinRange( displayThisText, 1, 3 ); //.................................... display prompts / get response / error check
     }
@@ -285,8 +285,8 @@ public class HotelReservationApplication
     private static int newAccountMenuChoice()
     {
         String[] displayThisText = { generateHeader("New Account Creation"),
-                                     AccountManagementInterface.newAccountInitialMenu()
-                                    }; //..................................................... strings for prompts
+                AccountManagementInterface.newAccountInitialMenu()
+        }; //..................................................... strings for prompts
 
         return errorCheckWithinRange( displayThisText, 1, 3 ); //........................................ display prompts / get response / error check
     }
@@ -321,9 +321,9 @@ public class HotelReservationApplication
                 int phone = Integer.parseInt( answers[10] );
 
                 UserAccount addNewUser = new UserAccount( answers[0], answers[1], "U",  username,
-                                                          answers[2], 0, street,  answers[6],
-                                                          answers[7], zip, answers[9], phone
-                                                        ); //...................................................................... create a new user account
+                        answers[2], 0, street,  answers[6],
+                        answers[7], zip, answers[9], phone
+                ); //...................................................................... create a new user account
 
                 AccountList.addUserAccount( addNewUser ); //................................................................... add the user to the DB
                 break;
