@@ -110,15 +110,19 @@ public class HotelReservationApplication
                             viewAllAccounts();
                             break;
 
-                        case 3: //..................................................... create new account
+                        case 3: //..................................................... view a single account
+                            viewSingleAccount();
+                            break;
+
+                        case 4: //..................................................... create new account
                             newAccountMenu();
                             break;
 
-                        case 4: //..................................................... delete an account
+                        case 5: //..................................................... delete an account
                             Account deleted = deleteAccountAdmin();
                             break;
 
-                        case 5: //..................................................... go to previous menu
+                        case 6: //..................................................... go to previous menu
                             stopLoop = true;
                             break;
                     }
@@ -145,6 +149,43 @@ public class HotelReservationApplication
                     }
                     break;
             }
+        }
+    }
+
+    // Method to print a single account object specified by ID
+    private static void viewSingleAccount()
+    {
+        String id;
+
+        switch( errorCheckWithinRange( new String[] {AccountManagementInterface.newAccountInitialMenu()} , 1, 3 ) )
+        {
+            case 1: //................................................................................................. staff account
+                System.out.print( AccountManagementInterface.viewSingleAccountMenu() );
+                id = console.next();
+
+                if( AccountList.searchStaffAccount(id).getFirstName().equals("") )
+                {
+                    System.out.print( "\nInvalid ID\n" );
+                    break;
+                }
+
+                System.out.println( AccountList.searchStaffAccount(id) );
+                break;
+
+            case 2: //................................................................................................. user account
+                System.out.print( AccountManagementInterface.viewSingleAccountMenu() );
+                id = console.next();
+
+                if( AccountList.searchUserAccount(id).getFirstName().equals("") )
+                {
+                    System.out.print( "\nInvalid ID\n" );
+                    break;
+                }
+                System.out.println( AccountList.searchUserAccount(id) );
+                break;
+
+            case 3: //................................................................................................. prevous menu
+                break;
         }
     }
 
@@ -327,7 +368,7 @@ public class HotelReservationApplication
 
     // Method to check for input errors
     // takes the low and high for range of values to test within
-    private static int errorCheckWithinRange(String[] displayText, int low, int high )
+    private static int errorCheckWithinRange( String[] displayText, int low, int high )
     {
         int choice = 0; //................................................................................................ variable to return the answer with
 

@@ -16,9 +16,10 @@ public class AccountManagementInterface
                 returnString += "ADMIN MENU\n";
                 returnString += "1. View my account\n";
                 returnString += "2. View all accounts\n";
-                returnString += "3. Create a new account\n";
-                returnString += "4. Delete an account\n";
-                returnString += "5. Previous menu\n>:";
+                returnString += "3. View a single account\n";
+                returnString += "4. Create a new account\n";
+                returnString += "5. Delete an account\n";
+                returnString += "6. Previous menu\n>:";
                 break;
 
             case 0: //......................................................................... STAFF
@@ -107,6 +108,11 @@ public class AccountManagementInterface
                                     };
 
         return returnString;
+    }
+
+    public static String viewSingleAccountMenu()
+    {
+        return "Please enter the ID\n>: ";
     }
 
 }

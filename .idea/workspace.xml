@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountList.java" afterPath="$PROJECT_DIR$/src/AccountList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountListJDBC.java" afterPath="$PROJECT_DIR$/src/AccountListJDBC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccountManagementInterface.java" afterPath="$PROJECT_DIR$/src/AccountManagementInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationApplication.java" />
     </list>
     <ignored path="HotelReservation.iws" />
@@ -30,12 +29,13 @@
       <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40614334">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.7045814">
+              <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-                <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+                <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+                <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -46,7 +46,6 @@
                 <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-                <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
               </folding>
             </state>
@@ -71,14 +70,11 @@
               <folding>
                 <element signature="method#addUserAccount#0;class#AccountList#0" expanded="false" />
                 <element signature="method#addStaffAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="method#searchUserAccount#0;class#AccountList#0" expanded="false" />
+                <element signature="method#updateAccountByStaffMethod#0;class#AccountList#0" expanded="false" />
+                <element signature="docComment;method#updateStaffAccountMethod#0;class#AccountList#0" expanded="false" />
+                <element signature="method#updateStaffAccountMethod#0;class#AccountList#0" expanded="false" />
                 <element signature="method#searchStaffAccount#0;class#AccountList#0" expanded="false" />
                 <element signature="docComment;method#deleteUserAccount#0;class#AccountList#0" expanded="false" />
-                <element signature="e#5068#5069#0" expanded="true" />
-                <element signature="e#5140#5141#0" expanded="true" />
-                <element signature="e#5304#5305#0" expanded="true" />
-                <element signature="e#5359#5360#0" expanded="true" />
-                <marker date="1449949529114" expanded="false" signature="2:23" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -108,8 +104,16 @@
         <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-              <folding />
+              <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+              <folding>
+                <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+                <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+                <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+                <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+                <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+                <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+                <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,12 +123,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="e#285#286#0" expanded="false" />
-                <element signature="e#332#333#0" expanded="false" />
-                <element signature="e#1050#1051#0" expanded="false" />
-                <element signature="e#1089#1090#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,18 +134,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
               <folding>
-                <element signature="e#477#478#0" expanded="false" />
-                <element signature="e#545#546#0" expanded="false" />
-                <element signature="e#1419#1420#0" expanded="false" />
-                <element signature="e#1456#1457#0" expanded="false" />
-                <element signature="e#1612#1613#0" expanded="false" />
-                <element signature="e#1648#1649#0" expanded="false" />
-                <element signature="e#2906#2907#0" expanded="false" />
-                <element signature="e#2945#2946#0" expanded="false" />
-                <element signature="e#3058#3059#0" expanded="false" />
-                <element signature="e#3095#3096#0" expanded="false" />
-                <element signature="e#3228#3229#0" expanded="false" />
-                <element signature="e#3264#3265#0" expanded="false" />
                 <element signature="method#toString#0;class#Account#0" expanded="false" />
               </folding>
             </state>
@@ -173,6 +160,7 @@
                 <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
                 <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+                <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -183,34 +171,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding>
-                <element signature="e#429#430#0" expanded="false" />
-                <element signature="e#497#498#0" expanded="false" />
-                <element signature="e#1731#1732#0" expanded="false" />
-                <element signature="e#1767#1768#0" expanded="false" />
-                <element signature="e#1929#1930#0" expanded="false" />
-                <element signature="e#1961#1962#0" expanded="false" />
-                <element signature="e#2201#2202#0" expanded="false" />
-                <element signature="e#2235#2236#0" expanded="false" />
-                <element signature="e#2387#2388#0" expanded="false" />
-                <element signature="e#2425#2426#0" expanded="false" />
-                <element signature="e#2603#2604#0" expanded="false" />
-                <element signature="e#2651#2652#0" expanded="false" />
-                <element signature="e#2816#2817#0" expanded="false" />
-                <element signature="e#2862#2863#0" expanded="false" />
-                <element signature="e#2989#2990#0" expanded="false" />
-                <element signature="e#3018#3019#0" expanded="false" />
-                <element signature="e#3139#3140#0" expanded="false" />
-                <element signature="e#3166#3167#0" expanded="false" />
-                <element signature="e#3290#3291#0" expanded="false" />
-                <element signature="e#3318#3319#0" expanded="false" />
-                <element signature="e#3447#3448#0" expanded="false" />
-                <element signature="e#3477#3478#0" expanded="false" />
-                <element signature="e#3624#3625#0" expanded="false" />
-                <element signature="e#3659#3660#0" expanded="false" />
-                <element signature="e#3800#3801#0" expanded="false" />
-                <element signature="e#3834#3835#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,17 +208,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Account.java" />
-        <option value="$PROJECT_DIR$/src/AccountManagementInterface.java" />
         <option value="$PROJECT_DIR$/src/DatabaseCreation.java" />
-        <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
         <option value="$PROJECT_DIR$/src/AccountList.java" />
         <option value="$PROJECT_DIR$/src/AccountListJDBC.java" />
+        <option value="$PROJECT_DIR$/src/AccountManagementInterface.java" />
+        <option value="$PROJECT_DIR$/src/HotelReservationApplication.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -284,9 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,6 +282,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -619,11 +582,23 @@
       <option name="project" value="LOCAL" />
       <updated>1449947898553</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated creating a new account menu to allow you to go back to previous menu">
+      <created>1450022853543</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1450022853543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added the string Number when prompting user for their house">
+      <created>1450022918261</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1450022918261</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -633,10 +608,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28445426" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.283857" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14623655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,11 +646,13 @@
     <MESSAGE value="cleaned up the code" />
     <MESSAGE value="created AccountList branch&#10;added Amarjit's class&#10;removed package" />
     <MESSAGE value="Uploaded newest updates to AccountList class by Amarjit&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploaded newest updates to AccountList class by Amarjit&#10;" />
+    <MESSAGE value="updated creating a new account menu to allow you to go back to previous menu" />
+    <MESSAGE value="added the string Number when prompting user for their house" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the string Number when prompting user for their house" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -684,6 +661,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/AccountListJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="247" column="126" selection-start-line="247" selection-start-column="126" selection-end-line="247" selection-end-column="126" />
+          <folding>
+            <element signature="method#getAllAccounts#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#connectToDatabase#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#connectStatement#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#getUserID#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#addStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#addUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#deleteUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#searchStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#searchUserAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateAccountByStaff#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -691,7 +700,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -702,7 +712,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
@@ -736,7 +745,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,12 +761,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,18 +770,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -794,6 +794,7 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -802,34 +803,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -840,7 +814,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -851,7 +826,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
@@ -885,7 +859,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -893,12 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,18 +884,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -943,6 +908,7 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -951,34 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -989,7 +928,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1000,7 +940,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
@@ -1026,7 +965,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,12 +981,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,18 +990,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1084,6 +1014,7 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1092,34 +1023,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,7 +1034,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1141,7 +1046,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
@@ -1151,7 +1055,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="102" selection-start-line="91" selection-start-column="102" selection-end-line="91" selection-end-column="102" />
-          <folding />
+          <folding>
+            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1159,12 +1071,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,18 +1080,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1209,6 +1104,7 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1217,34 +1113,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1255,7 +1124,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1266,7 +1136,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
@@ -1276,7 +1145,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,12 +1161,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,18 +1170,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1334,6 +1194,7 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1345,7 +1206,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1356,7 +1218,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
@@ -1381,6 +1242,7 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,12 +1251,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1402,34 +1259,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1929#1930#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2235#2236#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2603#2604#0" expanded="false" />
-            <element signature="e#2651#2652#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="false" />
-            <element signature="e#2862#2863#0" expanded="false" />
-            <element signature="e#2989#2990#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3139#3140#0" expanded="false" />
-            <element signature="e#3166#3167#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3447#3448#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3624#3625#0" expanded="false" />
-            <element signature="e#3659#3660#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3834#3835#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,18 +1268,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1456#1457#0" expanded="false" />
-            <element signature="e#1612#1613#0" expanded="false" />
-            <element signature="e#1648#1649#0" expanded="false" />
-            <element signature="e#2906#2907#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#3058#3059#0" expanded="false" />
-            <element signature="e#3095#3096#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3264#3265#0" expanded="false" />
             <element signature="method#toString#0;class#Account#0" expanded="false" />
           </folding>
         </state>
@@ -1482,8 +1300,16 @@
     <entry file="file://$PROJECT_DIR$/src/AccountManagementInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
+          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+          <folding>
+            <element signature="method#initialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountInitialMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountUserMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#newAccountStaffMenu#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#0;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#deleteAccountConfirmation#1;class#AccountManagementInterface#0" expanded="false" />
+            <element signature="method#adminDeleteAccountMenu#0;class#AccountManagementInterface#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1494,14 +1320,11 @@
           <folding>
             <element signature="method#addUserAccount#0;class#AccountList#0" expanded="false" />
             <element signature="method#addStaffAccount#0;class#AccountList#0" expanded="false" />
-            <element signature="method#searchUserAccount#0;class#AccountList#0" expanded="false" />
+            <element signature="method#updateAccountByStaffMethod#0;class#AccountList#0" expanded="false" />
+            <element signature="docComment;method#updateStaffAccountMethod#0;class#AccountList#0" expanded="false" />
+            <element signature="method#updateStaffAccountMethod#0;class#AccountList#0" expanded="false" />
             <element signature="method#searchStaffAccount#0;class#AccountList#0" expanded="false" />
             <element signature="docComment;method#deleteUserAccount#0;class#AccountList#0" expanded="false" />
-            <element signature="e#5068#5069#0" expanded="true" />
-            <element signature="e#5140#5141#0" expanded="true" />
-            <element signature="e#5304#5305#0" expanded="true" />
-            <element signature="e#5359#5360#0" expanded="true" />
-            <marker date="1449949529114" expanded="false" signature="2:23" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1525,18 +1348,20 @@
             <element signature="method#updateStaffAccount#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#staffLogin#0;class#AccountListJDBC#0" expanded="false" />
             <element signature="method#userLogin#0;class#AccountListJDBC#0" expanded="false" />
+            <element signature="method#main#0;class#AccountListJDBC#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40614334">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.7045814">
+          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#initialMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#login#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1547,7 +1372,6 @@
             <element signature="method#errorCheckWithinRange#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
-            <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
           </folding>
         </state>
