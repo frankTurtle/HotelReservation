@@ -17,7 +17,8 @@ public class AfterLoginInterface
                 returnString += "1. Account Management\n";
                 returnString += "2. Reservation Management\n";
                 returnString += "3. Room Management\n";
-                returnString += "4. Logout\n>:";
+                returnString += "4. Generate Reports\n";
+                returnString += "5. Logout\n>:";
                 break;
 
             case 0: //........................................................................ STAFF

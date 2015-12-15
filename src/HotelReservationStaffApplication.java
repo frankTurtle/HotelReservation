@@ -50,13 +50,52 @@ public class HotelReservationStaffApplication
                         roomManagement();
                         break;
 
-                    case 4: //........................................................................................... exit program
+                    case 4:
+                        report();
+                        break;
+
+                    case 5: //........................................................................................... exit program
                         System.out.println("\nGoodBye!\n");
                         if( AccountList.logout() ) account = null; //.................................................... sets account to null upon logout
                         break;
                 }
             }
         }
+    }
+
+    private static void report() {
+        boolean stopLoop = false;
+        while (!stopLoop)
+        {
+            switch (reportChoice())
+            {
+                case 1:
+                    Report.generateYearly(2015);
+                    break;
+
+                case 2:
+                    Report.generateMonthly(1);
+                    break;
+
+                case 3:
+                    Report.generateDaily(1);
+                    break;
+
+                case 4:
+                    stopLoop = true;
+                    break;
+            }
+        }
+    }
+
+    private static int reportChoice()
+    {
+        String[] displayThisText = { generateHeader( "Report" ),
+                                    ReportManagementInterface.menu()
+                                    };
+        int max = 4;
+
+        return errorCheckWithinRange( displayThisText, 1, max );
     }
 
     // Method to determine which choice from the menu
@@ -212,7 +251,7 @@ public class HotelReservationStaffApplication
                                      AfterLoginInterface.initialMenu( person.getAccountType() )}; //.................. array full of title and questions
 
         //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
-        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 4 : 4; //.... sets the max for response based on account questions
+        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 5 : 4; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
     }
