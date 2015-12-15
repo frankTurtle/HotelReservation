@@ -1,36 +1,37 @@
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 public class Amenity
 {
-    public static int getamenityid(ResultSet rs) throws SQLException
+    private int amenityId;
+    private String amenityname;
+    private char status;
+
+    public Amenity()
     {
-        int amenityid = rs.getInt("amenityid");
 
-        return amenityid;
-    }
-    public static String getamenityname(ResultSet rs) throws SQLException
-    {
-        String amenityName = rs.getString("amenityname");
-
-
-        return amenityName;
     }
 
-    public static String getamenitystatus(ResultSet rs) throws SQLException
+    public int getAmenityId()
     {
-        String amenitystatus = rs.getString("status");
-
-        return amenitystatus;
+        return amenityId;
     }
 
-    public static boolean setamenitystatus(int input,String new_status, Statement stmt, String query) throws SQLException
+    public String getAmenityName()
     {
-        System.out.println("in amenity");
-        int rs2 = 0;
-        rs2 = stmt.executeUpdate(query);
-        return true;
+        return amenityname;
+    }
+
+    public char getAmenityStatus()
+    {
+        return status;
+    }
+
+    public void setAmenityStatus(char n_status)
+    {
+        status = n_status;
+    }
+
+    public String toString()
+    {
+        return "Amenity ID: " + amenityId + " - Amenity Name: " + amenityname + " - Amenity Status: " + status + "\n";
 
     }
 }

@@ -1,9 +1,10 @@
+import java.util.*;
 /** this is the class that interacts with the
  * allows changes to me made to the amenity table
  * @author Other
  *
  */
-public class amenityList {
+public class AmenityList {
 
     /**this is the class that allows the staff member to update
      * the status an amenity
@@ -11,25 +12,29 @@ public class amenityList {
      * @param status
      * @return
      */
-    public static void updateamenity(int input, String status)
+    public static boolean UpdateAmenity(int input, char status)
     {
-        boolean update = false;
+        Scanner in = new Scanner(System.in);
+        boolean done = false;
 
-        update = amenityList_JDBC.updateamenity_JDBC(input, status);
+        System.out.println("Please enter amenity id for amenity you wish to update:");
+        input = in.nextInt();
 
-        if(update == true)
-            System.out.println("Update successful");
-        else
-            System.out.println("Not successful");
+        System.out.println("Please enter the status you wish for it to now have:");
+        status = in.next().charAt(0);
+
+        done =AmenityListJDBC.UpdateAmenityJDBC(input, status);
+
+        return done;
 
     }
 
     /**this is the class that allows the user to view all the amnities
      * offered by the hotel
      */
-    public static void viewamenity()
+    public static void ViewAmenity()
     {
-        amenityList_JDBC.viewamenity_JDBC();
+        AmenityListJDBC.ViewAmenityJDBC();
 
     }
 

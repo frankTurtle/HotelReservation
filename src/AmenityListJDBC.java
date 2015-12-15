@@ -1,11 +1,6 @@
 import java.sql.*;
 
-/**this class allows the interaction between 
- * the amenitylist and the amenity database
- * @author Other
- *
- */
-public class amenityList_JDBC {
+public class AmenityListJDBC {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost:3306/";
@@ -15,13 +10,7 @@ public class amenityList_JDBC {
     static final String user = "root";
     static final String pass = "123456789";
 
-    /**this method allows for the interaction between the
-     * updateamenity method and the amenity database
-     * @param input
-     * @param new_status
-     * @return
-     */
-    public static boolean updateamenity_JDBC(int input, String new_status)
+    public static boolean UpdateAmenityJDBC(int input,char n_status )
     {
         boolean update = false;
         Connection conn = null;
@@ -30,35 +19,17 @@ public class amenityList_JDBC {
         try
         {
             Class.forName(JDBC_DRIVER);
-
-            System.out.println("Connecting to a selected database");
             conn = DriverManager.getConnection(UPDATED_URL, user, pass);
-            System.out.println("Connected database successfully");
-
-            System.out.println("Creating statement");
             stmt = conn.createStatement();
 
-            String sql = "SELECT amenityid, status FROM Amenity_Table";
-            ResultSet rs = stmt.executeQuery(sql);
+            String sql = "UPDATE amenity_table SET status = '"+ n_status + "' WHERE amenityid = " + input + ";";
+            stmt.executeUpdate(sql);
 
-            System.out.println("AmenityID:				Status:");
-            while(rs.next())
-            {
-                System.out.print(Amenity.getamenityid(rs) + "				");
-                System.out.println(Amenity.getamenitystatus(rs));
-            }rs.close();
-
-
-            String query = "UPDATE amenity_table SET status = '"+ new_status + "' WHERE amenityid = " + input + ";";
-            //"update Amenity_Table" + "set status = new_status" + "where amenityid = input" ;
-            stmt = conn.createStatement();
-            update=Amenity.setamenitystatus(input, new_status, stmt, query);
-
-            conn.close();
-
-        }catch(SQLException se){
-            se.printStackTrace();
-        }catch(Exception e){
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }finally{
             try{
@@ -75,16 +46,10 @@ public class amenityList_JDBC {
             }
 
         }
-        return update;
-    }
 
-    /**this method allows for the interaction between the
-     * viewamenity method and the amenity database
-     * @param DatabaseCreation2
-     * @param conn
-     * @throws SQLException
-     */
-    public static void viewamenity_JDBC()
+        return update=true;
+    }
+    public static void ViewAmenityJDBC()
     {
         Connection conn = null;
         Statement stmt = null;
@@ -103,13 +68,21 @@ public class amenityList_JDBC {
             String sql = "SELECT * FROM Amenity_Table";
             ResultSet rs = stmt.executeQuery(sql);
 
-            System.out.println("AmenityID:		Amenity Name:			Status:");
+            System.out.println("ID:\tName:\tStatus:");
             while(rs.next())
             {
-                System.out.print(Amenity.getamenityid(rs) + "				");
-                System.out.print(Amenity.getamenityname(rs) + "				");
-                System.out.println(Amenity.getamenitystatus(rs));
-            }rs.close();
+                int id = rs.getInt("amenityId");
+                String name = rs.getString("amenityname");
+                String s = rs.getString("status");
+
+                System.out.print(id + "\t");
+                System.out.print(name + "\t");
+                System.out.println(s);
+
+				/*System.out.print(((Amenity) rs).getAmenityId() + "				");
+				System.out.print(((Amenity) rs).getAmenityName() + "				");
+				System.out.println(((Amenity) rs).getAmenityStatus());
+			*/}rs.close();
         }catch(SQLException se){
             se.printStackTrace();
         }catch(Exception e){
@@ -130,4 +103,5 @@ public class amenityList_JDBC {
 
         }
     }
-}	
+
+}

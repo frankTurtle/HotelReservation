@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Amenity.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AmenityList.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AmenityListJDBC.java" />
@@ -10,6 +11,12 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomList.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomListJDBC.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomManagementInterface.java" />
+||||||| merged common ancestors
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Reservation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ReservationListJDBC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ReservationManagementInterface.java" />
+=======
+>>>>>>> Stashed changes
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HotelReservation.iws" />
@@ -32,13 +39,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file leaf-file-name="HotelReservationApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationApplication.java">
+||||||| merged common ancestors
+      <file leaf-file-name="HotelReservationStaffApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
+=======
+      <file leaf-file-name="HotelReservationStaffApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="0.0">
               <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+||||||| merged common ancestors
+            <state vertical-scroll-proportion="0.24802528">
+              <caret line="800" column="30" selection-start-line="800" selection-start-column="30" selection-end-line="800" selection-end-column="30" />
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="731" column="0" selection-start-line="731" selection-start-column="0" selection-end-line="731" selection-end-column="0" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
                 <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
@@ -53,16 +77,76 @@
                 <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
                 <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+||||||| merged common ancestors
+                <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+                <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+                <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="Amenity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Amenity.java">
+||||||| merged common ancestors
+      <file leaf-file-name="HotelReservationUserApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
+=======
+      <file leaf-file-name="HotelReservationUserApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="0.0">
               <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+||||||| merged common ancestors
+            <state vertical-scroll-proportion="0.0">
+              <caret line="821" column="5" selection-start-line="567" selection-start-column="4" selection-end-line="821" selection-end-column="5" />
+=======
+            <state vertical-scroll-proportion="0.78515005">
+              <caret line="821" column="5" selection-start-line="821" selection-start-column="5" selection-end-line="821" selection-end-column="5" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -640,7 +724,115 @@
       <option name="project" value="LOCAL" />
       <updated>1449947898553</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="10" />
+||||||| merged common ancestors
+    <task id="LOCAL-00010" summary="updated creating a new account menu to allow you to go back to previous menu">
+      <created>1450022853543</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1450022853543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added the string Number when prompting user for their house">
+      <created>1450022918261</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1450022918261</updated>
+    </task>
+    <task id="LOCAL-00012" summary="implemented method to search for a specific user for the admin account">
+      <created>1450024889040</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1450024889040</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option">
+      <created>1450025503815</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1450025503815</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Created new branch to split the user and staff login into two different classes">
+      <created>1450025808421</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1450025808421</updated>
+    </task>
+    <task id="LOCAL-00015" summary="split the classes then got the HotelReservationStaffApplication working">
+      <created>1450026894544</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1450026894544</updated>
+    </task>
+    <task id="LOCAL-00016" summary="merged into master branch">
+      <created>1450027656950</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1450027656950</updated>
+    </task>
+    <task id="LOCAL-00017" summary="created Integration branch&#10;">
+      <created>1450141328240</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1450141328240</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+=======
+    <task id="LOCAL-00010" summary="updated creating a new account menu to allow you to go back to previous menu">
+      <created>1450022853543</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1450022853543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added the string Number when prompting user for their house">
+      <created>1450022918261</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1450022918261</updated>
+    </task>
+    <task id="LOCAL-00012" summary="implemented method to search for a specific user for the admin account">
+      <created>1450024889040</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1450024889040</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option">
+      <created>1450025503815</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1450025503815</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Created new branch to split the user and staff login into two different classes">
+      <created>1450025808421</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1450025808421</updated>
+    </task>
+    <task id="LOCAL-00015" summary="split the classes then got the HotelReservationStaffApplication working">
+      <created>1450026894544</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1450026894544</updated>
+    </task>
+    <task id="LOCAL-00016" summary="merged into master branch">
+      <created>1450027656950</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1450027656950</updated>
+    </task>
+    <task id="LOCAL-00017" summary="created Integration branch&#10;">
+      <created>1450141328240</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1450141328240</updated>
+    </task>
+    <task id="LOCAL-00018" summary="imported all the Reservation implementation and interfaces">
+      <created>1450142819366</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1450142819366</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,7 +884,30 @@
     <MESSAGE value="cleaned up the code" />
     <MESSAGE value="created AccountList branch&#10;added Amarjit's class&#10;removed package" />
     <MESSAGE value="Uploaded newest updates to AccountList class by Amarjit&#10;" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="Uploaded newest updates to AccountList class by Amarjit&#10;" />
+||||||| merged common ancestors
+    <MESSAGE value="updated creating a new account menu to allow you to go back to previous menu" />
+    <MESSAGE value="added the string Number when prompting user for their house" />
+    <MESSAGE value="implemented method to search for a specific user for the admin account" />
+    <MESSAGE value="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option" />
+    <MESSAGE value="Created new branch to split the user and staff login into two different classes" />
+    <MESSAGE value="split the classes then got the HotelReservationStaffApplication working" />
+    <MESSAGE value="merged into master branch" />
+    <MESSAGE value="created Integration branch&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="created Integration branch&#10;" />
+=======
+    <MESSAGE value="updated creating a new account menu to allow you to go back to previous menu" />
+    <MESSAGE value="added the string Number when prompting user for their house" />
+    <MESSAGE value="implemented method to search for a specific user for the admin account" />
+    <MESSAGE value="updated some menu's for the account management interface&#10;updated error checking range for app class&#10;updated login interface to include a previous menu option" />
+    <MESSAGE value="Created new branch to split the user and staff login into two different classes" />
+    <MESSAGE value="split the classes then got the HotelReservationStaffApplication working" />
+    <MESSAGE value="merged into master branch" />
+    <MESSAGE value="created Integration branch&#10;" />
+    <MESSAGE value="imported all the Reservation implementation and interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="imported all the Reservation implementation and interfaces" />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -752,6 +967,7 @@
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
@@ -766,6 +982,50 @@
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+||||||| merged common ancestors
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -857,6 +1117,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
@@ -871,6 +1132,50 @@
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+||||||| merged common ancestors
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -954,6 +1259,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
@@ -968,6 +1274,50 @@
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+||||||| merged common ancestors
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1035,6 +1385,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1049,6 +1400,50 @@
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+||||||| merged common ancestors
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1108,6 +1503,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< Updated upstream
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagement#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#afterLoginMenuChoice#0;class#HotelReservationApplication#0" expanded="false" />
@@ -1122,6 +1518,50 @@
             <element signature="method#generateHeader#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationApplication#0" expanded="false" />
+||||||| merged common ancestors
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1359,6 +1799,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/RoomList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1372,12 +1813,118 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RoomManagementInterface.java">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="821" column="5" selection-start-line="567" selection-start-column="4" selection-end-line="821" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationUserApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
+>>>>>>> Stashed changes
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.89192265">
           <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+||||||| merged common ancestors
+        <state vertical-scroll-proportion="0.24802528">
+          <caret line="800" column="30" selection-start-line="800" selection-start-column="30" selection-end-line="800" selection-end-column="30" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="731" column="0" selection-start-line="731" selection-start-column="0" selection-end-line="731" selection-end-column="0" />
+>>>>>>> Stashed changes
           <folding>
+<<<<<<< Updated upstream
             <element signature="e#1426#1427#0" expanded="true" />
             <element signature="e#1461#1462#0" expanded="true" />
+||||||| merged common ancestors
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#initialMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#login#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewReservationByAccount#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#viewAllReservations#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenu#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#newReservationMenuAnswers#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkInReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+            <element signature="method#checkOutReservation#0;class#HotelReservationStaffApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78515005">
+          <caret line="821" column="5" selection-start-line="821" selection-start-column="5" selection-end-line="821" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#afterLoginAccountManagement#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#viewSingleAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#viewAllAccounts#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#afterLoginMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#loginPicked#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newAccountMenuChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newAccountMenu#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newStaffAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#errorCheckWithinRange#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#newUserAccountMenuAnswers#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#generateHeader#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#deleteAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#deleteAccountAdmin#0;class#HotelReservationUserApplication#0" expanded="false" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
