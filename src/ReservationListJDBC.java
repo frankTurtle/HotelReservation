@@ -610,5 +610,20 @@ public class ReservationListJDBC {
 
     }
 
+    public static boolean reserveAmenity(int rId, int amenId) throws SQLException
+    {
+        try {
+            Connection conn = run();
+            String sql = "update Reservation set amenityid=" + amenId + "where reservationID=" + rId;
+            executeUpdate(conn, sql);
+            return true;
+        }
+        catch (SQLException e) {
+            System.out.println("ERROR: Could not check out the reservation");
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
 

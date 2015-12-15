@@ -1283,4 +1283,37 @@ public class HotelReservationStaffApplication
             }
         }while (option != 0);
     }
+
+//    public Void ReserveAmenityInput()
+//    {
+//        System.out.println("please input the ID of the Reservation you want to reserve an Amenity for ");
+//        String res = console.next();
+//        if (isInteger(res) == true)
+//        {
+//            int resId = Integer.parseInt(res);
+//            R = ReservationListJDBC.search(resID);
+//
+//            System.out.println("please enter the Amenity id you want to reserve");
+//            string amen = console.next();
+//            if(isInteger(amen) == true)
+//            {
+//                int amenId = Integer.parseInt(amen);
+//                ReservationListJDBC.reserveAmenity(resId,amenId);
+//            }
+//            else
+//            {
+//                System.out.println("Invalid ID entered");
+//            }
+//
+//
+//        }
+//        else
+//        {
+//            System.out.println("Invalid ID entered");
+//
+//        }
+//
+//
+//
+//    }
 }

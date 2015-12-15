@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="added some comments">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ReservationList.java" />
+    <list default="true" id="68231434-1477-48f7-9e77-2eefedeef496" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationStaffApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationStaffApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelReservationUserApplication.java" afterPath="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Reservation.java" afterPath="$PROJECT_DIR$/src/Reservation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReservationListJDBC.java" afterPath="$PROJECT_DIR$/src/ReservationListJDBC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReservationManagementInterface.java" afterPath="$PROJECT_DIR$/src/ReservationManagementInterface.java" />
     </list>
     <ignored path="HotelReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotelReservationStaffApplication.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HotelReservationStaffApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="653" column="0" selection-start-line="653" selection-start-column="0" selection-end-line="653" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.36134455">
+              <caret line="1285" column="0" selection-start-line="1285" selection-start-column="0" selection-end-line="1285" selection-end-column="0" />
               <folding>
                 <element signature="method#main#0;class#HotelReservationStaffApplication#0" expanded="false" />
                 <element signature="method#report#0;class#HotelReservationStaffApplication#0" expanded="false" />
@@ -84,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="607" column="5" selection-start-line="607" selection-start-column="5" selection-end-line="607" selection-end-column="5" />
+              <caret line="1238" column="5" selection-start-line="1238" selection-start-column="5" selection-end-line="1238" selection-end-column="5" />
               <folding>
                 <element signature="method#main#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
@@ -103,6 +99,7 @@
                 <element signature="method#generateHeader#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#deleteAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#deleteAccountAdmin#0;class#HotelReservationUserApplication#0" expanded="false" />
+                <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#viewReservationByAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#viewAllReservations#0;class#HotelReservationUserApplication#0" expanded="false" />
                 <element signature="method#afterLoginReservationManagement#0;class#HotelReservationUserApplication#0" expanded="false" />
@@ -150,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReservationList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReservationList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ReservationList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23296355">
-              <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="104" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="e#442#443#0" expanded="true" />
                 <element signature="e#487#488#0" expanded="true" />
@@ -206,7 +203,7 @@
         <entry file="file://$PROJECT_DIR$/src/ReservationListJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+              <caret line="616" column="101" selection-start-line="616" selection-start-column="101" selection-end-line="616" selection-end-column="101" />
               <folding>
                 <element signature="e#4228#4241#0" expanded="true" />
                 <element signature="e#11263#11276#0" expanded="true" />
@@ -296,11 +293,11 @@
         <option value="$PROJECT_DIR$/src/ReportJDBC.java" />
         <option value="$PROJECT_DIR$/src/DatabaseCreation.java" />
         <option value="$PROJECT_DIR$/src/Reservation.java" />
-        <option value="$PROJECT_DIR$/src/ReservationListJDBC.java" />
         <option value="$PROJECT_DIR$/src/ReservationManagementInterface.java" />
-        <option value="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
         <option value="$PROJECT_DIR$/src/ReservationList.java" />
+        <option value="$PROJECT_DIR$/src/HotelReservationUserApplication.java" />
         <option value="$PROJECT_DIR$/src/HotelReservationStaffApplication.java" />
+        <option value="$PROJECT_DIR$/src/ReservationListJDBC.java" />
       </list>
     </option>
   </component>
@@ -739,7 +736,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450152137762</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added some comments&#10;imported code Josh and Frank sent&#10;integrated code into app classes">
+      <created>1450189949633</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1450189949633</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -748,12 +751,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28602383" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28602383" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -818,7 +821,8 @@
     <MESSAGE value="udpated some room / amenity connection to DB issues" />
     <MESSAGE value="imported Report / JDBC&#10;created ReportManagementInterface&#10;updated implementation in staff app&#10; &#10;" />
     <MESSAGE value="updated the DB creation to have the most current SQL provided by frank&#10;updated some code in ReportJDBC to connect to DB&#10;updated implementatino of the report in the staff app" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the DB creation to have the most current SQL provided by frank&#10;updated some code in ReportJDBC to connect to DB&#10;updated implementatino of the report in the staff app" />
+    <MESSAGE value="added some comments&#10;imported code Josh and Frank sent&#10;integrated code into app classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some comments&#10;imported code Josh and Frank sent&#10;integrated code into app classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1308,17 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReservationListJDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding>
-            <element signature="e#4228#4241#0" expanded="true" />
-            <element signature="e#11263#11276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ReportManagementInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1372,10 +1365,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReservationList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelReservationUserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="607" column="5" selection-start-line="607" selection-start-column="5" selection-end-line="607" selection-end-column="5" />
+          <caret line="1238" column="5" selection-start-line="1238" selection-start-column="5" selection-end-line="1238" selection-end-column="5" />
           <folding>
             <element signature="method#main#0;class#HotelReservationUserApplication#0" expanded="false" />
             <element signature="method#afterLoginAccountManagementChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
@@ -1394,6 +1398,7 @@
             <element signature="method#generateHeader#0;class#HotelReservationUserApplication#0" expanded="false" />
             <element signature="method#deleteAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
             <element signature="method#deleteAccountAdmin#0;class#HotelReservationUserApplication#0" expanded="false" />
+            <element signature="method#afterLoginReservationManagementChoice#0;class#HotelReservationUserApplication#0" expanded="false" />
             <element signature="method#viewReservationByAccount#0;class#HotelReservationUserApplication#0" expanded="false" />
             <element signature="method#viewAllReservations#0;class#HotelReservationUserApplication#0" expanded="false" />
             <element signature="method#afterLoginReservationManagement#0;class#HotelReservationUserApplication#0" expanded="false" />
@@ -1417,10 +1422,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/ReservationListJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="653" column="0" selection-start-line="653" selection-start-column="0" selection-end-line="653" selection-end-column="0" />
+          <caret line="616" column="101" selection-start-line="616" selection-start-column="101" selection-end-line="616" selection-end-column="101" />
+          <folding>
+            <element signature="e#4228#4241#0" expanded="true" />
+            <element signature="e#11263#11276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelReservationStaffApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36134455">
+          <caret line="1285" column="0" selection-start-line="1285" selection-start-column="0" selection-end-line="1285" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#HotelReservationStaffApplication#0" expanded="false" />
             <element signature="method#report#0;class#HotelReservationStaffApplication#0" expanded="false" />
@@ -1461,17 +1477,6 @@
             <element signature="method#updateRoomAmount#0;class#HotelReservationStaffApplication#0" expanded="false" />
             <element signature="method#updateRoomID#0;class#HotelReservationStaffApplication#0" expanded="false" />
             <element signature="method#roomManagement#0;class#HotelReservationStaffApplication#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReservationList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23296355">
-          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="104" selection-end-column="7" />
-          <folding>
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
           </folding>
         </state>
       </provider>
