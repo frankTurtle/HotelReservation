@@ -43,6 +43,7 @@ public class HotelReservationUserApplication
                         break;
 
                     case 2: //........................................................................................... reservation management
+                        afterLoginReservationManagement( account );
                         break;
 
                     case 3: //........................................................................................... exit program
@@ -564,5 +565,259 @@ public class HotelReservationUserApplication
         return deleteThisAccount;
     }
 
+    private static int afterLoginReservationManagementChoice( Account person )
+    {
+        String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
+                ReservationManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
+        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 4; //.... sets the max for response based on account questions
+
+        return errorCheckWithinRange( displayThisText, 1, max );
+    }
+
+    private static void viewReservationByAccount( Account person)
+    {
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+        if (type ==0)
+        {
+            for( Reservation reservation : ReservationListJDBC.searchByAccount(person.getId()) ) System.out.println( reservation );
+        }
+        else
+        {
+            System.out.println("Please enter the ID of the user whose reservations you wish to view");
+            int searchID = console.nextInt();
+            for( Reservation reservation : ReservationListJDBC.searchByAccount(searchID) ) System.out.println( reservation );
+        }
+    }
+
+    private static void viewAllReservations()
+    {
+        for( Reservation reservation : ReservationListJDBC.viewAllReservations()) System.out.println( reservation );
+    }
+
+
+    private static void afterLoginReservationManagement( Account person )
+    {
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+        boolean stopLoop = false;
+
+        while( !stopLoop )
+        {
+            switch( type )
+            {
+                case 0: //............................................................. user
+                    switch( afterLoginReservationManagementChoice(person) )
+                    {
+                        case 1: //..................................................... view my r9eservation
+
+                            viewReservationByAccount(person);
+                            break;
+
+                        case 2: //..................................................... update my reservation
+
+                            break;
+
+                        case 3: //..................................................... create a reservation
+                            newReservationMenu(person);
+                            break;
+                        case 4: //..................................................... create a reservation
+                            deleteReservation(person);
+                            stopLoop = true;
+                            break;
+                        case 5: //..................................................... go to previous menu
+                            stopLoop = true;
+                            break;
+                    }
+                    break;
+
+
+                case 1: //............................................................ admin
+                    switch( afterLoginReservationManagementChoice(person) )
+                    {
+                        case 1: //..................................................... view a reservation
+                            System.out.println( person );
+                            break;
+
+                        case 2: //..................................................... view a reservation
+                            viewAllReservations();
+                            break;
+
+                        case 3: //..................................................... update a reservation
+
+                            break;
+                        case 4: //..................................................... create new reservation
+                            newReservationMenu(person);
+                            break;
+
+                        case 5: //..................................................... delete a reservation
+                            Reservation deleted = deleteReservation(person);
+                            break;
+
+                        case 6: //..................................................... check in a reservation
+                            Reservation checkedIn = checkInReservation();
+                            break;
+                        case 7: //..................................................... check out a reservation
+                            Reservation checkedOut = checkOutReservation();
+                            break;
+                        case 8: //..................................................... go to previous menu
+                            stopLoop = true;
+                            break;
+                    }
+                    break;
+
+                case 2: //............. staff
+                    switch( afterLoginReservationManagementChoice(person) )
+                    {
+                        case 1: //..................................................... view a reservation
+                            System.out.println( person );
+                            break;
+
+                        case 2: //..................................................... view a reservation
+                            viewAllReservations();
+                            break;
+
+                        case 3: //..................................................... update a reservation
+
+                            break;
+                        case 4: //..................................................... create new reservation
+                            newReservationMenu(person);
+                            break;
+
+                        case 5: //..................................................... delete a reservation
+                            Reservation deleted = deleteReservation(person);
+                            break;
+
+                        case 6: //..................................................... check in a reservation
+                            Reservation checkedIn = checkInReservation();
+                            break;
+                        case 7: //..................................................... check out a reservation
+                            Reservation checkedOut =checkOutReservation();
+                            break;
+                        case 8: //..................................................... go to previous menu
+                            stopLoop = true;
+                            break;
+                    }
+                    break;
+            }
+        }
+    }
+
+    private static void newReservationMenu(Account person)
+    {
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+
+        if( account != null && type == 0) //................................................... make sure an admin is logged in
+        {
+            String [] answers = newReservationMenuAnswers(); //........................................................... get answers to staff creation questions
+            int roomAmount = Integer.parseInt(answers[3]);
+            Reservation addNewReservation = new Reservation( person.getId(), 0, 0, answers[1], answers[2], roomAmount, "Card", 0); //.. create the new staff object
+            System.out.println(addNewReservation.toString());
+
+            ReservationListJDBC.createReservation( addNewReservation ); //............................................................. add staff object to DB
+        }
+        else
+        {
+            System.out.println("Please enter the ID of the user who reservation will belong to");
+            int newID = console.nextInt();
+            String [] answers = newReservationMenuAnswers(); //........................................................... get answers to staff creation questions
+            int roomAmount = Integer.parseInt(answers[3]);
+            Reservation addNewReservation = new Reservation( newID, 0, 0, answers[1], answers[2], roomAmount, "Card", 0); //.. create the new staff object
+            System.out.println(addNewReservation.toString());
+
+            ReservationListJDBC.createReservation( addNewReservation ); //............................................................. add staff object to DB
+        }
+    }
+
+    // Method to ask and return the answers in creating a new staff account
+    public static String[] newReservationMenuAnswers()
+    {
+        String[] answers = new String[ ReservationManagementInterface.newReservationMenu().length ]; //.. array the length of questions to store the answers
+
+        System.out.println( generateHeader( "New Reservation" ) ); //.............................. prints header
+
+        for( int i = 0; i < answers.length; i++ ) //................................................. loop through each question
+        {
+            try
+            {
+                System.out.print( ReservationManagementInterface.newReservationMenu()[i] ); //.......... ask question
+                answers[i] = console.next(); //...................................................... get answer
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+
+                Object chomp = console.next(); //............................................... captures new line
+                i --;
+
+            }
+        }
+
+        return answers;
+    }
+
+
+    public static Reservation deleteReservation( Account person )
+    {
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+
+        Reservation deleteThisReservation = new Reservation();
+        System.out.println("Enter the ID of the reservation you wish to delete");
+        int reservationID = console.nextInt();
+        deleteThisReservation = ReservationListJDBC.search(reservationID);
+
+
+        while( true ) //....................................................................... loop for error catching
+        {
+            if( deleteThisReservation.getReservationId() == 0 ) //............................... if its an account that doesnt exist
+            {
+                System.out.print( "\nInvalid ID\n" );
+                break;
+            }
+
+            try
+            {
+                System.out.print(ReservationManagementInterface.deleteReservationConfirmation()); //... confirm they want to delete the account
+                String answer = console.next().toLowerCase(); //............................... get answer
+
+
+                if (answer.equals("y")) //................................. if its a user
+                {
+                    ReservationListJDBC.deleteReservation( deleteThisReservation, person, type );
+                    break;
+                }
+                else if( answer.equals("n") ) //.............................................. if they dont want to delete the account
+                    break;
+                else
+                    throw new Exception("\nInvalid entry, try again\n\n");
+            }
+            catch (Exception e)
+            {
+                System.out.print( e.getMessage() );
+            }
+        }
+
+        return deleteThisReservation;
+    }
+
+    public static Reservation checkInReservation()
+    {
+        Reservation R = new Reservation();
+        System.out.println("Please input the ID of the reservation you want to check in.");
+        int checkInID = console.nextInt();
+
+        R = ReservationListJDBC.search(checkInID);
+        ReservationListJDBC.checkIn(R);
+        return R;
+    }
+
+    public static Reservation checkOutReservation()
+    {
+        Reservation R = new Reservation();
+        System.out.println("Please input the ID of the reservation you want to check in.");
+        int checkOutID = console.nextInt();
+
+        R = ReservationListJDBC.search(checkOutID);
+        ReservationListJDBC.checkOut(R);
+        return R;
+    }
 }
