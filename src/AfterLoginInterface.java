@@ -16,14 +16,16 @@ public class AfterLoginInterface
                 returnString += "ADMIN MENU\n";
                 returnString += "1. Account Management\n";
                 returnString += "2. Reservation Management\n";
-                returnString += "3. Logout\n>:";
+                returnString += "3. Room Management\n";
+                returnString += "4. Logout\n>:";
                 break;
 
             case 0: //........................................................................ STAFF
                 returnString += "STAFF MENU\n";
                 returnString += "1. Account Management\n";
                 returnString += "2. Reservation Management\n";
-                returnString += "3. Logout\n>:";
+                returnString += "3. Room Management\n";
+                returnString += "4. Logout\n>:";
                 break;
 
             case 2: //......................................................................... USER

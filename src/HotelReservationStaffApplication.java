@@ -46,7 +46,11 @@ public class HotelReservationStaffApplication
                         afterLoginReservationManagement( account );
                         break;
 
-                    case 3: //........................................................................................... exit program
+                    case 3: //........................................................................................... room management
+                        roomManagement();
+                        break;
+
+                    case 4: //........................................................................................... exit program
                         System.out.println("\nGoodBye!\n");
                         if( AccountList.logout() ) account = null; //.................................................... sets account to null upon logout
                         break;
@@ -208,7 +212,7 @@ public class HotelReservationStaffApplication
                                      AfterLoginInterface.initialMenu( person.getAccountType() )}; //.................. array full of title and questions
 
         //todo update the numbers 1st is User, 2nd is Admin, 3rd is Staff
-        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 3 : 3; //.... sets the max for response based on account questions
+        int max = ( person.getAccountType().equals("U") ) ? 3 : ( person.getAccountType().equals("A") ) ? 4 : 4; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
     }
@@ -818,5 +822,79 @@ public class HotelReservationStaffApplication
         R = ReservationListJDBC.search(checkOutID);
         ReservationListJDBC.checkOut(R);
         return R;
+    }
+
+    public static void roomManagement()
+    {
+        Scanner in = new Scanner(System.in);
+        int option, input;
+
+        do
+        {
+            System.out.println("Please choose one of the following options");
+            System.out.println("1. Room menu");
+            System.out.println("2. Amenity menu");
+            System.out.println("0. To exit");
+
+            option= in.nextInt();
+
+            switch(option)
+            {
+                case 1:
+                    System.out.println("Entering Room menu");
+                    System.out.println("Please choose one of the following:");
+                    System.out.println("1. to update room status");
+                    System.out.println("2. to view rooms");
+                    System.out.println("3. to delete room");
+                    System.out.println("4.to add room");
+
+                    input = in.nextInt();
+                    switch(input)
+                    {
+                        case 1:
+                            RoomManagementInterface.getupdateroominput();
+                            break;
+                        case 2:
+                            RoomManagementInterface.userviewroomform();
+                            break;
+                        case 3:
+                            RoomManagementInterface.getdeleteroominput();
+                            break;
+                        case 4:
+                            RoomManagementInterface.GetAddRoomInput();
+                            break;
+                        default:
+                            System.out.println("That is not an option");
+                            break;
+                    }
+                    break;
+                case 2:
+                    System.out.println("Entering amenity menu");
+                    System.out.println("Please choose one of the following:");
+                    System.out.println("1. to view all amenities");
+                    System.out.println("2. to update an amenity status");
+
+                    input = in.nextInt();
+                    switch(input)
+                    {
+                        case 1:
+                            AmenityManagementInterface.browseamenityform();
+                            break;
+                        case 2:
+                            AmenityManagementInterface.getupdateamenityinput();
+                            break;
+                        default:
+                            System.out.println("Not an option!");
+                            break;
+                    }
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("That is not an option");
+                    break;
+
+            }
+        }while (option != 0);
     }
 }

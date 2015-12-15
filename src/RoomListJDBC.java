@@ -9,11 +9,11 @@ public class RoomListJDBC {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost:3306/";
-    static final String DB_NAME = "HOTEL_RESERVATION6";
+    static final String DB_NAME = "HOTEL_RESERVATION";
     static final String UPDATED_URL = DB_URL + DB_NAME;
 
     static final String user = "root";
-    static final String pass = "123456789";
+    static final String pass = "1234567890";
     /**this method updates the room entity in
      * database
      *
@@ -37,7 +37,7 @@ public class RoomListJDBC {
             System.out.println("Creating statement");
             stmt = conn.createStatement();
 
-            String query = "UPDATE RoomList SET Status = '"+ new_status + "' WHERE room_id = " + roomNum + ";";
+            String query = "UPDATE Room SET Status = '"+ new_status + "' WHERE room_id = " + roomNum + ";";
             stmt = conn.createStatement();
             stmt.executeUpdate(query);
             conn.close();
@@ -86,7 +86,7 @@ public class RoomListJDBC {
             System.out.println("Creating statement");
             stmt = conn.createStatement();
 
-            String sql = "SELECT room_id, Status, description, room_type, roomPrice, capacity FROM roomList";
+            String sql = "SELECT room_id, Status, description, room_type, roomPrice, capacity FROM room";
             ResultSet rs = stmt.executeQuery(sql);
 
             System.out.println("Number:\tStatus:\tType\tDescription\tPrice\tCapacity");
@@ -137,7 +137,7 @@ public class RoomListJDBC {
             System.out.println("Creating statement");
             stmt = conn.createStatement();
 
-            String sql = "SELECT room_id, Status, description, room_type, roomPrice, capacity FROM roomList WHERE status = 'A'";
+            String sql = "SELECT room_id, Status, description, room_type, roomPrice, capacity FROM room WHERE status = 'A'";
             ResultSet rs = stmt.executeQuery(sql);
 
             System.out.println("Number:\tStatus:\tType\tDescription\tPrice\tCapacity");
@@ -196,7 +196,7 @@ public class RoomListJDBC {
             System.out.println("Creating statement");
             stmt = conn.createStatement();
 
-            String sql = String.format("INSERT INTO roomlist " + "VALUES( %d, '%s', '%c', %f, '%s', %d )",  aRoom.getRoomId(), aRoom.getRoomType(), aRoom.getStatus(), aRoom.getRoomPrice(), aRoom.getDescription(),aRoom.getRoomCapacity() );
+            String sql = String.format("INSERT INTO room " + "VALUES( %d, '%s', '%c', %f, '%s', %d )",  aRoom.getRoomId(), aRoom.getRoomType(), aRoom.getStatus(), aRoom.getRoomPrice(), aRoom.getDescription(),aRoom.getRoomCapacity() );
 
             stmt.executeUpdate(sql); //................................................... RUN SQL CODE!
             return true;
@@ -229,7 +229,7 @@ public class RoomListJDBC {
             System.out.println("Creating statement");
             stmt = conn.createStatement();
 
-            String query = "DELETE from RoomList WHERE room_id = " + room_Id + ";";
+            String query = "DELETE from Room WHERE room_id = " + room_Id + ";";
             stmt.executeUpdate(query);
             conn.close();
 

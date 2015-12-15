@@ -4,11 +4,11 @@ public class AmenityListJDBC {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost:3306/";
-    static final String DB_NAME = "HOTEL_RESERVATION6";
+    static final String DB_NAME = "HOTEL_RESERVATION";
     static final String UPDATED_URL = DB_URL + DB_NAME;
 
     static final String user = "root";
-    static final String pass = "123456789";
+    static final String pass = "1234567890";
 
     public static boolean UpdateAmenityJDBC(int input,char n_status )
     {
