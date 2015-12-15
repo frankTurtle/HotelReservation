@@ -121,7 +121,7 @@ public class ReportJDBC
     {
 
         //String sqlGetYear = String.format("SELECT Cost,Date FROM reservation.new_table;");
-        String sqlGetYear = String.format( "SELECT totalCost, checkOutTime from reservation WHERE year = '"+year+"'" );
+        String sqlGetYear = String.format( "SELECT totalCost, checkOutTime FROM reservation WHERE year = '"+year+"'" );
         double returnTC = 0;
         String sub = "";
 

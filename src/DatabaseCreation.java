@@ -28,7 +28,7 @@ public class DatabaseCreation
             conn = DriverManager.getConnection(DB_URL, USER, PASS); //........ initial connect to the DB
 
             stmt = conn.createStatement(); //................................. register the connection for the statement
-            createDatabase( stmt, DB_NAME ); //............................... create the DB
+//            createDatabase( stmt, DB_NAME ); //............................... create the DB
 
             conn = DriverManager.getConnection( UPDATED_URL, USER, PASS ); //. establish the new connection to the hotel_reservation DB
             System.out.println("\n\nCreating tables...");
@@ -89,10 +89,10 @@ public class DatabaseCreation
     // this method calls helper methods to create each individual table
     private static void createTables( Connection connection )
     {
-        createAccountTables( connection ); //................... create the account table
+//        createAccountTables( connection ); //................... create the account table
         createReservationTable( connection );
-        createAmenityTable( connection );
-        createRoomTable( connection );
+//        createAmenityTable( connection );
+//        createRoomTable( connection );
     }
 
     // Method to create the account tables
@@ -148,18 +148,20 @@ public class DatabaseCreation
 
     private static void createReservationTable( Connection connection )
     {
-        String createReservationTable = "CREATE TABLE Reservation" + //
+        String createReservationTable = "CREATE TABLE Reservation" +
                                         "(reservationID INTEGER NOT NULL, " + //Primary key
-                                        "checkInTime CHAR(20), " + //check in time represented as a string
-                                        "checkOutTime CHAR(20), " + //check out time represented as a string
+                                        "checkInTime CHAR(19), " + //check in time represented as a string
+                                        "checkOutTime CHAR(19), " + //check out time represented as a string
                                         "paymentMethod CHAR(6), " + //"cash" or "credit"
                                         "user_account_id INTEGER NOT NULL, " + //Foreign key 1
                                         "staff_account_id INTEGER NOT NULL, "+ //Foreign key 2
                                         "roomAmount INTEGER, " + //number of rooms reserved
                                         "roomNumber INTEGER, " + //the physical room number
+                                        "totalCost INTEGER, " + //the total cost
                                         "PRIMARY KEY (reservationID), " +
                                         "FOREIGN KEY ( user_account_id ) REFERENCES user_account( user_account_id ), " +
-                                        "FOREIGN KEY ( staff_account_id ) REFERENCES staff_account( staff_account_id ) "+
+                                        "FOREIGN KEY ( staff_account_id ) REFERENCES staff_account( staff_account_id ), "+
+                                        "FOREIGN KEY ( roomNumber) REFERENCES Room( room_id) " +
                                         "ON UPDATE CASCADE ON DELETE CASCADE)";
 
         try

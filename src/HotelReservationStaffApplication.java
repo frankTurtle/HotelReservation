@@ -50,7 +50,7 @@ public class HotelReservationStaffApplication
                         roomManagement();
                         break;
 
-                    case 4:
+                    case 4: //........................................................................................... generate reports
                         report();
                         break;
 
@@ -63,22 +63,23 @@ public class HotelReservationStaffApplication
         }
     }
 
+    // Method to present the user the choices for which report to generate
     private static void report() {
         boolean stopLoop = false;
-        while (!stopLoop)
+        while ( !stopLoop )
         {
-            switch (reportChoice())
+            switch ( reportChoice() )
             {
                 case 1:
-                    Report.generateYearly(2015);
+                    Report.generateYearly( 2015 );
                     break;
 
                 case 2:
-                    Report.generateMonthly(1);
+                    Report.generateMonthly( 1 );
                     break;
 
                 case 3:
-                    Report.generateDaily(1);
+                    Report.generateDaily( 1 );
                     break;
 
                 case 4:
