@@ -8,12 +8,12 @@ public class Reservation
 {
     private int accountId;
     private int reservationId;
-    private int roomId;
+    private String roomId;
     private String checkInTime;
     private String checkOutTime;
     private int roomAmount;
     private String paymentMethod;
-    private int totalCost;
+    private double totalCost;
 
     /**
      * Non-default constructors
@@ -35,8 +35,8 @@ public class Reservation
      * @param paymentMethod Method of payment for the reservation
      * @param totalCost of all room, amenity, and reservation fees
      */
-    public Reservation (int accountId, int reservationId, int roomId, String checkInTime, String checkOutTime,
-                        int roomAmount, String paymentMethod, int totalCost)
+    public Reservation (int accountId, int reservationId, String roomId, String checkInTime, String checkOutTime,
+                        int roomAmount, String paymentMethod, double totalCost)
     {
         this.setAccountId (accountId);
         this.setReservationId (reservationId);
@@ -74,7 +74,7 @@ public class Reservation
      * @param roomId Room ID to set
      * @return boolean
      */
-    public void setRoomId (int roomId)
+    public void setRoomId (String roomId)
     {
         this.roomId = roomId;
     }
@@ -117,7 +117,7 @@ public class Reservation
      * @param totalCost Total cost to set
      * @return void
      */
-    public void setTotalCost (int totalCost)
+    public void setTotalCost (double totalCost)
     {
         this.totalCost = totalCost;
     }
@@ -148,7 +148,7 @@ public class Reservation
      * @param roomId Room ID to set
      * @return Room ID (Room Number)
      */
-    public int getRoomId ()
+    public String getRoomId ()
     {
         return this.roomId;
     }
@@ -190,7 +190,7 @@ public class Reservation
      * @param totalCost Total cost to set
      * @return Total Cost
      */
-    public int getTotalCost ()
+    public double getTotalCost ()
     {
         return this.totalCost;
     }
@@ -204,12 +204,14 @@ public class Reservation
     public String toString()
     {
         return String.format("User Account Number: %d\n" +
-                "User Reservation Number: %d\n" +
-                "User Room Number: %d\n" +
-                "User Check in: %s\n" +
-                "User Check out: %s\n" +
-                "Number of Rooms Reserved:%d\n" +
-                "Method of payment:%s", this.getAccountId(), this.getReservationId(), this.getRoomId(), this.getCheckInTime(), this.getCheckOutTime(), this.getRoomAmount(),this.getPaymentMethod() );
+                        "User Reservation Number: %d\n" +
+                        "User Room Number: %s\n" +
+                        "User Check in: %s\n" +
+                        "User Check out: %s\n" +
+                        "Number of Rooms Reserved:%d\n" +
+                        "Method of payment:%s" +
+                        "Total Cost: %f\n",
+                this.getAccountId(), this.getReservationId(), this.getRoomId(), this.getCheckInTime(), this.getCheckOutTime(), this.getRoomAmount(),this.getPaymentMethod(),this.getTotalCost() );
     }
 
 }

@@ -55,6 +55,8 @@ public class HotelReservationUserApplication
         }
     }
 
+    //******************** TEAM I ***************************//
+
     // Method to determine which choice from the menu
     // after you login and choose account management
     private static int afterLoginAccountManagementChoice( Account person )
@@ -565,12 +567,14 @@ public class HotelReservationUserApplication
         return deleteThisAccount;
     }
 
+    //******************** TEAM II ***************************//
+
     private static int afterLoginReservationManagementChoice( Account person )
     {
         String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
                 ReservationManagementInterface.initialMenu( person.getAccountType() )}; //............ array to hold strings to display
 
-        int max = ( person.getAccountType().equals("U") ) ? 4 : ( person.getAccountType().equals("A") ) ? 5 : 4; //.... sets the max for response based on account questions
+        int max = ( person.getAccountType().equals("U") ) ? 5 : ( person.getAccountType().equals("A") ) ? 8 : 8; //.... sets the max for response based on account questions
 
         return errorCheckWithinRange( displayThisText, 1, max );
     }
@@ -585,8 +589,16 @@ public class HotelReservationUserApplication
         else
         {
             System.out.println("Please enter the ID of the user whose reservations you wish to view");
-            int searchID = console.nextInt();
-            for( Reservation reservation : ReservationListJDBC.searchByAccount(searchID) ) System.out.println( reservation );
+            String enteredID = console.next();
+            if (isInteger(enteredID) == false)
+            {
+                System.out.println("Invalid ID entered");
+            }
+            else
+            {
+                int searchID = Integer.parseInt(enteredID);
+                for( Reservation reservation : ReservationListJDBC.searchByAccount(searchID) ) System.out.println( reservation );
+            }
         }
     }
 
@@ -594,7 +606,6 @@ public class HotelReservationUserApplication
     {
         for( Reservation reservation : ReservationListJDBC.viewAllReservations()) System.out.println( reservation );
     }
-
 
     private static void afterLoginReservationManagement( Account person )
     {
@@ -614,7 +625,7 @@ public class HotelReservationUserApplication
                             break;
 
                         case 2: //..................................................... update my reservation
-
+                            afterLoginUpdateReservationManagement(person);
                             break;
 
                         case 3: //..................................................... create a reservation
@@ -635,7 +646,7 @@ public class HotelReservationUserApplication
                     switch( afterLoginReservationManagementChoice(person) )
                     {
                         case 1: //..................................................... view a reservation
-                            System.out.println( person );
+                            viewReservationByAccount(person);
                             break;
 
                         case 2: //..................................................... view a reservation
@@ -643,7 +654,7 @@ public class HotelReservationUserApplication
                             break;
 
                         case 3: //..................................................... update a reservation
-
+                            afterLoginUpdateReservationManagement(person);
                             break;
                         case 4: //..................................................... create new reservation
                             newReservationMenu(person);
@@ -669,7 +680,7 @@ public class HotelReservationUserApplication
                     switch( afterLoginReservationManagementChoice(person) )
                     {
                         case 1: //..................................................... view a reservation
-                            System.out.println( person );
+                            viewReservationByAccount(person);
                             break;
 
                         case 2: //..................................................... view a reservation
@@ -677,7 +688,7 @@ public class HotelReservationUserApplication
                             break;
 
                         case 3: //..................................................... update a reservation
-
+                            afterLoginUpdateReservationManagement(person);
                             break;
                         case 4: //..................................................... create new reservation
                             newReservationMenu(person);
@@ -702,6 +713,114 @@ public class HotelReservationUserApplication
         }
     }
 
+    private static int afterLoginUpdateReservationManagementChoice( Account person )
+    {
+        String[] displayThisText = { generateHeader( String .format("Welcome %s",person.getFirstName())),
+                ReservationManagementInterface.updateMenu( person.getAccountType() )}; //............ array to hold strings to display
+
+        int max = ( person.getAccountType().equals("U") ) ? 5 : ( person.getAccountType().equals("A") ) ? 7 : 7 ; //.... sets the max for response based on account questions
+
+        return errorCheckWithinRange( displayThisText, 1, max );
+    }
+
+    private static void afterLoginUpdateReservationManagement( Account person )
+    {
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+        boolean stopLoop = false;
+
+        while( !stopLoop )
+        {
+            switch( type )
+            {
+                case 0: //............................................................. user
+                    switch( afterLoginUpdateReservationManagementChoice(person) )
+                    {
+                        case 1: //..................................................... view my reservation
+                            updateCheckInTime(person);
+                            break;
+
+                        case 2: //..................................................... update my reservation
+                            updateCheckOutTime(person);
+                            break;
+
+                        case 3: //..................................................... create a reservation
+                            updatePaymentMethod(person);
+                            break;
+                        case 4: //..................................................... create a reservation
+                            updateRoomAmount(person);
+                            break;
+                        case 5: //..................................................... go to previous menu
+                            stopLoop = true;
+                            break;
+                    }
+                    break;
+
+
+                case 1: //............................................................ admin
+                    switch( afterLoginUpdateReservationManagementChoice(person) )
+                    {
+                        case 1: //..................................................... view my reservation
+                            updateCheckInTime(person);
+                            break;
+
+                        case 2: //..................................................... update my reservation
+                            updateCheckOutTime(person);
+                            break;
+
+                        case 3: //..................................................... create a reservation
+                            updatePaymentMethod(person);
+                            break;
+                        case 4: //..................................................... create a reservation
+                            updateRoomAmount(person);
+                            break;
+
+                        case 5: //..................................................... delete a reservation
+                            updateRoomID(person);
+                            break;
+
+                        case 6: //..................................................... check in a reservation
+                            updateReservationMenu(person);
+                            break;
+                        case 7: //..................................................... check out a reservation
+                            stopLoop = true;
+                            break;
+                    }
+                    break;
+
+                case 2: //............. staff
+                    switch( afterLoginUpdateReservationManagementChoice(person) )
+                    {
+                        case 1: //..................................................... view my reservation
+                            updateCheckInTime(person);
+                            break;
+
+                        case 2: //..................................................... update my reservation
+                            updateCheckOutTime(person);
+                            break;
+
+                        case 3: //..................................................... create a reservation
+                            updatePaymentMethod(person);
+                            break;
+                        case 4: //..................................................... create a reservation
+                            updateRoomAmount(person);
+                            break;
+
+                        case 5: //..................................................... delete a reservation
+                            updateRoomID(person);
+                            break;
+
+                        case 6: //..................................................... check in a reservation
+                            updateReservationMenu(person);
+                            break;
+                        case 7: //..................................................... check out a reservation
+                            stopLoop = true;
+                            break;
+                    }
+                    break;
+            }
+        }
+    }
+
     private static void newReservationMenu(Account person)
     {
         int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
@@ -710,25 +829,46 @@ public class HotelReservationUserApplication
         {
             String [] answers = newReservationMenuAnswers(); //........................................................... get answers to staff creation questions
             int roomAmount = Integer.parseInt(answers[3]);
-            Reservation addNewReservation = new Reservation( person.getId(), 0, 0, answers[1], answers[2], roomAmount, "Card", 0); //.. create the new staff object
-            System.out.println(addNewReservation.toString());
+            String roomID = ReservationListJDBC.getRoomID(answers[0],roomAmount);
+            if (roomID.equals(""))
+            {
+                System.out.println("Not enough rooms are available.");
+            }
+            else
+            {
+                double cost = ReservationListJDBC.calcuateCost(roomID);
+                int reserveID = ReservationListJDBC.getReservationID();
+                Reservation addNewReservation = new Reservation( person.getId(), reserveID, roomID, answers[0], answers[2], roomAmount, "Card", cost); //.. create the new staff object
+                System.out.println(addNewReservation.toString());
 
-            ReservationListJDBC.createReservation( addNewReservation ); //............................................................. add staff object to DB
+                ReservationListJDBC.createReservation( addNewReservation ); //............................................................. add staff object to DB
+            }
         }
         else
         {
             System.out.println("Please enter the ID of the user who reservation will belong to");
-            int newID = console.nextInt();
-            String [] answers = newReservationMenuAnswers(); //........................................................... get answers to staff creation questions
-            int roomAmount = Integer.parseInt(answers[3]);
-            Reservation addNewReservation = new Reservation( newID, 0, 0, answers[1], answers[2], roomAmount, "Card", 0); //.. create the new staff object
-            System.out.println(addNewReservation.toString());
 
-            ReservationListJDBC.createReservation( addNewReservation ); //............................................................. add staff object to DB
+            String enteredID = console.next();
+            if (isInteger(enteredID) == false)
+            {
+                System.out.println("Invalid ID entered");
+            }
+            else
+            {
+                int newID = Integer.parseInt(enteredID);
+
+                String [] answers = newReservationMenuAnswers(); //........................................................... get answers to staff creation questions
+                int roomAmount = Integer.parseInt(answers[3]);
+                String roomID = ReservationListJDBC.getRoomID(answers[0],roomAmount);
+                double cost = ReservationListJDBC.calcuateCost(roomID);
+                Reservation addNewReservation = new Reservation( newID, 0, roomID, answers[1], answers[2], roomAmount, "Card", cost); //.. create the new staff object
+                System.out.println(addNewReservation.toString());
+
+                ReservationListJDBC.createReservation( addNewReservation ); //............................................................. add staff object to DB
+            }
         }
     }
 
-    // Method to ask and return the answers in creating a new staff account
     public static String[] newReservationMenuAnswers()
     {
         String[] answers = new String[ ReservationManagementInterface.newReservationMenu().length ]; //.. array the length of questions to store the answers
@@ -755,47 +895,54 @@ public class HotelReservationUserApplication
         return answers;
     }
 
-
     public static Reservation deleteReservation( Account person )
     {
         int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
 
         Reservation deleteThisReservation = new Reservation();
         System.out.println("Enter the ID of the reservation you wish to delete");
-        int reservationID = console.nextInt();
-        deleteThisReservation = ReservationListJDBC.search(reservationID);
-
-
-        while( true ) //....................................................................... loop for error catching
+        String enteredID = console.next();
+        if (isInteger(enteredID) == false)
         {
-            if( deleteThisReservation.getReservationId() == 0 ) //............................... if its an account that doesnt exist
+            System.out.println("Invalid ID entered");
+            return null;
+        }
+        else
+        {
+            int reservationID = Integer.parseInt(enteredID);
+            deleteThisReservation = ReservationListJDBC.search(reservationID);
+
+
+            while( true ) //....................................................................... loop for error catching
             {
-                System.out.print( "\nInvalid ID\n" );
-                break;
-            }
-
-            try
-            {
-                System.out.print(ReservationManagementInterface.deleteReservationConfirmation()); //... confirm they want to delete the account
-                String answer = console.next().toLowerCase(); //............................... get answer
-
-
-                if (answer.equals("y")) //................................. if its a user
+                if( deleteThisReservation.getReservationId() == 0 )
                 {
-                    ReservationListJDBC.deleteReservation( deleteThisReservation, person, type );
+                    System.out.print( "\nInvalid ID\n" );
                     break;
                 }
-                else if( answer.equals("n") ) //.............................................. if they dont want to delete the account
-                    break;
-                else
-                    throw new Exception("\nInvalid entry, try again\n\n");
-            }
-            catch (Exception e)
-            {
-                System.out.print( e.getMessage() );
+
+                try
+                {
+                    System.out.print(ReservationManagementInterface.deleteReservationConfirmation());
+                    String answer = console.next().toLowerCase(); //............................... get answer
+
+
+                    if (answer.equals("y"))
+                    {
+                        ReservationListJDBC.deleteReservation( deleteThisReservation, person, type );
+                        break;
+                    }
+                    else if( answer.equals("n") )
+                        break;
+                    else
+                        throw new Exception("\nInvalid entry, try again\n\n");
+                }
+                catch (Exception e)
+                {
+                    System.out.print( e.getMessage() );
+                }
             }
         }
-
         return deleteThisReservation;
     }
 
@@ -803,21 +950,291 @@ public class HotelReservationUserApplication
     {
         Reservation R = new Reservation();
         System.out.println("Please input the ID of the reservation you want to check in.");
-        int checkInID = console.nextInt();
 
-        R = ReservationListJDBC.search(checkInID);
-        ReservationListJDBC.checkIn(R);
-        return R;
+        String checkInI = console.next();
+        if (isInteger(checkInI) == true)
+        {
+            int checkInID = Integer.parseInt(checkInI);
+            R = ReservationListJDBC.search(checkInID);
+            System.out.println(R.toString());
+            ReservationListJDBC.checkIn(R);
+            return R;
+        }
+        else
+        {
+            System.out.println("Invalid ID entered");
+            return R;
+        }
     }
 
     public static Reservation checkOutReservation()
     {
         Reservation R = new Reservation();
-        System.out.println("Please input the ID of the reservation you want to check in.");
-        int checkOutID = console.nextInt();
+        System.out.println("Please input the ID of the reservation you want to check out.");
+        String checkOutI = console.next();
+        if (isInteger(checkOutI) == true)
+        {
+            int checkOutID = Integer.parseInt(checkOutI);
+            R = ReservationListJDBC.search(checkOutID);
+            ReservationListJDBC.checkOut(R);
+            return R;
+        }
+        else
+        {
+            System.out.println("Invalid ID entered");
+            return R;
+        }
 
-        R = ReservationListJDBC.search(checkOutID);
-        ReservationListJDBC.checkOut(R);
-        return R;
+    }
+
+    public static boolean isInteger(String s) {
+        return isInteger(s,10);
+    }
+
+    public static boolean isInteger(String s, int radix) {
+        if(s.isEmpty()) return false;
+        for(int i = 0; i < s.length(); i++) {
+            if(i == 0 && s.charAt(i) == '-') {
+                if(s.length() == 1) return false;
+                else continue;
+            }
+            if(Character.digit(s.charAt(i),radix) < 0) return false;
+        }
+        return true;
+    }
+
+    private static void updateReservationMenu(Account person)
+    {
+        int type = ( person.getAccountType().equals("U") ) ? 0 : ( person.getAccountType().equals("A") ) ? 1 : 2; //..... sets the type of person for the switch
+
+        if( account != null && type == 0) //................................................... make sure an admin is logged in
+        {
+
+        }
+        else
+        {
+            System.out.println("Please enter the ID of the reservation to update");
+
+            String enteredID = console.next();
+            if (isInteger(enteredID) == false)
+            {
+                System.out.println("Invalid ID entered");
+            }
+            else
+            {
+                int newID = Integer.parseInt(enteredID);
+
+                String [] answers = updateStaffReservationMenuAnswers(); //........................................................... get answers to staff creation questions
+                int roomAmount = Integer.parseInt(answers[3]);
+                ReservationListJDBC.update(newID, answers[0], answers[1], answers[2], roomAmount, answers[4] ); //............................................................. add staff object to DB
+            }
+        }
+    }
+
+    public static String[] updateStaffReservationMenuAnswers()
+    {
+        String[] answers = new String[ ReservationManagementInterface.updateStaffAllReservationMenu().length ]; //.. array the length of questions to store the answers
+
+        System.out.println( generateHeader( "Update Reservation" ) ); //.............................. prints header
+
+        for( int i = 0; i < answers.length; i++ ) //................................................. loop through each question
+        {
+            try
+            {
+                System.out.print( ReservationManagementInterface.updateStaffAllReservationMenu()[i] ); //.......... ask question
+                answers[i] = console.next(); //...................................................... get answer
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+
+                Object chomp = console.next(); //............................................... captures new line
+                i --;
+
+            }
+        }
+
+        return answers;
+    }
+
+    private static void updateCheckInTime(Account person)
+    {
+
+        String enteredID = console.next(); //
+
+
+        if (isInteger(enteredID) == false)
+        {
+            System.out.println("Invalid ID entered");
+        }
+        else
+        {
+            String enteredTime = console.next(); //
+            int newID = Integer.parseInt(enteredID);
+            Reservation reservationToUpdate = new Reservation();
+            ReservationListJDBC.updateCheckInTime(newID, enteredTime);
+        }
+    }
+
+    private static void updateCheckOutTime(Account person)
+    {
+
+        String enteredID = console.next(); //
+
+
+        if (isInteger(enteredID) == false)
+        {
+            System.out.println("Invalid ID entered");
+        }
+        else
+        {
+            String enteredTime = console.next(); //
+            int newID = Integer.parseInt(enteredID);
+            Reservation reservationToUpdate = new Reservation();
+            ReservationListJDBC.updateCheckOutTime(newID, enteredTime);
+        }
+    }
+
+    private static void updatePaymentMethod(Account person)
+    {
+
+        String enteredID = console.next(); //
+
+
+        if (isInteger(enteredID) == false)
+        {
+            System.out.println("Invalid ID entered");
+        }
+        else
+        {
+            String enteredMethod = console.next(); //
+            int newID = Integer.parseInt(enteredID);
+            Reservation reservationToUpdate = new Reservation();
+            ReservationListJDBC.updatePaymentMethod(newID, enteredMethod);
+        }
+    }
+
+    private static void updateRoomAmount(Account person)
+    {
+
+        String enteredID = console.next(); //
+
+
+        if (isInteger(enteredID) == false)
+        {
+            System.out.println("Invalid ID entered");
+        }
+        else
+        {
+            String enteredAmount = console.next(); //
+
+            if (isInteger(enteredAmount) == false)
+            {
+                System.out.println("Invalid amount entered");
+            }
+            else
+            {
+                int newID = Integer.parseInt(enteredID);
+                int newAmount = Integer.parseInt(enteredAmount);
+                Reservation reservationToUpdate = new Reservation();
+                ReservationListJDBC.updateRoomAmount(newID, newAmount);
+            }
+        }
+    }
+
+    private static void updateRoomID(Account person)
+    {
+
+        String enteredID = console.next(); //
+
+
+        if (isInteger(enteredID) == false)
+        {
+            System.out.println("Invalid ID entered");
+        }
+        else
+        {
+            String enteredRooms = console.next(); //
+            int newID = Integer.parseInt(enteredID);
+            Reservation reservationToUpdate = new Reservation();
+            ReservationListJDBC.updateRoomNumber(newID, enteredRooms);
+        }
+    }
+
+
+    //******************** TEAM III ***************************//
+
+    public static void roomManagement()
+    {
+        Scanner in = new Scanner(System.in);
+        int option, input;
+
+        do
+        {
+            System.out.println("Please choose one of the following options");
+            System.out.println("1. Room menu");
+            System.out.println("2. Amenity menu");
+            System.out.println("0. To exit");
+
+            option= in.nextInt();
+
+            switch(option)
+            {
+                case 1:
+                    System.out.println("Entering Room menu");
+                    System.out.println("Please choose one of the following:");
+                    System.out.println("1. to update room status");
+                    System.out.println("2. to view rooms");
+                    System.out.println("3. to delete room");
+                    System.out.println("4.to add room");
+
+                    input = in.nextInt();
+                    switch(input)
+                    {
+                        case 1:
+                            RoomManagementInterface.getupdateroominput();
+                            break;
+                        case 2:
+                            RoomManagementInterface.userviewroomform();
+                            break;
+                        case 3:
+                            RoomManagementInterface.getdeleteroominput();
+                            break;
+                        case 4:
+                            RoomManagementInterface.GetAddRoomInput();
+                            break;
+                        default:
+                            System.out.println("That is not an option");
+                            break;
+                    }
+                    break;
+                case 2:
+                    System.out.println("Entering amenity menu");
+                    System.out.println("Please choose one of the following:");
+                    System.out.println("1. to view all amenities");
+                    System.out.println("2. to update an amenity status");
+
+                    input = in.nextInt();
+                    switch(input)
+                    {
+                        case 1:
+                            AmenityManagementInterface.browseamenityform();
+                            break;
+                        case 2:
+                            AmenityManagementInterface.getupdateamenityinput();
+                            break;
+                        default:
+                            System.out.println("Not an option!");
+                            break;
+                    }
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("That is not an option");
+                    break;
+
+            }
+        }while (option != 0);
     }
 }

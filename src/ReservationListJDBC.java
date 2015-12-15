@@ -3,6 +3,8 @@
  *@author Joshua Williams - Group 1 Team 3
  */
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.ArrayList;
 
@@ -90,17 +92,17 @@ public class ReservationListJDBC {
         try {
             System.out.println(getReservationID());
             String createString = String.format( "INSERT INTO reservation " +
-                    "VALUES ( " + getReservationID() + " , '" + R.getCheckInTime() + "' , '" + R.getCheckOutTime()+ "' , '" +
+                    "VALUES ( " + R.getReservationId() + " , '" + R.getCheckInTime() + "' , '" + R.getCheckOutTime()+ "' , '" +
                     R.getPaymentMethod()+ "' , " + R.getAccountId()+ " , " +
-                    10+ " , " + R.getRoomAmount()+ " , " + 0 + " ) ");
+                    10+ " , " + R.getRoomAmount()+ " , '" + R.getRoomId() + "' ) ");
 
-//			    String sqlStatement = String.format( "INSERT INTO %s " +
+            //			    String sqlStatement = String.format( "INSERT INTO %s " +
             //                      "VALUES( %d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\' )", "staff_account", 0, staff.getAccountType(), staff.getFirstName(), staff.getLastName(), staff.getUsername(), staff.getPassword() );
 
             //public Reservation (int accountId, int reservationId, int roomId, String checkInTime, String checkOutTime,
             //int roomAmount, String paymentMethod, int totalCost)
             executeUpdate(conn, createString);
-            conn.close();
+
             System.out.println("Reservation created");
         } catch (SQLException e) {
             System.out.println("ERROR: Could not create the reservation");
@@ -130,7 +132,7 @@ public class ReservationListJDBC {
             while (rs.next())
             {
                 reservationArrayList.add( new Reservation(rs.getInt("user_account_id"), rs.getInt("reservationID"),
-                        rs.getInt("roomNumber"),rs.getString("checkInTime"), rs.getString("checkOutTime"),
+                        rs.getString("roomNumber"),rs.getString("checkInTime"), rs.getString("checkOutTime"),
                         rs.getInt("roomAmount"), rs.getString("paymentMethod"), 0) );
             }
         }
@@ -159,9 +161,9 @@ public class ReservationListJDBC {
             ResultSet rs = stmt.executeQuery(createString);
             while (rs.next())
             {
-                result.setReservationId( rs.getInt("reservationID") );
-                result.setRoomId( rs.getInt("roomNumber") );
-                result.setAccountId( rs.getInt("user_account_id") );
+                result = new Reservation(rs.getInt("user_account_id"), rs.getInt("reservationID"),
+                        rs.getString("roomNumber"),rs.getString("checkInTime"), rs.getString("checkOutTime"),
+                        rs.getInt("roomAmount"), rs.getString("paymentMethod"), 0);
             }
         }
         catch( SQLException ex )
@@ -170,7 +172,7 @@ public class ReservationListJDBC {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
-
+        System.out.println(result.toString());
         return result;
     }
 
@@ -178,27 +180,46 @@ public class ReservationListJDBC {
 
         // Connect to MySQL
         Connection conn = run();
+        String S = R.getRoomId();
+        System.out.println(S);
+        String roomIDs [] = S.split(","); //if the user enter 1123:2342 this method
 
-        // Create a table
-        try {
-            String updateReservationString =
-                    "UPDATE reservation " +
-                            "SET checkInTime = " + System.currentTimeMillis() +
-                            " WHERE reservationID = " + R.getReservationId();
-            String updateRoomStatus =
-                    "UPDATE room " +
-                            "SET Status = 'U' " +
-                            "WHERE room_id = " + R.getRoomId();
-            executeUpdate(conn, updateReservationString);
-            executeUpdate(conn, updateRoomStatus);
-            conn.close();
-            System.out.println("Reservation checked in.");
-            return R;
-        } catch (SQLException e) {
-            System.out.println("ERROR: Could not check in the reservation");
-            e.printStackTrace();
-            return R;
+
+        int roomNumbers [] = new int [roomIDs.length];
+        String trimmed;
+        for (int i = 0; i < roomIDs.length; i++)
+        {
+            trimmed = roomIDs[i].trim();
+            roomNumbers[i] = Integer.parseInt(trimmed);
         }
+
+
+        for (int i = 0; i < roomIDs.length; i++)
+        {
+
+            try {
+                String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
+
+                String updateReservationString =
+                        "UPDATE reservation " +
+                                "SET checkInTime = '" + timeStamp +
+                                "' WHERE reservationID = " + R.getReservationId();
+                String updateRoomStatus =
+                        "UPDATE room " +
+                                "SET Status = 'U' " +
+                                "WHERE room_id = " +roomNumbers[i];
+                executeUpdate(conn, updateReservationString);
+                executeUpdate(conn, updateRoomStatus);
+
+            } catch (SQLException e) {
+                System.out.println("ERROR: Could not check in the reservation");
+                e.printStackTrace();
+                return R;
+            }
+        }
+        System.out.println("Reservation checked in.");
+        return R;
     }
 
 
@@ -207,28 +228,45 @@ public class ReservationListJDBC {
         // Connect to MySQL
         Connection conn = run();
 
-        // Create a table
-        try {
-            String updateReservationString =
-                    "UPDATE reservation " +
-                            "SET checkOutTime = " + System.currentTimeMillis() +
-                            " WHERE reservationID = " + R.getReservationId();
-            String updateRoomStatus =
-                    "UPDATE room " +
-                            "SET Status = 'A' " +
-                            "WHERE room_id = " + R.getRoomId();
-            executeUpdate(conn, updateReservationString);
-            executeUpdate(conn, updateRoomStatus);
-            conn.close();
-            System.out.println("Reservation checked out.");
-            return R;
-        } catch (SQLException e) {
-            System.out.println("ERROR: Could not check out the reservation");
-            e.printStackTrace();
-            return R;
+        String S = R.getRoomId();
+        String roomIDs [] = S.split(","); //if the user enter 1123:2342 this method
+
+
+        int roomNumbers [] = new int [roomIDs.length];
+        String trimmed;
+        for (int i = 0; i < roomIDs.length; i++)
+        {
+            trimmed = roomIDs[i].trim();
+            roomNumbers[i] = Integer.parseInt(trimmed);
         }
 
+        for (int i = 0; i < roomIDs.length; i++)
+        {
+            try {
+                String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 
+
+                String updateReservationString =
+                        "UPDATE reservation " +
+                                "SET checkOutTime =  '" + timeStamp +
+                                "' WHERE reservationID = " + R.getReservationId();
+                String updateRoomStatus =
+                        "UPDATE room " +
+                                "SET Status = 'A' " +
+                                "WHERE room_id = " + roomNumbers[i];
+                executeUpdate(conn, updateReservationString);
+                executeUpdate(conn, updateRoomStatus);
+
+
+
+            } catch (SQLException e) {
+                System.out.println("ERROR: Could not check out the reservation");
+                e.printStackTrace();
+
+            }
+        }
+        System.out.println("Reservation checked out.");
+        return R;
 
 
 
@@ -273,7 +311,7 @@ public class ReservationListJDBC {
                 String createString = String.format( "DELETE FROM reservation " +
                         "WHERE  reservationID = " + R.getReservationId());
                 executeUpdate(conn, createString);
-                conn.close();
+
                 System.out.println("Reservation deleted");
                 return R;
             } catch (SQLException e) {
@@ -303,7 +341,7 @@ public class ReservationListJDBC {
             while (rs.next())
             {
                 reservationArrayList.add( new Reservation(rs.getInt("user_account_id"), rs.getInt("reservationID"),
-                        rs.getInt("roomNumber"),rs.getString("checkInTime"), rs.getString("checkOutTime"),
+                        rs.getString("roomNumber"),rs.getString("checkInTime"), rs.getString("checkOutTime"),
                         rs.getInt("roomAmount"), rs.getString("paymentMethod"), 0) );
             }
         }
@@ -317,115 +355,260 @@ public class ReservationListJDBC {
         return reservationArrayList;
     }
 
-		/*
-		// Create a table
-		try {
-		    String createString =
-			        "CREATE TABLE " + this.tableName + " ( " +
-			        "ID INTEGER NOT NULL, " +
-			        "NAME varchar(40) NOT NULL, " +
-			        "STREET varchar(40) NOT NULL, " +
-			        "CITY varchar(20) NOT NULL, " +
-			        "STATE char(2) NOT NULL, " +
-			        "ZIP char(5), " +
-			        "PRIMARY KEY (ID))";
-			this.executeUpdate(conn, createString);
-			System.out.println("Created a table");
-	    } catch (SQLException e) {
-			System.out.println("ERROR: Could not create the table");
-			e.printStackTrace();
-			return;
-		}
 
-		// Drop the table
-		try {
-		    String dropString = "DROP TABLE " + this.tableName;
-			this.executeUpdate(conn, dropString);
-			System.out.println("Dropped the table");
-	    } catch (SQLException e) {
-			System.out.println("ERROR: Could not drop the table");
-			e.printStackTrace();
-			return;
-		}
-	}
-*/
+    public static String getRoomID(String roomType, int roomAmount) {
+        Statement stmt = null;
+        // Connect to MySQL
+
+        Connection conn = run();
+        String result = "";
+        // Create a table
+        try {
+            stmt = conn.createStatement();
+            String createString = "SELECT * FROM room " +
+                    "WHERE room_type = " + "'" + roomType +"' AND " +
+                    "Status = 'A' ";
+
+            int k = 0;
+            System.out.println(createString);
+            ResultSet rs = stmt.executeQuery(createString);
 
 
 
-    /**
-     * Connect to the DB and do some stuff
-     */
+            for ( int i = 0; i < roomAmount; i++)
+            {
 
-/*
-public class ReservationListJDBC {
-public Reservation[] reservationList = new Reservation[1] ;
+                while (rs.next())
+                {
 
-	/**Requests to set check in time and set room status
-	 * @param reservationID
-	 */
-//	public boolean checkIn(int reservationID)
-//	{
-//		return true;
-///	}
-    /** Requests to set check out time and set room status
-     * @param reservationID
-     */
-//	public boolean checkOut(int reservationID)
-//	{
-//		return true;
-//	}
-    /**Method to request a cancellation of a reservation
-     *
-     * @param reservationID Reservation ID
-     */
-    //public Reservation	cancelReservation(int reservationID)
-    //{
+                    if (k > 0)
+                    {
+                        result += ", ";
+                        System.out.println(result);
+                    }
+                    result += rs.getString("room_id");
+                    System.out.println(result);
+                    k++;
 
-//	}
+                }
+            }
+            if (k < roomAmount)
+            {
 
+                return "";
+            }
 
-    /**Method to request the creation of a reservation
-     *
-     * @param reservationID Reservation ID
-     * @param checkIn Check In Time
-     * @param checkOut Check Out Time
-     * @param roomNum Room Number
-     * @param numGuests Number of Guests
-     * @param userAcctNum User Account Number
-     */
-    public boolean	createReservation(int reservationID, java.lang.String checkIn, java.lang.String checkOut, int roomNum, int numGuests, int userAcctNum)
-    {
-        return true;
+        }
+        catch( SQLException ex )
+        {
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+
+        return result;
     }
-    /** Method to request the update of a reservation
-     *
-     * @param reservationID Reservation ID
-     * @param checkIn Check In Time
-     * @param checkOut Check Out Time
-     * @param roomNum Room Number
-     * @param numGuests Number of Guests
-     * @param userAcctNum User Account Number
-     */
-//	public boolean	updateReservation(int reservationID, java.lang.String checkIn, java.lang.String checkOut, int roomNum, int numGuests, int userAcctNum)
-//	{
-//		return true;
-//	}
-    /**Method to make a request to view a reservation's information
-     *
-     * @param reservationID Reservation ID
-     */
-//	public Reservation	viewReservation(int reservationID)
-//	{
-//		return Reservation;
-//	}
 
 
-    /**Returns value of reservation as a string
-     */
-//	public String toString()
-//	{
-//	}
+    public static double calcuateCost(String S)
+    {
+        double cost = 0;
 
+        Statement stmt = null;
+        // Connect to MySQL
+
+
+        String roomIDs [] = S.split(","); //if the user enter 1123:2342 this method
+
+
+        int roomNumbers [] = new int [roomIDs.length];
+        String trimmed;
+        for (int i = 0; i < roomIDs.length; i++)
+        {
+            trimmed = roomIDs[i].trim();
+            roomNumbers[i] = Integer.parseInt(trimmed);
+        }
+
+
+        Connection conn = run();
+        String result = "";
+        // Create a table
+        for(int i =0; i < roomNumbers.length; i++)
+        {
+            try {
+                stmt = conn.createStatement();
+                String createString = "SELECT * FROM room " +
+                        "WHERE room_id = " + roomNumbers[i];
+
+
+                System.out.println(createString);
+                ResultSet rs = stmt.executeQuery(createString);
+                while (rs.next())
+                {
+
+                    cost += rs.getDouble("roomPrice");
+
+                }
+            }
+
+            catch( SQLException ex )
+            {
+                System.out.println("SQLException: " + ex.getMessage());
+                System.out.println("SQLState: " + ex.getSQLState());
+                System.out.println("VendorError: " + ex.getErrorCode());
+            }
+
+        }
+        return cost;
+    }
+
+
+    public static void update(int reservationID, String newInTime, String newOutTime, String newPayment,  int newAmount, String newRoomID ) {
+
+        // Connect to MySQL
+        Connection conn = run();
+
+        // Create a table
+        try {
+
+            String createString = String.format( "UPDATE reservation " +
+                    "SET checkInTime = '" +newInTime + "' , checkOutTime = '" + newOutTime+ "' , paymentMethod = '" +
+                    newPayment+ "' " +
+                    " , roomAmount = " + newAmount+ " , roomNumber = '" + newRoomID + "' " +
+                    "WHERE reservationID = " + reservationID );
+
+            executeUpdate(conn, createString);
+
+            System.out.println("Reservation updated");
+        } catch (SQLException e) {
+            System.out.println("ERROR: Could not update the reservation");
+            e.printStackTrace();
+            return;
+        }
+
+
+    }
+    public static void updateCheckInTime(int reservationID, String newInTime) {
+
+        // Connect to MySQL
+        Connection conn = run();
+
+        // Create a table
+        try {
+
+            String createString = String.format( "UPDATE reservation " +
+                    "SET checkInTime = '" +newInTime +
+                    "' WHERE reservationID =" + reservationID );
+
+            executeUpdate(conn, createString);
+
+            System.out.println("Reservation updated");
+        } catch (SQLException e) {
+            System.out.println("ERROR: Could not update the reservation");
+            e.printStackTrace();
+            return;
+        }
+
+
+    }
+
+
+    public static void updateCheckOutTime(int reservationID, String newOutTime) {
+
+        // Connect to MySQL
+        Connection conn = run();
+
+        // Create a table
+        try {
+
+            String createString = String.format( "UPDATE reservation " +
+                    "SET checkOutTime = '" +newOutTime +
+                    "' WHERE reservationID =" + reservationID );
+
+            executeUpdate(conn, createString);
+
+            System.out.println("Reservation updated");
+        } catch (SQLException e) {
+            System.out.println("ERROR: Could not update the reservation");
+            e.printStackTrace();
+            return;
+        }
+
+
+
+    }
+
+    public static void updatePaymentMethod(int reservationID, String newPayment) {
+
+        // Connect to MySQL
+        Connection conn = run();
+
+        // Create a table
+        try {
+
+            String createString = String.format( "UPDATE reservation " +
+                    "SET paymentMethod = '" +newPayment +
+                    "' WHERE reservationID =" + reservationID );
+
+            executeUpdate(conn, createString);
+
+            System.out.println("Reservation updated");
+        } catch (SQLException e) {
+            System.out.println("ERROR: Could not update the reservation");
+            e.printStackTrace();
+            return;
+        }
+
+
+    }
+
+    public static void updateRoomAmount(int reservationID, int newAmount) {
+
+        // Connect to MySQL
+        Connection conn = run();
+
+        // Create a table
+        try {
+
+            String createString = String.format( "UPDATE reservation " +
+                    "SET roomAmount = " +newAmount +
+                    " WHERE reservationID =" + reservationID );
+
+            executeUpdate(conn, createString);
+
+            System.out.println("Reservation updated");
+        } catch (SQLException e) {
+            System.out.println("ERROR: Could not update the reservation");
+            e.printStackTrace();
+            return;
+        }
+
+
+    }
+
+    public static void updateRoomNumber(int reservationID, String newRoomID) {
+
+        // Connect to MySQL
+        Connection conn = run();
+
+        // Create a table
+        try {
+
+            String createString = String.format( "UPDATE reservation " +
+                    "SET roomNumber = '" +newRoomID +
+                    "' WHERE reservationID =" + reservationID );
+
+            executeUpdate(conn, createString);
+
+            System.out.println("Reservation updated");
+        } catch (SQLException e) {
+            System.out.println("ERROR: Could not update the reservation");
+            e.printStackTrace();
+            return;
+        }
+
+
+    }
 
 }
 
